@@ -1,0 +1,567 @@
+.primary {
+    background-color: var(--md-sys-color-primary);
+}
+
+.primary-text {
+    color: var(--md-sys-color-primary);
+}
+
+.on-primary {
+    background-color: var(--md-sys-color-on-primary);
+}
+
+.on-primary-text {
+    color: var(--md-sys-color-on-primary);
+}
+
+.primary-container {
+    background-color: var(--md-sys-color-primary-container);
+}
+
+.primary-container-text {
+    color: var(--md-sys-color-primary-container);
+}
+
+.on-primary-container {
+    background-color: var(--md-sys-color-on-primary-container);
+}
+
+.on-primary-container-text {
+    color: var(--md-sys-color-on-primary-container);
+}
+
+.secondary {
+    background-color: var(--md-sys-color-secondary);
+}
+
+.secondary-text {
+    color: var(--md-sys-color-secondary);
+}
+
+.on-secondary {
+    background-color: var(--md-sys-color-on-secondary);
+}
+
+.on-secondary-text {
+    color: var(--md-sys-color-on-secondary);
+}
+
+.secondary-container {
+    background-color: var(--md-sys-color-secondary-container);
+}
+
+.secondary-container-text {
+    color: var(--md-sys-color-secondary-container);
+}
+
+.on-secondary-container {
+    background-color: var(--md-sys-color-on-secondary-container);
+}
+
+.on-secondary-container-text {
+    color: var(--md-sys-color-on-secondary-container);
+}
+
+.tertiary {
+    background-color: var(--md-sys-color-tertiary);
+}
+
+.tertiary-text {
+    color: var(--md-sys-color-tertiary);
+}
+
+.on-tertiary {
+    background-color: var(--md-sys-color-on-tertiary);
+}
+
+.on-tertiary-text {
+    color: var(--md-sys-color-on-tertiary);
+}
+
+.tertiary-container {
+    background-color: var(--md-sys-color-tertiary-container);
+}
+
+.tertiary-container-text {
+    color: var(--md-sys-color-tertiary-container);
+}
+
+.on-tertiary-container {
+    background-color: var(--md-sys-color-on-tertiary-container);
+}
+
+.on-tertiary-container-text {
+    color: var(--md-sys-color-on-tertiary-container);
+}
+
+.error {
+    background-color: var(--md-sys-color-error);
+}
+
+.error-text {
+    color: var(--md-sys-color-error);
+}
+
+.error-container {
+    background-color: var(--md-sys-color-error-container);
+}
+
+.error-container-text {
+    color: var(--md-sys-color-error-container);
+}
+
+.on-error {
+    background-color: var(--md-sys-color-on-error);
+}
+
+.on-error-text {
+    color: var(--md-sys-color-on-error);
+}
+
+.on-error-container {
+    background-color: var(--md-sys-color-on-error-container);
+}
+
+.on-error-container-text {
+    color: var(--md-sys-color-on-error-container);
+}
+
+.background {
+    background-color: var(--md-sys-color-background);
+}
+
+.background-text {
+    color: var(--md-sys-color-background);
+}
+
+.on-background {
+    background-color: var(--md-sys-color-on-background);
+}
+
+.on-background-text {
+    color: var(--md-sys-color-on-background);
+}
+
+.surface {
+    background-color: var(--md-sys-color-surface);
+}
+
+.surface-text {
+    color: var(--md-sys-color-surface);
+}
+
+.on-surface {
+    background-color: var(--md-sys-color-on-surface);
+}
+
+.on-surface-text {
+    color: var(--md-sys-color-on-surface);
+}
+
+.surface-variant {
+    background-color: var(--md-sys-color-surface-variant);
+}
+
+.surface-variant-text {
+    color: var(--md-sys-color-surface-variant);
+}
+
+.on-surface-variant {
+    background-color: var(--md-sys-color-on-surface-variant);
+}
+
+.on-surface-variant-text {
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+.outline {
+    background-color: var(--md-sys-color-outline);
+}
+
+.outline-text {
+    color: var(--md-sys-color-outline);
+}
+
+.inverse-on-surface {
+    background-color: var(--md-sys-color-inverse-on-surface);
+}
+
+.inverse-on-surface-text {
+    color: var(--md-sys-color-inverse-on-surface);
+}
+
+.inverse-surface {
+    background-color: var(--md-sys-color-inverse-surface);
+}
+
+.inverse-surface-text {
+    color: var(--md-sys-color-inverse-surface);
+}
+
+.inverse-primary {
+    background-color: var(--md-sys-color-inverse-primary);
+}
+
+.inverse-primary-text {
+    color: var(--md-sys-color-inverse-primary);
+}
+
+.shadow {
+    background-color: var(--md-sys-color-shadow);
+}
+
+.shadow-text {
+    color: var(--md-sys-color-shadow);
+}
+
+.surface-tint {
+    background-color: var(--md-sys-color-surface-tint);
+}
+
+.surface-tint-text {
+    color: var(--md-sys-color-surface-tint);
+}
+
+.outline-variant {
+    background-color: var(--md-sys-color-outline-variant);
+}
+
+.outline-variant-text {
+    color: var(--md-sys-color-outline-variant);
+}
+
+.scrim {
+    background-color: var(--md-sys-color-scrim);
+}
+
+.scrim-text {
+    color: var(--md-sys-color-scrim);
+}
+
+
+
+:root {
+    --md-sys-color-primary: var(--md-sys-color-primary-light);
+    --md-sys-color-on-primary: var(--md-sys-color-on-primary-light);
+    --md-sys-color-primary-container: var(--md-sys-color-primary-container-light);
+    --md-sys-color-on-primary-container: var(--md-sys-color-on-primary-container-light);
+    --md-sys-color-secondary: var(--md-sys-color-secondary-light);
+    --md-sys-color-on-secondary: var(--md-sys-color-on-secondary-light);
+    --md-sys-color-secondary-container: var(--md-sys-color-secondary-container-light);
+    --md-sys-color-on-secondary-container: var(--md-sys-color-on-secondary-container-light);
+    --md-sys-color-tertiary: var(--md-sys-color-tertiary-light);
+    --md-sys-color-on-tertiary: var(--md-sys-color-on-tertiary-light);
+    --md-sys-color-tertiary-container: var(--md-sys-color-tertiary-container-light);
+    --md-sys-color-on-tertiary-container: var(--md-sys-color-on-tertiary-container-light);
+    --md-sys-color-error: var(--md-sys-color-error-light);
+    --md-sys-color-error-container: var(--md-sys-color-error-container-light);
+    --md-sys-color-on-error: var(--md-sys-color-on-error-light);
+    --md-sys-color-on-error-container: var(--md-sys-color-on-error-container-light);
+    --md-sys-color-background: var(--md-sys-color-background-light);
+    --md-sys-color-on-background: var(--md-sys-color-on-background-light);
+    --md-sys-color-surface: var(--md-sys-color-surface-light);
+    --md-sys-color-on-surface: var(--md-sys-color-on-surface-light);
+    --md-sys-color-surface-variant: var(--md-sys-color-surface-variant-light);
+    --md-sys-color-on-surface-variant: var(--md-sys-color-on-surface-variant-light);
+    --md-sys-color-outline: var(--md-sys-color-outline-light);
+    --md-sys-color-inverse-on-surface: var(--md-sys-color-inverse-on-surface-light);
+    --md-sys-color-inverse-surface: var(--md-sys-color-inverse-surface-light);
+    --md-sys-color-inverse-primary: var(--md-sys-color-inverse-primary-light);
+    --md-sys-color-shadow: var(--md-sys-color-shadow-light);
+    --md-sys-color-surface-tint: var(--md-sys-color-surface-tint-light);
+    --md-sys-color-outline-variant: var(--md-sys-color-outline-variant-light);
+    --md-sys-color-scrim: var(--md-sys-color-scrim-light);
+}
+
+
+
+
+:root {
+    --md-source: #dc9e66;
+    /* primary */
+    --md-ref-palette-primary0: #000000;
+    --md-ref-palette-primary10: #2e1600;
+    --md-ref-palette-primary20: #4b2700;
+    --md-ref-palette-primary25: #5b3100;
+    --md-ref-palette-primary30: #6c3a00;
+    --md-ref-palette-primary35: #7c4400;
+    --md-ref-palette-primary40: #8e4f00;
+    --md-ref-palette-primary50: #af650e;
+    --md-ref-palette-primary60: #ce7e2a;
+    --md-ref-palette-primary70: #ed9742;
+    --md-ref-palette-primary80: #ffb877;
+    --md-ref-palette-primary90: #ffdcc0;
+    --md-ref-palette-primary95: #ffeee2;
+    --md-ref-palette-primary98: #fff8f5;
+    --md-ref-palette-primary99: #fffbff;
+    --md-ref-palette-primary100: #ffffff;
+    /* secondary */
+    --md-ref-palette-secondary0: #000000;
+    --md-ref-palette-secondary10: #241a00;
+    --md-ref-palette-secondary20: #3e2e00;
+    --md-ref-palette-secondary25: #4b3900;
+    --md-ref-palette-secondary30: #594400;
+    --md-ref-palette-secondary35: #674f00;
+    --md-ref-palette-secondary40: #765b00;
+    --md-ref-palette-secondary50: #947200;
+    --md-ref-palette-secondary60: #b28b0e;
+    --md-ref-palette-secondary70: #cfa62e;
+    --md-ref-palette-secondary80: #edc148;
+    --md-ref-palette-secondary90: #ffdf93;
+    --md-ref-palette-secondary95: #ffefd0;
+    --md-ref-palette-secondary98: #fff8f1;
+    --md-ref-palette-secondary99: #fffbff;
+    --md-ref-palette-secondary100: #ffffff;
+    /* tertiary */
+    --md-ref-palette-tertiary0: #000000;
+    --md-ref-palette-tertiary10: #042100;
+    --md-ref-palette-tertiary20: #0a3900;
+    --md-ref-palette-tertiary25: #0e4600;
+    --md-ref-palette-tertiary30: #1b520a;
+    --md-ref-palette-tertiary35: #285e17;
+    --md-ref-palette-tertiary40: #346a22;
+    --md-ref-palette-tertiary50: #4c8439;
+    --md-ref-palette-tertiary60: #659f50;
+    --md-ref-palette-tertiary70: #7fba68;
+    --md-ref-palette-tertiary80: #99d680;
+    --md-ref-palette-tertiary90: #b4f39a;
+    --md-ref-palette-tertiary95: #ccffb4;
+    --md-ref-palette-tertiary98: #edffe0;
+    --md-ref-palette-tertiary99: #f7ffed;
+    --md-ref-palette-tertiary100: #ffffff;
+    /* neutral */
+    --md-ref-palette-neutral0: #000000;
+    --md-ref-palette-neutral10: #271900;
+    --md-ref-palette-neutral20: #422c00;
+    --md-ref-palette-neutral25: #503700;
+    --md-ref-palette-neutral30: #5e4100;
+    --md-ref-palette-neutral35: #6d4c00;
+    --md-ref-palette-neutral40: #7d5800;
+    --md-ref-palette-neutral50: #9c6f00;
+    --md-ref-palette-neutral60: #bc8711;
+    --md-ref-palette-neutral70: #daa12f;
+    --md-ref-palette-neutral80: #f9bc49;
+    --md-ref-palette-neutral90: #ffdea9;
+    --md-ref-palette-neutral95: #ffeed8;
+    --md-ref-palette-neutral98: #fff8f3;
+    --md-ref-palette-neutral99: #fffbff;
+    --md-ref-palette-neutral100: #ffffff;
+    /* secondary */
+    --md-ref-palette-secondary0: #000000;
+    --md-ref-palette-secondary10: #001f29;
+    --md-ref-palette-secondary20: #003544;
+    --md-ref-palette-secondary25: #004152;
+    --md-ref-palette-secondary30: #004d61;
+    --md-ref-palette-secondary35: #005a71;
+    --md-ref-palette-secondary40: #006780;
+    --md-ref-palette-secondary50: #0082a1;
+    --md-ref-palette-secondary60: #009dc3;
+    --md-ref-palette-secondary70: #3ab9e0;
+    --md-ref-palette-secondary80: #5ed4fc;
+    --md-ref-palette-secondary90: #b9eaff;
+    --md-ref-palette-secondary95: #def4ff;
+    --md-ref-palette-secondary98: #f3fbff;
+    --md-ref-palette-secondary99: #fafdff;
+    --md-ref-palette-secondary100: #ffffff;
+    /* neutral-variant */
+    --md-ref-palette-neutral-variant0: #000000;
+    --md-ref-palette-neutral-variant10: #231a11;
+    --md-ref-palette-neutral-variant20: #392e25;
+    --md-ref-palette-neutral-variant25: #453930;
+    --md-ref-palette-neutral-variant30: #51443a;
+    --md-ref-palette-neutral-variant35: #5d5046;
+    --md-ref-palette-neutral-variant40: #6a5c51;
+    --md-ref-palette-neutral-variant50: #837469;
+    --md-ref-palette-neutral-variant60: #9e8e82;
+    --md-ref-palette-neutral-variant70: #b9a89b;
+    --md-ref-palette-neutral-variant80: #d6c3b6;
+    --md-ref-palette-neutral-variant90: #f2dfd1;
+    --md-ref-palette-neutral-variant95: #ffeee2;
+    --md-ref-palette-neutral-variant98: #fff8f5;
+    --md-ref-palette-neutral-variant99: #fffbff;
+    --md-ref-palette-neutral-variant100: #ffffff;
+    /* error */
+    --md-ref-palette-error0: #000000;
+    --md-ref-palette-error10: #410002;
+    --md-ref-palette-error20: #690005;
+    --md-ref-palette-error25: #7e0007;
+    --md-ref-palette-error30: #93000a;
+    --md-ref-palette-error35: #a80710;
+    --md-ref-palette-error40: #ba1a1a;
+    --md-ref-palette-error50: #de3730;
+    --md-ref-palette-error60: #ff5449;
+    --md-ref-palette-error70: #ff897d;
+    --md-ref-palette-error80: #ffb4ab;
+    --md-ref-palette-error90: #ffdad6;
+    --md-ref-palette-error95: #ffedea;
+    --md-ref-palette-error98: #fff8f7;
+    --md-ref-palette-error99: #fffbff;
+    --md-ref-palette-error100: #ffffff;
+    /* light */
+    --md-sys-color-primary-light: #8e4f00;
+    --md-sys-color-on-primary-light: #ffffff;
+    --md-sys-color-primary-container-light: #ffdcc0;
+    --md-sys-color-on-primary-container-light: #2e1600;
+    --md-sys-color-secondary-light: #765b00;
+    --md-sys-color-on-secondary-light: #ffffff;
+    --md-sys-color-secondary-container-light: #ffdf93;
+    --md-sys-color-on-secondary-container-light: #241a00;
+    --md-sys-color-tertiary-light: #346a22;
+    --md-sys-color-on-tertiary-light: #ffffff;
+    --md-sys-color-tertiary-container-light: #b4f39a;
+    --md-sys-color-on-tertiary-container-light: #042100;
+    --md-sys-color-error-light: #ba1a1a;
+    --md-sys-color-error-container-light: #ffdad6;
+    --md-sys-color-on-error-light: #ffffff;
+    --md-sys-color-on-error-container-light: #410002;
+    --md-sys-color-background-light: #fffbff;
+    --md-sys-color-on-background-light: #271900;
+    --md-sys-color-surface-light: #fffbff;
+    --md-sys-color-on-surface-light: #271900;
+    --md-sys-color-surface-variant-light: #f2dfd1;
+    --md-sys-color-on-surface-variant-light: #51443a;
+    --md-sys-color-outline-light: #837469;
+    --md-sys-color-inverse-on-surface-light: #ffeed8;
+    --md-sys-color-inverse-surface-light: #422c00;
+    --md-sys-color-inverse-primary-light: #ffb877;
+    --md-sys-color-shadow-light: #000000;
+    --md-sys-color-surface-tint-light: #8e4f00;
+    --md-sys-color-outline-variant-light: #d6c3b6;
+    --md-sys-color-scrim-light: #000000;
+    /* dark */
+    --md-sys-color-primary-dark: #ffb877;
+    --md-sys-color-on-primary-dark: #4b2700;
+    --md-sys-color-primary-container-dark: #6c3a00;
+    --md-sys-color-on-primary-container-dark: #ffdcc0;
+    --md-sys-color-secondary-dark: #edc148;
+    --md-sys-color-on-secondary-dark: #3e2e00;
+    --md-sys-color-secondary-container-dark: #594400;
+    --md-sys-color-on-secondary-container-dark: #ffdf93;
+    --md-sys-color-tertiary-dark: #99d680;
+    --md-sys-color-on-tertiary-dark: #0a3900;
+    --md-sys-color-tertiary-container-dark: #1b520a;
+    --md-sys-color-on-tertiary-container-dark: #b4f39a;
+    --md-sys-color-error-dark: #ffb4ab;
+    --md-sys-color-error-container-dark: #93000a;
+    --md-sys-color-on-error-dark: #690005;
+    --md-sys-color-on-error-container-dark: #ffdad6;
+    --md-sys-color-background-dark: #271900;
+    --md-sys-color-on-background-dark: #ffdea9;
+    --md-sys-color-surface-dark: #271900;
+    --md-sys-color-on-surface-dark: #ffdea9;
+    --md-sys-color-surface-variant-dark: #51443a;
+    --md-sys-color-on-surface-variant-dark: #d6c3b6;
+    --md-sys-color-outline-dark: #9e8e82;
+    --md-sys-color-inverse-on-surface-dark: #271900;
+    --md-sys-color-inverse-surface-dark: #ffdea9;
+    --md-sys-color-inverse-primary-dark: #8e4f00;
+    --md-sys-color-shadow-dark: #000000;
+    --md-sys-color-surface-tint-dark: #ffb877;
+    --md-sys-color-outline-variant-dark: #51443a;
+    --md-sys-color-scrim-dark: #000000;
+    /* display - large */
+    --md-sys-typescale-display-large-font-family-name: Roboto;
+    --md-sys-typescale-display-large-font-family-style: Regular;
+    --md-sys-typescale-display-large-font-weight: 400px;
+    --md-sys-typescale-display-large-font-size: 57px;
+    --md-sys-typescale-display-large-line-height: 64px;
+    --md-sys-typescale-display-large-letter-spacing: -0.25px;
+    /* display - medium */
+    --md-sys-typescale-display-medium-font-family-name: Roboto;
+    --md-sys-typescale-display-medium-font-family-style: Regular;
+    --md-sys-typescale-display-medium-font-weight: 400px;
+    --md-sys-typescale-display-medium-font-size: 45px;
+    --md-sys-typescale-display-medium-line-height: 52px;
+    --md-sys-typescale-display-medium-letter-spacing: 0px;
+    /* display - small */
+    --md-sys-typescale-display-small-font-family-name: Roboto;
+    --md-sys-typescale-display-small-font-family-style: Regular;
+    --md-sys-typescale-display-small-font-weight: 400px;
+    --md-sys-typescale-display-small-font-size: 36px;
+    --md-sys-typescale-display-small-line-height: 44px;
+    --md-sys-typescale-display-small-letter-spacing: 0px;
+    /* headline - large */
+    --md-sys-typescale-headline-large-font-family-name: Roboto;
+    --md-sys-typescale-headline-large-font-family-style: Regular;
+    --md-sys-typescale-headline-large-font-weight: 400px;
+    --md-sys-typescale-headline-large-font-size: 32px;
+    --md-sys-typescale-headline-large-line-height: 40px;
+    --md-sys-typescale-headline-large-letter-spacing: 0px;
+    /* headline - medium */
+    --md-sys-typescale-headline-medium-font-family-name: Roboto;
+    --md-sys-typescale-headline-medium-font-family-style: Regular;
+    --md-sys-typescale-headline-medium-font-weight: 400px;
+    --md-sys-typescale-headline-medium-font-size: 28px;
+    --md-sys-typescale-headline-medium-line-height: 36px;
+    --md-sys-typescale-headline-medium-letter-spacing: 0px;
+    /* headline - small */
+    --md-sys-typescale-headline-small-font-family-name: Roboto;
+    --md-sys-typescale-headline-small-font-family-style: Regular;
+    --md-sys-typescale-headline-small-font-weight: 400px;
+    --md-sys-typescale-headline-small-font-size: 24px;
+    --md-sys-typescale-headline-small-line-height: 32px;
+    --md-sys-typescale-headline-small-letter-spacing: 0px;
+    /* body - large */
+    --md-sys-typescale-body-large-font-family-name: Roboto;
+    --md-sys-typescale-body-large-font-family-style: Regular;
+    --md-sys-typescale-body-large-font-weight: 400px;
+    --md-sys-typescale-body-large-font-size: 16px;
+    --md-sys-typescale-body-large-line-height: 24px;
+    --md-sys-typescale-body-large-letter-spacing: 0.50px;
+    /* body - medium */
+    --md-sys-typescale-body-medium-font-family-name: Roboto;
+    --md-sys-typescale-body-medium-font-family-style: Regular;
+    --md-sys-typescale-body-medium-font-weight: 400px;
+    --md-sys-typescale-body-medium-font-size: 14px;
+    --md-sys-typescale-body-medium-line-height: 20px;
+    --md-sys-typescale-body-medium-letter-spacing: 0.25px;
+    /* body - small */
+    --md-sys-typescale-body-small-font-family-name: Roboto;
+    --md-sys-typescale-body-small-font-family-style: Regular;
+    --md-sys-typescale-body-small-font-weight: 400px;
+    --md-sys-typescale-body-small-font-size: 12px;
+    --md-sys-typescale-body-small-line-height: 16px;
+    --md-sys-typescale-body-small-letter-spacing: 0.40px;
+    /* label - large */
+    --md-sys-typescale-label-large-font-family-name: Roboto;
+    --md-sys-typescale-label-large-font-family-style: Medium;
+    --md-sys-typescale-label-large-font-weight: 500px;
+    --md-sys-typescale-label-large-font-size: 14px;
+    --md-sys-typescale-label-large-line-height: 20px;
+    --md-sys-typescale-label-large-letter-spacing: 0.10px;
+    /* label - medium */
+    --md-sys-typescale-label-medium-font-family-name: Roboto;
+    --md-sys-typescale-label-medium-font-family-style: Medium;
+    --md-sys-typescale-label-medium-font-weight: 500px;
+    --md-sys-typescale-label-medium-font-size: 12px;
+    --md-sys-typescale-label-medium-line-height: 16px;
+    --md-sys-typescale-label-medium-letter-spacing: 0.50px;
+    /* label - small */
+    --md-sys-typescale-label-small-font-family-name: Roboto;
+    --md-sys-typescale-label-small-font-family-style: Medium;
+    --md-sys-typescale-label-small-font-weight: 500px;
+    --md-sys-typescale-label-small-font-size: 11px;
+    --md-sys-typescale-label-small-line-height: 16px;
+    --md-sys-typescale-label-small-letter-spacing: 0.50px;
+    /* title - large */
+    --md-sys-typescale-title-large-font-family-name: Roboto;
+    --md-sys-typescale-title-large-font-family-style: Regular;
+    --md-sys-typescale-title-large-font-weight: 400px;
+    --md-sys-typescale-title-large-font-size: 22px;
+    --md-sys-typescale-title-large-line-height: 28px;
+    --md-sys-typescale-title-large-letter-spacing: 0px;
+    /* title - medium */
+    --md-sys-typescale-title-medium-font-family-name: Roboto;
+    --md-sys-typescale-title-medium-font-family-style: Medium;
+    --md-sys-typescale-title-medium-font-weight: 500px;
+    --md-sys-typescale-title-medium-font-size: 16px;
+    --md-sys-typescale-title-medium-line-height: 24px;
+    --md-sys-typescale-title-medium-letter-spacing: 0.15px;
+    /* title - small */
+    --md-sys-typescale-title-small-font-family-name: Roboto;
+    --md-sys-typescale-title-small-font-family-style: Medium;
+    --md-sys-typescale-title-small-font-weight: 500px;
+    --md-sys-typescale-title-small-font-size: 14px;
+    --md-sys-typescale-title-small-line-height: 20px;
+    --md-sys-typescale-title-small-letter-spacing: 0.10px;
+}

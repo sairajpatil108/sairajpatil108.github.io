@@ -8,6 +8,7 @@
 }
 
 body {
+  background-color: #ffebca;
   font-family: "Poppins", sans-serif;
 }
 
@@ -250,7 +251,7 @@ section {
 }
 
 .btn-color-2 {
-  background: none;
+  background: #d9e5de;
 }
 
 .btn-color-2:hover {
@@ -284,7 +285,18 @@ section {
 }
 
 .about-pic {
-  border-radius: 5rem;
+  border-radius: 25%;
+  /* Start with a circular shape */
+  border: 7.3px solid white;
+  /* Border width */
+}
+
+/* Media query for adjusting border radius based on screen size */
+@media screen and (min-width: 768px) {
+  .about-pic {
+    border-radius: 5rem;
+    /* Adjust the border radius for larger screens */
+  }
 }
 
 .arrow {
@@ -296,11 +308,16 @@ section {
 .details-container {
   padding: 1.5rem;
   flex: 1;
-  background: white;
+  background-color: #ebba8d;
   border-radius: 2rem;
-  border: rgb(53, 53, 53) 0.1rem solid;
-  border-color: rgb(163, 163, 163);
+  border: rgb(255, 255, 255) 0.1rem solid;
+  border-width: 3.5px;
+  border-color: rgb(255, 255, 255);
   text-align: center;
+}
+
+.details-container1 {
+  background-color: #a0b29e;
 }
 
 .section-container {
@@ -361,8 +378,8 @@ article .icon {
 }
 
 .color-container {
-  border-color: rgb(163, 163, 163);
-  background: rgb(250, 250, 250);
+  border-color: rgb(255, 255, 255);
+  background: #d9e5de;
 }
 
 .project-img {
