@@ -8,6 +8,11 @@
   <title>My Portfolio</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="mediaqueries.css" />
+  <style>
+    #role {
+      transition: opacity 0.5s ease-in-out;
+    }
+  </style>
 </head>
 
 <body class="body">
@@ -46,6 +51,8 @@
       <p class="section__text__p1">Hello, I'm</p>
       <h1 class="title">Sairaj</h1>
       <p class="section__text__p2">Software Developer</p>
+      <p><h5 id="role">Android Developer</h5></p>
+      <br>
       <div class="btn-container">
         <button class="btn btn-color-2" onclick="window.open('./assets/resume-example.pdf')">
           Download CV
@@ -307,6 +314,23 @@
     <p>Copyright &#169; 2023 Sairaj Patil. All Rights Reserved.</p>
   </footer>
   <script src="script.js"></script>
+
+  <script>
+    const roles = ["Android Developer", "Cross Platform App Developer", "Cybersecurity Specialist"];
+    let currentRoleIndex = 0;
+
+    function changeRole() {
+      document.getElementById('role').style.opacity = '0';
+      setTimeout(() => {
+        currentRoleIndex = (currentRoleIndex + 1) % roles.length;
+        document.getElementById('role').innerText = roles[currentRoleIndex];
+        document.getElementById('role').style.opacity = '1';
+      }, 500); // Wait for 0.5 seconds for the transition to complete
+    }
+
+    setInterval(changeRole, 3000); // Change role every 3 seconds
+  </script>
+
 </body>
 
 </html>
