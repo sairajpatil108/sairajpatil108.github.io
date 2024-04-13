@@ -293,11 +293,10 @@ section {
   /* Border width */
 }
 
-/* Media query for adjusting border radius based on screen size */
+
 @media screen and (min-width: 768px) {
   .about-pic {
     border-radius: 5rem;
-    /* Adjust the border radius for larger screens */
   }
 }
 
@@ -365,7 +364,7 @@ section {
 article {
   display: flex;
   width: 10rem;
-  justify-content: space-around;
+  justify-content: left;
   gap: 0.5rem;
 }
 
