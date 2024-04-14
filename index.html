@@ -51,7 +51,9 @@
       <p class="section__text__p1">Hello, I'm</p>
       <h1 class="title">Sairaj</h1>
       <p class="section__text__p2">Software Developer</p>
-      <p><h5 id="role">Android Developer</h5></p>
+      <p>
+      <h4 class="Role" id="role">Android Developer</h4>
+      </p>
       <br>
       <div class="btn-container">
         <button class="btn btn-color-2" onclick="window.open('./assets/resume-example.pdf')">
@@ -284,6 +286,30 @@
     </div>
     <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#contact'" />
   </section>
+  <!-- <section>
+    <div class="certificate-container-color details-container">
+      <img src="./assets/certificate.png" alt="Certificate icon" class="icon" />
+      <h3>Certifications</h3>
+      <br>
+      <div class="certificate-listA">
+        <articleA>
+          <img src="./assets/experience.png" alt="Checkmark icon" class="icon" />
+          <div>
+            <h3>Android Development <br>(Jetpack Compose)</h3>
+            <p>Google Developers</p>
+          </div>
+        </articleA>
+        <articleA>
+          <img src="./assets/experience.png" alt="Checkmark icon" class="icon" />
+          <div>
+            <h3>Python</h3>
+            <p>Intermediate</p>
+          </div>
+        </articleA>
+       
+      </div>
+    </div>
+  </section> -->
   <section id="contact">
     <p class="section__text__p1">Get in Touch</p>
     <h1 class="title">Contact Me</h1>
@@ -316,7 +342,7 @@
   <script src="script.js"></script>
 
   <script>
-    const roles = ["Android Developer", "Cross Platform App Developer", "Cybersecurity Specialist"];
+    const roles = ["Android Developer", "Cross Platform App Developer", "Cybersecurity Analyst"];
     let currentRoleIndex = 0;
 
     function changeRole() {
@@ -328,7 +354,7 @@
       }, 500); // Wait for 0.5 seconds for the transition to complete
     }
 
-    setInterval(changeRole, 3000); // Change role every 3 seconds
+    setInterval(changeRole, 2000); // Change role every 3 seconds
   </script>
 
 </body>

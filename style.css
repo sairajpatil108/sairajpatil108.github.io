@@ -8,6 +8,7 @@
 }
 
 body {
+  align-self: center;
   /* max-width: 5000px; */
   background-color: #ffebca;
   font-family: "Poppins", sans-serif;
@@ -488,4 +489,43 @@ footer p {
   border-radius: 2rem;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
   /* Add elevation */
+}
+
+.certificate-container-color {
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+  background-color: #ffedb0;
+}
+
+
+.certificate-containerA {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.certificate-listA {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 20px;
+  /* Adjust the gap between certificates */
+}
+
+.articleA {
+  display: flex;
+  align-items: center;
+}
+
+.article imgA {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+
+.Role {
+  color: #61705f;
+  font-weight: 600;
 }
