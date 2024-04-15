@@ -208,14 +208,14 @@
               <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
               <div>
                 <h3>Linux</h3>
-                <p>Intermediate</p>
+                <p>Experienced</p>
               </div>
             </article>
             <article>
               <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
               <div>
                 <h3>GitHub</h3>
-                <p>Experienced</p>
+                <p>Intermediate</p>
               </div>
             </article>
             <article>
@@ -228,8 +228,8 @@
             <article>
               <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
               <div>
-                <h3>IintelliJ IDEA</h3>
-                <p>Intermediate</p>
+                <h3>Postman</h3>
+                <p>Basic</p>
               </div>
             </article>
             <article>
@@ -272,8 +272,9 @@
           </div>
           <h2 class="experience-sub-title project-title">NoteIt</h2>
           <div class="btn-container">
-            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">
-              Github
+            <button class="btn btn-color-2 project-btn"
+              onclick="location.href='https://drive.google.com/file/d/1Qvp3CRDwo9hxm-pfaExo-0akGrSQaNgg/view?usp=drive_link'">
+              Try it
             </button>
             <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">
               View Details
@@ -286,7 +287,7 @@
     </div>
     <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#contact'" />
   </section>
-  <!-- <section>
+  <section>
     <div class="certificate-container-color details-container">
       <img src="./assets/certificate.png" alt="Certificate icon" class="icon" />
       <h3>Certifications</h3>
@@ -309,7 +310,7 @@
 
       </div>
     </div>
-  </section> -->
+  </section>
   <section id="contact">
     <p class="section__text__p1">Get in Touch</p>
     <h1 class="title">Contact Me</h1>
@@ -340,23 +341,6 @@
     <p>Copyright &#169; 2023 Sairaj Patil. All Rights Reserved.</p>
   </footer>
   <script src="script.js"></script>
-
-  <script>
-    const roles = ["Android Developer", "Cross Platform App Developer", "Cybersecurity Analyst","Java Developer"];
-    let currentRoleIndex = 0;
-
-    function changeRole() {
-      document.getElementById('role').style.opacity = '0';
-      setTimeout(() => {
-        currentRoleIndex = (currentRoleIndex + 1) % roles.length;
-        document.getElementById('role').innerText = roles[currentRoleIndex];
-        document.getElementById('role').style.opacity = '1';
-      }, 500); // Wait for 0.5 seconds for the transition to complete
-    }
-
-    setInterval(changeRole, 2000); // Change role every 3 seconds
-  </script>
-
 </body>
 
 </html>
