@@ -287,6 +287,13 @@ section {
   display: flex;
 }
 
+.alignmentContainer {
+  display: flex;
+  width: 200px;
+  justify-content: center;
+  align-items: center;
+}
+
 .about-pic {
   border-radius: 25%;
   /* Start with a circular shape */
