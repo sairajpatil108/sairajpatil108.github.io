@@ -10,7 +10,7 @@
 body {
   align-self: center;
   /* max-width: 5000px; */
-  background-color: #ffebca;
+  background-color: #dcdcdc;
   font-family: "Poppins", sans-serif;
 }
 
@@ -169,7 +169,8 @@ section {
   display: flex;
   justify-content: center;
   gap: 5rem;
-  height: 80vh;
+  height: 100%;
+
 }
 
 .section__pic-container {
@@ -278,6 +279,7 @@ section {
 }
 
 .about-details-container {
+  width: 100%;
   justify-content: left;
   flex-direction: column;
 }
@@ -287,12 +289,7 @@ section {
   display: flex;
 }
 
-.alignmentContainer {
-  display: flex;
-  width: 200px;
-  justify-content: center;
-  align-items: center;
-}
+
 
 .about-pic {
   border-radius: 25%;
