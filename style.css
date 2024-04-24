@@ -227,16 +227,18 @@ section {
 
 .btn {
   font-weight: 600;
+  font-size: 14px;
   transition: all 300ms ease;
   padding: 1rem;
-  width: 8rem;
-  border-radius: 2rem;
+  width: 9rem;
+  border-radius: 5rem;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
 }
 
 .btn-color-1,
 .btn-color-2 {
-  border: rgb(53, 53, 53) 0.1rem solid;
+  border: rgb(255, 255, 255) 0.1rem solid;
+  border-width: 0.8cap;
 }
 
 .btn-color-1:hover,
@@ -246,7 +248,7 @@ section {
 
 .btn-color-1,
 .btn-color-2:hover {
-  background: rgb(53, 53, 53);
+  background: rgb(72, 72, 72);
   color: white;
 }
 
@@ -294,7 +296,7 @@ section {
 .about-pic {
   border-radius: 25%;
   /* Start with a circular shape */
-  border: 7.3px solid white;
+  border: 0.6cap solid white;
   /* Border width */
 }
 
@@ -317,8 +319,8 @@ section {
   background-color: #ebba8d;
   border-radius: 2rem;
   border: rgb(255, 255, 255) 0.1rem solid;
-  border-width: 3.5px;
-  border-color: rgb(255, 255, 255);
+  border-width: 0.6cap;
+  border-color: rgba(255, 255, 255, 0.4);
   text-align: center;
 }
 
@@ -334,7 +336,7 @@ section {
 .section__pic-container {
   height: 400px;
   width: 400px;
-  border-radius: 1ch;
+  border-radius: 5ch;
   margin: auto 0;
 }
 
@@ -499,7 +501,7 @@ footer p {
   margin-left: auto;
   margin-right: auto;
   width: 70%;
-  background-color: #ffedb0;
+  background-color: #ffd099;
 }
 
 
@@ -530,6 +532,20 @@ footer p {
 
 
 .Role {
-  color: #61705f;
+  color: #4f634b;
   font-weight: 600;
+}
+
+.certificate-color {
+  background-color: #ebba8d;
+}
+
+.contact-info-btn-color {
+  background-color: #a0b29e;
+  border-color: #a0b29e;
+}
+
+.download-cv-btn-color {
+  background-color: #febc87;
+  border-color: #febc87;
 }
