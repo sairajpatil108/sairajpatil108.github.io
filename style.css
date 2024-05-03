@@ -500,13 +500,13 @@ footer p {
 .certificate-container-color {
   margin-left: auto;
   margin-right: auto;
-  width: 70%;
+  width: 80%;
   background-color: #ffd099;
 }
 
 
 .certificate-containerA {
-  display: flex;
+  /* display: flex; */
   flex-direction: column;
   align-items: center;
 }
