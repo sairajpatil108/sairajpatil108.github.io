@@ -10,7 +10,7 @@
 body {
   align-self: center;
   /* max-width: 5000px; */
-  background-color: #dcdcdc;
+  background-color: #f1f1f1;
   font-family: "Poppins", sans-serif;
 }
 
@@ -295,7 +295,6 @@ section {
 
 .about-pic {
   border-radius: 25%;
-  /* Start with a circular shape */
   border: 0.6cap solid white;
   /* Border width */
 }
