@@ -312,15 +312,20 @@ section {
   bottom: 2.5rem;
 }
 
+.containerx {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
 .details-container {
-  padding: 1.5rem;
-  flex: 1;
+  flex: 1 1 calc(50% - 1rem);
+  padding: 1rem;
   background-color: #ebba8d;
   border-radius: 2rem;
-  border: rgb(255, 255, 255) 0.1rem solid;
-  border-width: 0.6cap;
-  border-color: rgba(255, 255, 255, 0.4);
+  border: 0.1rem solid rgba(255, 255, 255, 0.4);
   text-align: center;
+  box-sizing: border-box;
 }
 
 .details-container1 {
