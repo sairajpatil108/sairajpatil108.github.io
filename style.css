@@ -10,6 +10,8 @@
 body {
   align-self: center;
   /* max-width: 5000px; */
+  justify-content: center;
+  align-items: center;
   background-color: #f1f1f1;
   font-family: "Poppins", sans-serif;
 }
@@ -501,28 +503,6 @@ footer p {
   /* Add elevation */
 }
 
-.certificate-container-color {
-  margin-left: auto;
-  margin-right: auto;
-  width: 80%;
-  background-color: #ffd099;
-}
-
-
-.certificate-containerA {
-  /* display: flex; */
-  flex-direction: column;
-  align-items: center;
-}
-
-.certificate-listA {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  gap: 20px;
-  /* Adjust the gap between certificates */
-}
-
 .articleA {
   display: flex;
   align-items: center;
@@ -552,4 +532,95 @@ footer p {
 .download-cv-btn-color {
   background-color: #febc87;
   border-color: #febc87;
+}
+
+
+
+
+
+/* --------------------------------Certification - –- -  - - - - -  - - - - -  - - - - - - -  -- -  - */
+/* Add your general styles here */
+
+
+/* Add your general styles here */
+.carousel-container {
+  max-width: 60%;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 2rem;
+  /* Add some bottom margin for spacing */
+}
+
+.carousel {
+  display: flex;
+  transition: transform 1s ease-in-out;
+  overflow-x: scroll;
+  /* Enable horizontal scrolling */
+  scroll-snap-type: x mandatory;
+  /* Snap each item to the viewport */
+  -webkit-overflow-scrolling: touch;
+  /* Smooth scrolling for iOS */
+  scrollbar-width: thin;
+  /* Width of the scrollbar */
+  scrollbar-color: #aaa #f0f0f0;
+  /* Color of the scrollbar */
+}
+
+.carousel::-webkit-scrollbar {
+  width: 8px;
+  /* Width of the scrollbar */
+}
+
+.carousel::-webkit-scrollbar-track {
+  background: #f0f0f0;
+  /* Track color */
+  border-radius: 10px;
+  /* Rounded corners */
+}
+
+.carousel::-webkit-scrollbar-thumb {
+  background-color: #aaa;
+  /* Thumb color */
+  border-radius: 10px;
+  /* Rounded corners */
+}
+
+.carousel-item {
+  min-width: 50%;
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: center;
+  scroll-snap-align: center;
+  /* Center align each item */
+}
+
+.carousel-item img {
+  max-width: 30%;
+  height: auto;
+  width: auto;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+  .carousel-item {
+    min-width: 80%;
+    /* Adjust based on your design needs */
+  }
+
+  .carousel-container {
+    width: 90%;
+    /* Adjust width for smaller screens */
+    margin: 0 auto;
+    /* Center the container */
+  }
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
 }

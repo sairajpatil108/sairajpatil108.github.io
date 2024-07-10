@@ -20,4 +20,48 @@ function toggleMenu() {
   icon.classList.toggle("open");
 }
 
+// ---------------- certification -----------------------------
 
+const carousel = document.querySelector('.carousel');
+const carouselItems = carousel.querySelectorAll('.carousel-item');
+
+let isDragging = false;
+let touchStartX = 0;
+let scrollLeftStart = 0;
+let animationInterval;
+
+function startCarousel() {
+  animationInterval = setInterval(() => {
+    scrollCarousel('next');
+  }, 5000); // Adjust the interval as needed
+}
+
+function stopCarousel() {
+  clearInterval(animationInterval);
+}
+
+function handleTouchStart(e) {
+  touchStartX = e.touches[0].clientX;
+  scrollLeftStart = carousel.scrollLeft;
+  isDragging = true;
+  stopCarousel(); // Stop sliding when user interacts
+}
+
+function handleTouchMove(e) {
+  if (!isDragging) return;
+  const touchCurrentX = e.touches[0].clientX;
+  const diffX = touchCurrentX - touchStartX;
+  carousel.scrollLeft = scrollLeftStart - diffX;
+}
+
+function handleTouchEnd(e) {
+  isDragging = false;
+  startCarousel(); // Resume sliding after interaction
+}
+
+carousel.addEventListener('touchstart', handleTouchStart);
+carousel.addEventListener('touchmove', handleTouchMove);
+carousel.addEventListener('touchend', handleTouchEnd);
+
+// Start the carousel sliding automatically
+startCarousel();
