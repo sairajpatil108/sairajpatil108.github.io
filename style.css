@@ -540,9 +540,9 @@ footer p {
 
 /* --------------------------------Certification - –- -  - - - - -  - - - - -  - - - - - - -  -- -  - */
 .carousel-container {
-  max-width: 80%;
+  max-width: 85%;
   /* Limiting the maximum width of the carousel container */
-  max-height: 600px;
+  max-height: 700px;
   /* Limiting the maximum height of the carousel container */
   overflow: hidden;
   margin: 0 auto;
@@ -565,8 +565,10 @@ footer p {
   scroll-snap-align: center;
   text-align: center;
   margin-right: 5px;
-  width: 100%; /* Ensures full width of parent container */
-  height: 100%; /* Ensures full height of parent container */
+  width: 100%;
+  /* Ensures full width of parent container */
+  height: 100%;
+  /* Ensures full height of parent container */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -575,5 +577,6 @@ footer p {
 .carousel-item img {
   max-width: 100%;
   max-height: 100%;
-  object-fit: contain; /* Fit the image inside the container without cropping */
+  object-fit: contain;
+  /* Fit the image inside the container without cropping */
 }
