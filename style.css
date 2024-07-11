@@ -539,88 +539,41 @@ footer p {
 
 
 /* --------------------------------Certification - –- -  - - - - -  - - - - -  - - - - - - -  -- -  - */
-/* Add your general styles here */
-
-
-/* Add your general styles here */
 .carousel-container {
-  max-width: 60%;
+  max-width: 80%;
+  /* Limiting the maximum width of the carousel container */
+  max-height: 600px;
+  /* Limiting the maximum height of the carousel container */
   overflow: hidden;
+  margin: 0 auto;
   position: relative;
-  margin-bottom: 2rem;
-  /* Add some bottom margin for spacing */
 }
 
 .carousel {
   display: flex;
   transition: transform 1s ease-in-out;
-  overflow-x: scroll;
-  /* Enable horizontal scrolling */
+  overflow: hidden;
   scroll-snap-type: x mandatory;
-  /* Snap each item to the viewport */
   -webkit-overflow-scrolling: touch;
-  /* Smooth scrolling for iOS */
   scrollbar-width: thin;
-  /* Width of the scrollbar */
   scrollbar-color: #aaa #f0f0f0;
-  /* Color of the scrollbar */
-}
-
-.carousel::-webkit-scrollbar {
-  width: 8px;
-  /* Width of the scrollbar */
-}
-
-.carousel::-webkit-scrollbar-track {
-  background: #f0f0f0;
-  /* Track color */
-  border-radius: 10px;
-  /* Rounded corners */
-}
-
-.carousel::-webkit-scrollbar-thumb {
-  background-color: #aaa;
-  /* Thumb color */
-  border-radius: 10px;
-  /* Rounded corners */
+  padding-bottom: 1rem;
 }
 
 .carousel-item {
-  min-width: 50%;
   flex: 0 0 auto;
+  scroll-snap-align: center;
+  text-align: center;
+  margin-right: 5px;
+  width: 100%; /* Ensures full width of parent container */
+  height: 100%; /* Ensures full height of parent container */
   display: flex;
   justify-content: center;
-  scroll-snap-align: center;
-  /* Center align each item */
+  align-items: center;
 }
 
 .carousel-item img {
-  max-width: 30%;
-  height: auto;
-  width: auto;
-}
-
-/* Responsive Adjustments */
-@media screen and (max-width: 768px) {
-  .carousel-item {
-    min-width: 80%;
-    /* Adjust based on your design needs */
-  }
-
-  .carousel-container {
-    width: 90%;
-    /* Adjust width for smaller screens */
-    margin: 0 auto;
-    /* Center the container */
-  }
-}
-
-@keyframes slide {
-  0% {
-    transform: translateX(0%);
-  }
-
-  100% {
-    transform: translateX(-100%);
-  }
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* Fit the image inside the container without cropping */
 }

@@ -8,9 +8,9 @@ function changeRole() {
     currentRoleIndex = (currentRoleIndex + 1) % roles.length;
     document.getElementById('role').innerText = roles[currentRoleIndex];
     document.getElementById('role').style.opacity = '1';
-  }, 500); // Wait for 0.5 seconds for the transition to complete
+  }, 500); 
 }
-setInterval(changeRole, 2000); // Change role every 3 seconds
+setInterval(changeRole, 2000); 
 
 
 function toggleMenu() {
@@ -22,46 +22,51 @@ function toggleMenu() {
 
 // ---------------- certification -----------------------------
 
+
 const carousel = document.querySelector('.carousel');
 const carouselItems = carousel.querySelectorAll('.carousel-item');
-
-let isDragging = false;
-let touchStartX = 0;
-let scrollLeftStart = 0;
 let animationInterval;
 
 function startCarousel() {
   animationInterval = setInterval(() => {
     scrollCarousel('next');
-  }, 5000); // Adjust the interval as needed
+  }, 3000); // Adjust the interval as needed (every 3 seconds in this example)
 }
 
-function stopCarousel() {
-  clearInterval(animationInterval);
-}
+carousel.addEventListener('touchstart', () => {
+  clearInterval(animationInterval); // Stop sliding when user interacts
+});
 
-function handleTouchStart(e) {
-  touchStartX = e.touches[0].clientX;
-  scrollLeftStart = carousel.scrollLeft;
-  isDragging = true;
-  stopCarousel(); // Stop sliding when user interacts
-}
-
-function handleTouchMove(e) {
-  if (!isDragging) return;
-  const touchCurrentX = e.touches[0].clientX;
-  const diffX = touchCurrentX - touchStartX;
-  carousel.scrollLeft = scrollLeftStart - diffX;
-}
-
-function handleTouchEnd(e) {
-  isDragging = false;
+carousel.addEventListener('touchend', () => {
   startCarousel(); // Resume sliding after interaction
+});
+
+startCarousel(); // Start carousel sliding automatically
+
+// Logic for scrolling the carousel
+function scrollCarousel(direction) {
+  const scrollAmount = carousel.clientWidth / 2; // Half the width for centering
+  const currentScrollLeft = carousel.scrollLeft;
+  let newScrollLeft;
+
+  if (direction === 'next') {
+    newScrollLeft = currentScrollLeft + scrollAmount;
+  } else {
+    newScrollLeft = currentScrollLeft - scrollAmount;
+  }
+
+  // Check if the carousel should wrap around
+  if (newScrollLeft >= carousel.scrollWidth - carousel.clientWidth) {
+    // If scrolling past the last item, wrap around to the first
+    carousel.scrollTo({
+      left: 0,
+      behavior: 'smooth'
+    });
+  } else {
+    // Otherwise, scroll normally
+    carousel.scrollBy({
+      left: direction === 'next' ? scrollAmount : -scrollAmount,
+      behavior: 'smooth'
+    });
+  }
 }
-
-carousel.addEventListener('touchstart', handleTouchStart);
-carousel.addEventListener('touchmove', handleTouchMove);
-carousel.addEventListener('touchend', handleTouchEnd);
-
-// Start the carousel sliding automatically
-startCarousel();
