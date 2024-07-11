@@ -45,7 +45,7 @@ startCarousel(); // Start carousel sliding automatically
 
 // Logic for scrolling the carousel
 function scrollCarousel(direction) {
-  const scrollAmount = carousel.clientWidth / 2; // Half the width for centering
+  const scrollAmount = carousel.clientWidth; // Full width for scrolling one full item at a time
   const currentScrollLeft = carousel.scrollLeft;
   let newScrollLeft;
 
@@ -62,6 +62,12 @@ function scrollCarousel(direction) {
       left: 0,
       behavior: 'smooth'
     });
+  } else if (newScrollLeft < 0) {
+    // If scrolling before the first item, wrap around to the last
+    carousel.scrollTo({
+      left: carousel.scrollWidth - carousel.clientWidth,
+      behavior: 'smooth'
+    });
   } else {
     // Otherwise, scroll normally
     carousel.scrollBy({
@@ -70,3 +76,4 @@ function scrollCarousel(direction) {
     });
   }
 }
+
