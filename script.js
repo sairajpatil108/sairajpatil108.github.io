@@ -8,9 +8,9 @@ function changeRole() {
     currentRoleIndex = (currentRoleIndex + 1) % roles.length;
     document.getElementById('role').innerText = roles[currentRoleIndex];
     document.getElementById('role').style.opacity = '1';
-  }, 500); // Wait for 0.5 seconds for the transition to complete
+  }, 500); 
 }
-setInterval(changeRole, 2000); // Change role every 3 seconds
+setInterval(changeRole, 2000); 
 
 
 function toggleMenu() {
@@ -20,4 +20,53 @@ function toggleMenu() {
   icon.classList.toggle("open");
 }
 
+// ---------------- certification -----------------------------
 
+
+const carousel = document.querySelector('.carousel');
+const carouselItems = carousel.querySelectorAll('.carousel-item');
+let animationInterval;
+
+function startCarousel() {
+  animationInterval = setInterval(() => {
+    scrollCarousel('next');
+  }, 3000); // Adjust the interval as needed (every 3 seconds in this example)
+}
+
+carousel.addEventListener('touchstart', () => {
+  clearInterval(animationInterval); // Stop sliding when user interacts
+});
+
+carousel.addEventListener('touchend', () => {
+  startCarousel(); // Resume sliding after interaction
+});
+
+startCarousel(); // Start carousel sliding automatically
+
+// Logic for scrolling the carousel
+function scrollCarousel(direction) {
+  const scrollAmount = carousel.clientWidth / 2; // Half the width for centering
+  const currentScrollLeft = carousel.scrollLeft;
+  let newScrollLeft;
+
+  if (direction === 'next') {
+    newScrollLeft = currentScrollLeft + scrollAmount;
+  } else {
+    newScrollLeft = currentScrollLeft - scrollAmount;
+  }
+
+  // Check if the carousel should wrap around
+  if (newScrollLeft >= carousel.scrollWidth - carousel.clientWidth) {
+    // If scrolling past the last item, wrap around to the first
+    carousel.scrollTo({
+      left: 0,
+      behavior: 'smooth'
+    });
+  } else {
+    // Otherwise, scroll normally
+    carousel.scrollBy({
+      left: direction === 'next' ? scrollAmount : -scrollAmount,
+      behavior: 'smooth'
+    });
+  }
+}
