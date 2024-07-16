@@ -323,9 +323,9 @@ section {
 .details-container {
   flex: 1 1 calc(50% - 1rem);
   padding: 1rem;
-  background-color: #ebba8d;
+  background-color: #ffd2a8;
   border-radius: 2rem;
-  border: 0.1rem solid rgba(255, 255, 255, 0.4);
+  border: 0.4rem solid rgba(255, 255, 255, 0.532);
   text-align: center;
   box-sizing: border-box;
 }
