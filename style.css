@@ -296,15 +296,16 @@ section {
 
 
 .about-pic {
-  border-radius: 25%;
-  border: 0.6cap solid white;
+  border-radius: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  /* border: 0.0cap solid white; */
   /* Border width */
 }
 
 
 @media screen and (min-width: 768px) {
   .about-pic {
-    border-radius: 5rem;
+    border-radius: 50rem;
   }
 }
 
