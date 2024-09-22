@@ -8,9 +8,9 @@ function changeRole() {
     currentRoleIndex = (currentRoleIndex + 1) % roles.length;
     document.getElementById('role').innerText = roles[currentRoleIndex];
     document.getElementById('role').style.opacity = '1';
-  }, 500); 
+  }, 500);
 }
-setInterval(changeRole, 2000); 
+setInterval(changeRole, 2000);
 
 
 function toggleMenu() {
@@ -77,3 +77,22 @@ function scrollCarousel(direction) {
   }
 }
 
+// Array of profile pictures
+const profilePics = [
+  './assets/Untitled design (1).png',
+  './assets/Untitled design (2).png',
+  './assets/Untitled design (4).png',
+  './assets/Untitled design.png',
+];
+
+let currentIndex = 0;
+const profileImageElement = document.getElementById('profile-pic');
+
+// Function to change the profile picture every second
+function changeProfilePicture() {
+  currentIndex = (currentIndex + 1) % profilePics.length; // Cycle through the images
+  profileImageElement.src = profilePics[currentIndex];
+}
+
+// Change the profile picture every 1 second (1000ms)
+setInterval(changeProfilePicture, 500);
