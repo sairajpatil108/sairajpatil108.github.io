@@ -1,501 +1,889 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="mediaqueries.css" />
+  <title>OS Programming Answers</title>
   <style>
-    #role {
-      transition: opacity 0.5s ease-in-out;
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    h2 {
+      margin-top: 30px;
+      border-bottom: 1px solid #ccc;
+    }
+
+    pre {
+      background: #f4f4f4;
+      padding: 10px;
+      overflow-x: auto;
+    }
+
+    button {
+      display: block;
+      margin: 20px auto;
+      padding: 10px 20px;
+      font-size: 16px;
     }
   </style>
 </head>
 
-<body class="body">
-  <nav id="desktop-nav">
-    <div class="logo">Sairaj Patil</div>
-    <div>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#certifications">Certifications</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </div>
-  </nav>
-  <nav id="hamburger-nav">
-    <div class="logo">Sairaj Patil</div>
-    <div class="hamburger-menu">
-      <div class="hamburger-icon" onclick="toggleMenu()">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-      <div class="menu-links">
-        <li><a href="#about" onclick="toggleMenu()">About</a></li>
-        <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-        <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-        <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-      </div>
-    </div>
-  </nav>
-  <section id="profile">
-    <div class="section__pic-container">
-      <img src="./assets/profile1.png" alt="Profile picture" class="about-pic" id="profile-pic" />
-    </div>
-    <div class="section__text">
-      <p class="section__text__p1">Hello, I'm</p>
-      <h1 class="title">Sairaj</h1>
-      <p class="section__text__p2">Software Developer</p>
-      <p>
-      <h4 class="Role" id="role">Android Developer</h4>
-      </p>
-      <br>
-      <div class="btn-container">
-        <button class="download-cv-btn-color btn btn-color-2"
-          onclick="window.open('https://drive.google.com/file/d/1v-Pb0VuKXhG6WnXRhrQ9iG385fLxvKmk/view?usp=sharing')">
-          Download CV
-        </button>
-        <button class="contact-info-btn-color btn btn-color-2 " onclick="location.href='./#contact'">
-          Contact Info
-        </button>
-      </div>
-      <div id="socials-container">
-        <img src="./assets/linkedin logo.png" alt="My LinkedIn profile" class="icon"
-          onclick="window.open('https://www.linkedin.com/in/sairajpatil108/')" />
-        <img src="./assets/github.png" alt="My Github profile" class="icon"
-          onclick="window.open('https://github.com/sairajpatil108')" />
-        <img src="./assets/GoogleDeveloper.png" width="45px" alt="My Github profile" class="icon"
-          onclick="window.open('https://developers.google.com/profile/u/sairajpatil108')" />
-        <img src="./assets/icons8-leetcode-96.png" alt="My leetcode profile" class=" icon"
-          onclick="window.open('https://leetcode.com/sairajpatil108/')" />
-        <img src="./assets/google cloud logo.png" alt="My leetcode profile" class=" icon"
-          onclick="window.open('https://www.cloudskillsboost.google/public_profiles/372a8e89-a961-4e3d-aa55-3311de5c539b')" />
-        <img src="./assets/coursera logo.png" alt="My leetcode profile" class=" icon"
-          onclick="window.open('https://www.coursera.org/user/cbbcdd32bef60224fd6b86ba12af9fe8')" />
-      </div>
-    </div>
-  </section>
-  <section id="about">
-    <p class="section__text__p1">Get To Know More</p>
-    <h1 class="title">About Me</h1>
-    <!-- <div class="section-container">
-      <div class="section__pic-container">
-        <img src="./assets/profile1.png" alt="Profile picture" class="about-pic" />
-      </div> -->
-    <div class="about-details-container">
-      <div class="about-containers">
-        <div class="about-details-container">
-          <h2 class="section-title">Professional Journey</h2>
-          <div class="timeline-container">
-            <div class="timeline-item">
-              <span class="timeline-date">Jan 2024 - Present</span>
-              <div class="timeline-content">
-                <h3 class="timeline-title">
-                  <img src="./assets/experience.png" alt="Experience icon" class="icon" />
-                  Android (Kotlin) Developer Intern
-                </h3>
-                <div class="timeline-company">@ScriptAnalytica</div>
-                <div class="timeline-description">
-                  Working on Android app development using Kotlin and modern Android development practices.
-                </div>
-                <div>
-                  <span class="badge">Kotlin</span>
-                  <span class="badge">Android SDK</span>
-                  <span class="badge">Material Design</span>
-                </div>
-              </div>
-            </div>
+<body>
+  <h1>Operating System Programming Answers</h1>
 
-            <div class="timeline-item">
-              <span class="timeline-date">Aug 2023 - Present</span>
-              <div class="timeline-content">
-                <h3 class="timeline-title">
-                  <img src="./assets/experience.png" alt="Experience icon" class="icon" />
-                  Executive Member @GoogleDSC
-                </h3>
-                <div class="timeline-company">Flutter Domain</div>
-                <div class="timeline-description">
-                  Leading Flutter development initiatives and mentoring fellow students in mobile app development.
-                </div>
-                <div>
-                  <span class="badge">Flutter</span>
-                  <span class="badge">Dart</span>
-                  <span class="badge">Cross-platform</span>
-                </div>
-              </div>
-            </div>
+  <button onclick="downloadAll()">Download All Answers</button>
 
-            <div class="timeline-item">
-              <span class="timeline-date">Jun 2023 - Aug 2023</span>
-              <div class="timeline-content">
-                <h3 class="timeline-title">
-                  <img src="./assets/experience.png" alt="Experience icon" class="icon" />
-                  Android Development Educational Internship
-                </h3>
-                <div class="timeline-company">AICTE and EduSkills</div>
-                <div class="timeline-description">
-                  Completed intensive training in Android development fundamentals and best practices.
-                </div>
-                <div>
-                  <span class="badge">Android</span>
-                  <span class="badge">Java</span>
-                  <span class="badge">Mobile Development</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+  <h2>1. Linux Commands Simulation</h2>
+  <pre><code>import java.io.*;
 
-        <div class="education-container">
-          <h2 class="section-title">Education</h2>
-          <div class="education-card">
-            <div class="education-header">
-              <div class="degree-info">
-                <img src="./assets/education.png" alt="Education icon" class="icon" />
-                <div>
-                  <h3 class="degree">Bachelor of Technology in Computer Engineering</h3>
-                  <div class="institute">Pimpri Chinchwad College of Engineering, Pune</div>
-                  <div class="duration">2022 - 2026</div>
-                </div>
-              </div>
+public class LinuxCommandsSimulation {
+    public static void main(String[] args) {
+        // Simulating 'cp' command
+        try {
+            ProcessBuilder pb = new ProcessBuilder("cp", "source.txt", "destination.txt");
+            Process p = pb.start();
+            int status = p.waitFor();
+            System.out.println("cp command exited with status: " + status);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
-            </div>
+        // Simulating 'grep' command
+        try {
+            ProcessBuilder pb = new ProcessBuilder("grep", "pattern", "file.txt");
+            Process p = pb.start();
+            BufferedReader reader = new BufferedReader(new InputStreamReader(p.getInputStream()));
+            String line;
+            while ((line = reader.readLine()) != null) {
+                System.out.println(line);
+            }
+            int status = p.waitFor();
+            System.out.println("grep command exited with status: " + status);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
-            <div class="education-details">
-              <p>Major in Computer Science with focus on Software Engineering and Mobile Development. Currently in third
-                year, gaining expertise in various programming languages and development frameworks.</p>
+        // Using fork() equivalent in Java (not exact equivalent)
+        System.out.println("Parent PID: " + ProcessHandle.current().pid());
+        new Thread(() -> {
+            System.out.println("Child Thread PID would be different in actual fork()");
+            System.exit(0);
+        }).start();
+    }
+}</code></pre>
 
-              <div class="key-courses">
-                <h4>Key Courses</h4>
-                <div class="badge-container">
-                  <span class="badge">Data Structures & Algorithms</span>
-                  <span class="badge">Mobile App Development</span>
-                  <span class="badge">Database Management</span>
-                  <span class="badge">Web Technologies</span>
-                  <span class="badge">Software Engineering</span>
-                  <span class="badge">Computer Networks</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    </div>
-    <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#experience'" />
-  </section>
-  <section id="About">
-    <div class="text-container">
-      <p>
-        Hello,
-        I've been drawn to technology since I was young, captivated by the glow of a computer screen. Now,
-        as a B.Tech Computer Science student, my passion for the field has only grown stronger.
-        I breathe life into code, weaving intricate patterns of logic with
-        Java,
-        C++, Python, and Kotlin. But it's not just about the lines of code; it's about the stories they tell.
-        Each app I craft, from sleek user interfaces to secure mobile applications using Flutter and Android,
-        is a chapter in my journey.
+  <h2>2. Scheduling Algorithms</h2>
+  <pre><code>import java.util.*;
 
-        As a cybersecurity enthusiast, I see myself as a digital guardian, tirelessly fortifying systems against the
-        ever-looming threats of our online world. But my quest for knowledge doesn't stop there. Like a perennial
-        student,
-        I'm always hungry for more, diving deep into the latest tech trends and emerging technologies. Yet,
-        amidst the bytes and bits, I hold onto a belief: technology is a catalyst for positive change.
-        Whether it's simplifying everyday tasks with intuitive mobile apps or pushing the boundaries of innovation
-        with
-        cutting-edge technologies, I strive to make a difference.
+public class SchedulingAlgorithms {
+    
+    // FCFS Scheduling
+    public static void fcfs(int[] burstTimes) {
+        int n = burstTimes.length;
+        int[] waitingTimes = new int[n];
+        int[] turnaroundTimes = new int[n];
+        
+        waitingTimes[0] = 0;
+        turnaroundTimes[0] = burstTimes[0];
+        
+        for (int i = 1; i < n; i++) {
+            waitingTimes[i] = waitingTimes[i-1] + burstTimes[i-1];
+            turnaroundTimes[i] = waitingTimes[i] + burstTimes[i];
+        }
+        
+        System.out.println("FCFS Scheduling:");
+        printResults(waitingTimes, turnaroundTimes);
+    }
+    
+    // SJF Scheduling
+    public static void sjf(int[] burstTimes) {
+        int n = burstTimes.length;
+        int[] waitingTimes = new int[n];
+        int[] turnaroundTimes = new int[n];
+        int[] sortedBurst = burstTimes.clone();
+        Arrays.sort(sortedBurst);
+        
+        waitingTimes[0] = 0;
+        turnaroundTimes[0] = sortedBurst[0];
+        
+        for (int i = 1; i < n; i++) {
+            waitingTimes[i] = waitingTimes[i-1] + sortedBurst[i-1];
+            turnaroundTimes[i] = waitingTimes[i] + sortedBurst[i];
+        }
+        
+        System.out.println("SJF Scheduling:");
+        printResults(waitingTimes, turnaroundTimes);
+    }
+    
+    // Round Robin Scheduling
+    public static void roundRobin(int[] burstTimes, int quantum) {
+        int n = burstTimes.length;
+        int[] remainingTime = burstTimes.clone();
+        int[] waitingTimes = new int[n];
+        int currentTime = 0;
+        boolean done;
+        
+        do {
+            done = true;
+            for (int i = 0; i < n; i++) {
+                if (remainingTime[i] > 0) {
+                    done = false;
+                    if (remainingTime[i] > quantum) {
+                        currentTime += quantum;
+                        remainingTime[i] -= quantum;
+                    } else {
+                        currentTime += remainingTime[i];
+                        waitingTimes[i] = currentTime - burstTimes[i];
+                        remainingTime[i] = 0;
+                    }
+                }
+            }
+        } while (!done);
+        
+        int[] turnaroundTimes = new int[n];
+        for (int i = 0; i < n; i++) {
+            turnaroundTimes[i] = burstTimes[i] + waitingTimes[i];
+        }
+        
+        System.out.println("Round Robin Scheduling:");
+        printResults(waitingTimes, turnaroundTimes);
+    }
+    
+    // Priority Scheduling
+    public static void priority(int[] burstTimes, int[] priorities) {
+        int n = burstTimes.length;
+        int[] waitingTimes = new int[n];
+        int[] turnaroundTimes = new int[n];
+        
+        // Sort processes by priority (assuming lower number is higher priority)
+        Integer[] indices = new Integer[n];
+        for (int i = 0; i < n; i++) indices[i] = i;
+        Arrays.sort(indices, (a, b) -> priorities[a] - priorities[b]);
+        
+        waitingTimes[indices[0]] = 0;
+        turnaroundTimes[indices[0]] = burstTimes[indices[0]];
+        
+        for (int i = 1; i < n; i++) {
+            waitingTimes[indices[i]] = waitingTimes[indices[i-1]] + burstTimes[indices[i-1]];
+            turnaroundTimes[indices[i]]] = waitingTimes[indices[i]] + burstTimes[indices[i]];
+        }
+        
+        System.out.println("Priority Scheduling:");
+        printResults(waitingTimes, turnaroundTimes);
+    }
+    
+    private static void printResults(int[] waitingTimes, int[] turnaroundTimes) {
+        System.out.println("Process\tWaiting Time\tTurnaround Time");
+        for (int i = 0; i < waitingTimes.length; i++) {
+            System.out.println((i+1) + "\t" + waitingTimes[i] + "\t\t" + turnaroundTimes[i]);
+        }
+        System.out.println();
+    }
+    
+    public static void main(String[] args) {
+        int[] burstTimes = {10, 5, 8};
+        int[] priorities = {2, 1, 3};
+        
+        fcfs(burstTimes);
+        sjf(burstTimes);
+        roundRobin(burstTimes, 2);
+        priority(burstTimes, priorities);
+    }
+}</code></pre>
 
-        But what truly ignites my fire is collaboration. Like pieces of a puzzle, diverse perspectives come together
-        in a symphony of creativity. With a collaborative spirit and strong communication skills, I thrive in
-        environments
-        where ideas flow freely, where every voice is heard. And as I stand at the threshold of the future, I am
-        eager for
-        the adventures that lie ahead. I seek not just opportunities, but journeys—journeys where I can contribute
-        meaningfully, learn from the best, and together, shape the future of technology.
-      </p>
-    </div>
-  </section>
-  <section id="experience">
-    <p class="section__text__p1">Explore My</p>
-    <h1 class="title">Tech Stack Experience</h1>
-    <div class="experience-details-container">
-      <div class="about-containers">
-        <div class="details-container">
-          <h2 class="experience-sub-title">Languages</h2>
-          <div class="article-container">
-            <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-              <div>
-                <h3>Java</h3>
-                <p>Experienced</p>
-              </div>
-            </article>
-            <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-              <div>
-                <h3>Python</h3>
-                <p>Intermediate</p>
-              </div>
-            </article>
-            <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-              <div>
-                <h3>Kotlin</h3>
-                <p>Experienced</p>
-              </div>
-            </article>
-            <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-              <div>
-                <h3>C/C++</h3>
-                <p>Experienced</p>
-              </div>
-            </article>
-            <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-              <div>
-                <h3>Dart</h3>
-                <p>Intermediate</p>
-              </div>
-            </article>
-          </div>
-        </div>
-        <div class="details-container">
-          <h2 class="experience-sub-title">Developement</h2>
-          <div class="article-container">
-            <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-              <div>
-                <h3>Flutter</h3>
-                <p>Intermediate</p>
-              </div>
-            </article>
-            <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-              <div>
-                <h3>Android</h3>
-                <h6>(Jetpack Compose)</h6>
-                <p>Intermediate</p>
-              </div>
-            </article>
-            <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-              <div>
-                <h3>SQL</h3>
-                <h6>(MySQL,Oracle SQL)</h6>
-                <p>Intermediate</p>
-              </div>
-            </article>
-            <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-              <div>
-                <h3>Firebase</h3>
-                <p>Basic</p>
-              </div>
-            </article>
-            <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-              <div>
-                <h3>HTML/CSS</h3>
-                <p>Basic</p>
-              </div>
-            </article>
-          </div>
-        </div>
-        <div class="details-container">
-          <h2 class="experience-sub-title">Developer Tools</h2>
-          <div class="article-container">
-            <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-              <div>
-                <h3>Linux</h3>
-                <p>Experienced</p>
-              </div>
-            </article>
-            <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-              <div>
-                <h3>GitHub</h3>
-                <p>Intermediate</p>
-              </div>
-            </article>
-            <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-              <div>
-                <h3>Android Studio</h3>
-                <p>Experienced</p>
-              </div>
-            </article>
-            <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-              <div>
-                <h3>Postman</h3>
-                <p>Experienced</p>
-              </div>
-            </article>
-            <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-              <div>
-                <h3>Figma</h3>
-                <p>Basic</p>
-              </div>
-            </article>
-          </div>
-        </div>
-      </div>
-    </div>
-    <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#projects'" />
-  </section>
+  <h2>3. IPC using Pipes and Redirection</h2>
+  <pre><code>import java.io.*;
 
-  <br><br><br><br>
-  <section id="projects">
-    <p class="section__text__p1">Browse My Recent</p>
-    <h1 class="title">Projects</h1>
-    <div class="experience-details-container">
-      <div class="about-containers">
-        <div class="details-container color-container">
-          <div class="article-container">
-            <img src="./assets/DigiPanchatyat (1).png" alt="DigiPanchatyat" class="project-img" />
-          </div>
-          <h2 class="experience-sub-title project-title">DigiPanchatyat</h2>
-          <div class="btn-container">
-            <button class="btn btn-color-2" onclick="window.open('https://github.com/sairajpatil108/digiPanchayat')">
-              Github
-            </button>
-          </div>
-        </div>
-        <div class="details-container color-container">
-          <div class="article-container">
-            <img src="./assets/NoteIt.png" alt="NoteIt" class="project-img" />
-          </div>
-          <h2 class="experience-sub-title project-title">NoteIt</h2>
-          <div class="btn-container">
-            <button class="btn btn-color-2" onclick="window.open('https://github.com/sairajpatil108/noteit')">
-              Github
-            </button>
-          </div>
-        </div>
-        <div class="details-container color-container">
-          <div class="article-container">
-            <img src="./assets/VisonaryAI.png" alt="VisionaryAI" class="project-img" />
-          </div>
-          <h2 class="experience-sub-title project-title">VisionaryAI</h2>
-          <div class="btn-container">
-            <button class="btn btn-color-2" onclick="window.open('https://github.com/sairajpatil108/VisionaryAI')">
-              Github
-            </button>
-          </div>
-        </div>
-        <div class="details-container color-container">
-          <div class="article-container">
-            <img src="./assets/SkyForecast.png" alt="SkyForecast" class="project-img" />
-          </div>
-          <h2 class="experience-sub-title project-title">SkyForecast</h2>
-          <div class="btn-container">
-            <button class="btn btn-color-2" onclick="window.open('https://github.com/sairajpatil108/Weather-App')">
-              Github
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-    </div>
-    <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#contact'" />
-  </section>
+public class IPCExample {
+    public static void main(String[] args) throws IOException {
+        // Using ProcessBuilder for pipe simulation
+        ProcessBuilder pb1 = new ProcessBuilder("echo", "Hello from process 1");
+        ProcessBuilder pb2 = new ProcessBuilder("grep", "Hello");
+        
+        // Redirect output of pb1 to input of pb2
+        Process p1 = pb1.start();
+        InputStream p1Output = p1.getInputStream();
+        pb2.redirectInput(ProcessBuilder.Redirect.PIPE);
+        pb2.redirectOutput(ProcessBuilder.Redirect.INHERIT);
+        Process p2 = pb2.start();
+        
+        // Write p1 output to p2 input
+        OutputStream p2Input = p2.getOutputStream();
+        byte[] buffer = new byte[1024];
+        int bytesRead;
+        while ((bytesRead = p1Output.read(buffer)) != -1) {
+            p2Input.write(buffer, 0, bytesRead);
+        }
+        p2Input.close();
+        
+        try {
+            p1.waitFor();
+            p2.waitFor();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        
+        System.out.println("Processes completed");
+        
+        // Simple redirection example
+        ProcessBuilder pb = new ProcessBuilder("ls", "-l");
+        File outputFile = new File("output.txt");
+        pb.redirectOutput(outputFile);
+        Process p = pb.start();
+        try {
+            p.waitFor();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        System.out.println("Output redirected to output.txt");
+    }
+}</code></pre>
 
-  <br><br><br><br>
+  <h2>4. Reader-Writer Problem</h2>
+  <pre><code>import java.util.concurrent.*;
 
+public class ReaderWriterProblem {
+    private static Semaphore readLock = new Semaphore(1);
+    private static Semaphore writeLock = new Semaphore(1);
+    private static int readCount = 0;
+    private static int sharedData = 0;
+    
+    static class Reader implements Runnable {
+        private int id;
+        
+        public Reader(int id) {
+            this.id = id;
+        }
+        
+        @Override
+        public void run() {
+            try {
+                // Acquire read lock
+                readLock.acquire();
+                readCount++;
+                if (readCount == 1) {
+                    writeLock.acquire();
+                }
+                readLock.release();
+                
+                // Reading
+                System.out.println("Reader " + id + " reads: " + sharedData);
+                Thread.sleep(100);
+                
+                // Release read lock
+                readLock.acquire();
+                readCount--;
+                if (readCount == 0) {
+                    writeLock.release();
+                }
+                readLock.release();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+    
+    static class Writer implements Runnable {
+        private int id;
+        
+        public Writer(int id) {
+            this.id = id;
+        }
+        
+        @Override
+        public void run() {
+            try {
+                writeLock.acquire();
+                
+                // Writing
+                sharedData++;
+                System.out.println("Writer " + id + " writes: " + sharedData);
+                Thread.sleep(100);
+                
+                writeLock.release();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+    
+    public static void main(String[] args) {
+        ExecutorService executor = Executors.newFixedThreadPool(5);
+        
+        // Create readers and writers
+        for (int i = 0; i < 3; i++) {
+            executor.execute(new Reader(i));
+            executor.execute(new Writer(i));
+        }
+        
+        executor.shutdown();
+        try {
+            executor.awaitTermination(5, TimeUnit.SECONDS);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        
+        System.out.println("\nWithout synchronization:");
+        // Similar code but without semaphores would lead to race conditions
+    }
+}</code></pre>
 
-  <section id="certifications">
-    <p class="section__text__p1">Check Out My</p>
-    <h1 class="title">Certifications</h1>
-    <div class="carousel-container">
-      <div class="carousel">
-        <div class="carousel-item">
-          <img src="./assets/AI essentials_page-0001.jpg" alt="AI Essentials Certificate">
-        </div>
-        <div class="carousel-item">
-          <img src="./assets/Assets, Threats, and Vulnerabilities_page-0001.jpg" alt="Python Certificate">
-        </div>
-        <div class="carousel-item">
-          <img src="./assets/connect and protect computer networks_page-0001.jpg" alt="Final Certificate">
-        </div>
-        <div class="carousel-item">
-          <img src="./assets/final certificate_page-0001.jpg" alt="Final Certificate">
-        </div>
-        <div class="carousel-item">
-          <img src="./assets/fundamentals of UI-UX certificate_page-0001.jpg" alt="Final Certificate">
-        </div>
-        <div class="carousel-item">
-          <img src="./assets/intro to generative ai_page-0001.jpg" alt="Final Certificate">
-        </div>
-        <div class="carousel-item">
-          <img src="./assets/introduction to cybersecurity_page-0001.jpg" alt="Final Certificate">
-        </div>
-        <div class="carousel-item">
-          <img src="./assets/linux and SQL certificatate_page-0001.jpg" alt="Final Certificate">
-        </div>
-        <div class="carousel-item">
-          <img src="./assets/play it safe Manage security risks_page-0001.jpg" alt="Final Certificate">
-        </div>
-        <div class="carousel-item">
-          <img src="./assets/python certificate_page-0001.jpg" alt="Final Certificate">
-        </div>
-        <div class="carousel-item">
-          <img src="./assets/Sound the Alarm Detection and Response_page-0001.jpg" alt="Final Certificate">
-        </div>
-        <div class="carousel-item">
-          <img src="./assets/designing for user experiance_page-0001.jpg" alt="Final Certificate">
-        </div>
-        <div class="carousel-item">
-          <img src="./assets/scalar SQL certificate.png" alt="Final Certificate">
-        </div>
-        <div class="carousel-item">
-          <img src="./assets/postman certificate-1.jpg" alt="Final Certificate">
-        </div>
-        <!-- Add more carousel items as needed -->
-      </div>
-    </div>
-  </section>
+  <h2>5. Banker's Algorithm</h2>
+  <pre><code>import java.util.*;
 
-  <br><br><br><br>
+public class BankersAlgorithm {
+    private int[][] need;
+    private int[][] allocation;
+    private int[] available;
+    private int[] work;
+    private boolean[] finish;
+    private int numProcesses;
+    private int numResources;
+    
+    public BankersAlgorithm(int[][] max, int[][] allocation, int[] available) {
+        this.numProcesses = max.length;
+        this.numResources = available.length;
+        this.allocation = allocation;
+        this.available = available;
+        this.work = Arrays.copyOf(available, available.length);
+        this.finish = new boolean[numProcesses];
+        this.need = new int[numProcesses][numResources];
+        
+        // Calculate need matrix
+        for (int i = 0; i < numProcesses; i++) {
+            for (int j = 0; j < numResources; j++) {
+                need[i][j] = max[i][j] - allocation[i][j];
+            }
+        }
+    }
+    
+    public boolean isSafe() {
+        // Initialize work and finish
+        System.arraycopy(available, 0, work, 0, numResources);
+        Arrays.fill(finish, false);
+        
+        int[] safeSequence = new int[numProcesses];
+        int count = 0;
+        
+        while (count < numProcesses) {
+            boolean found = false;
+            
+            for (int i = 0; i < numProcesses; i++) {
+                if (!finish[i] && checkNeedLessThanWork(i)) {
+                    // Process can complete
+                    for (int j = 0; j < numResources; j++) {
+                        work[j] += allocation[i][j];
+                    }
+                    safeSequence[count] = i;
+                    finish[i] = true;
+                    count++;
+                    found = true;
+                }
+            }
+            
+            if (!found) {
+                // No process found that can complete
+                System.out.println("System is not in safe state");
+                return false;
+            }
+        }
+        
+        System.out.println("System is in safe state");
+        System.out.print("Safe sequence: ");
+        for (int i = 0; i < numProcesses; i++) {
+            System.out.print("P" + safeSequence[i] + " ");
+        }
+        System.out.println();
+        return true;
+    }
+    
+    private boolean checkNeedLessThanWork(int process) {
+        for (int i = 0; i < numResources; i++) {
+            if (need[process][i] > work[i]) {
+                return false;
+            }
+        }
+        return true;
+    }
+    
+    public boolean requestResources(int process, int[] request) {
+        // Check if request <= need
+        for (int i = 0; i < numResources; i++) {
+            if (request[i] > need[process][i]) {
+                System.out.println("Error: Process has exceeded maximum claim");
+                return false;
+            }
+        }
+        
+        // Check if request <= available
+        for (int i = 0; i < numResources; i++) {
+            if (request[i] > available[i]) {
+                System.out.println("Process must wait, resources not available");
+                return false;
+            }
+        }
+        
+        // Try to allocate
+        for (int i = 0; i < numResources; i++) {
+            available[i] -= request[i];
+            allocation[process][i] += request[i];
+            need[process][i] -= request[i];
+        }
+        
+        // Check if new state is safe
+        if (isSafe()) {
+            return true;
+        } else {
+            // Rollback
+            for (int i = 0; i < numResources; i++) {
+                available[i] += request[i];
+                allocation[process][i] -= request[i];
+                need[process][i] += request[i];
+            }
+            System.out.println("Request denied - would lead to unsafe state");
+            return false;
+        }
+    }
+    
+    public static void main(String[] args) {
+        // Example from book
+        int[][] max = {
+            {7, 5, 3},
+            {3, 2, 2},
+            {9, 0, 2},
+            {2, 2, 2},
+            {4, 3, 3}
+        };
+        
+        int[][] allocation = {
+            {0, 1, 0},
+            {2, 0, 0},
+            {3, 0, 2},
+            {2, 1, 1},
+            {0, 0, 2}
+        };
+        
+        int[] available = {3, 3, 2};
+        
+        BankersAlgorithm banker = new BankersAlgorithm(max, allocation, available);
+        banker.isSafe();
+        
+        // Test resource request
+        int[] request = {1, 0, 2};
+        System.out.println("\nTesting resource request P1 (1, 0, 2):");
+        banker.requestResources(1, request);
+    }
+}</code></pre>
 
-  <section id="contact">
-    <p class="section__text__p1">Get in Touch</p>
-    <h1 class="title">Contact Me</h1>
-    <div class="contact-info-upper-container">
-      <div class="contact-info-container">
-        <a href="mailto:sairajpatil108@gmail.com">
-          <img src="./assets/email.png" alt="Email icon" class="icon contact-icon email-icon" />
-        </a>
-        <p><a href="mailto:sairajpatil108@gmail.com">sairajpatil108@gmail.com</a></p>
-      </div>
-      <div class="contact-info-container">
-        <img src="./assets/linkedin.png" alt="LinkedIn icon" class="icon contact-icon" />
-        <p><a href="https://www.linkedin.com/in/sairajpatil108/">LinkedIn</a></p>
-      </div>
-    </div>
-  </section>
-  <footer>
-    <nav>
-      <div class="nav-links-container">
-        <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
-    </nav>
-    <p>Copyright &#169; 2023 Sairaj Patil. All Rights Reserved.</p>
-  </footer>
-  <script src="script.js"></script>
+  <h2>6. Memory Allocation Techniques</h2>
+  <pre><code>import java.util.*;
+
+public class MemoryAllocation {
+    
+    // First Fit
+    public static void firstFit(int[] blockSizes, int[] processSizes) {
+        int m = blockSizes.length;
+        int n = processSizes.length;
+        int[] allocation = new int[n];
+        Arrays.fill(allocation, -1);
+        
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m; j++) {
+                if (blockSizes[j] >= processSizes[i]) {
+                    allocation[i] = j;
+                    blockSizes[j] -= processSizes[i];
+                    break;
+                }
+            }
+        }
+        
+        printAllocation("First Fit", processSizes, allocation, blockSizes);
+    }
+    
+    // Best Fit
+    public static void bestFit(int[] blockSizes, int[] processSizes) {
+        int m = blockSizes.length;
+        int n = processSizes.length;
+        int[] allocation = new int[n];
+        Arrays.fill(allocation, -1);
+        
+        for (int i = 0; i < n; i++) {
+            int bestIdx = -1;
+            for (int j = 0; j < m; j++) {
+                if (blockSizes[j] >= processSizes[i]) {
+                    if (bestIdx == -1 || blockSizes[j] < blockSizes[bestIdx]) {
+                        bestIdx = j;
+                    }
+                }
+            }
+            
+            if (bestIdx != -1) {
+                allocation[i] = bestIdx;
+                blockSizes[bestIdx] -= processSizes[i];
+            }
+        }
+        
+        printAllocation("Best Fit", processSizes, allocation, blockSizes);
+    }
+    
+    // Next Fit
+    public static void nextFit(int[] blockSizes, int[] processSizes) {
+        int m = blockSizes.length;
+        int n = processSizes.length;
+        int[] allocation = new int[n];
+        Arrays.fill(allocation, -1);
+        int j = 0;
+        
+        for (int i = 0; i < n; i++) {
+            int count = 0;
+            while (count < m) {
+                if (blockSizes[j] >= processSizes[i]) {
+                    allocation[i] = j;
+                    blockSizes[j] -= processSizes[i];
+                    break;
+                }
+                j = (j + 1) % m;
+                count++;
+            }
+        }
+        
+        printAllocation("Next Fit", processSizes, allocation, blockSizes);
+    }
+    
+    // Worst Fit
+    public static void worstFit(int[] blockSizes, int[] processSizes) {
+        int m = blockSizes.length;
+        int n = processSizes.length;
+        int[] allocation = new int[n];
+        Arrays.fill(allocation, -1);
+        
+        for (int i = 0; i < n; i++) {
+            int worstIdx = -1;
+            for (int j = 0; j < m; j++) {
+                if (blockSizes[j] >= processSizes[i]) {
+                    if (worstIdx == -1 || blockSizes[j] > blockSizes[worstIdx]) {
+                        worstIdx = j;
+                    }
+                }
+            }
+            
+            if (worstIdx != -1) {
+                allocation[i] = worstIdx;
+                blockSizes[worstIdx] -= processSizes[i];
+            }
+        }
+        
+        printAllocation("Worst Fit", processSizes, allocation, blockSizes);
+    }
+    
+    private static void printAllocation(String strategy, int[] processSizes, int[] allocation, int[] blockSizes) {
+        System.out.println("\n" + strategy + " Allocation:");
+        System.out.println("Process No.\tProcess Size\tBlock No.");
+        for (int i = 0; i < allocation.length; i++) {
+            System.out.print(" " + (i+1) + "\t\t" + processSizes[i] + "\t\t");
+            if (allocation[i] != -1) {
+                System.out.print(allocation[i] + 1);
+            } else {
+                System.out.print("Not Allocated");
+            }
+            System.out.println();
+        }
+        
+        System.out.println("\nRemaining block sizes:");
+        for (int i = 0; i < blockSizes.length; i++) {
+            System.out.println("Block " + (i+1) + ": " + blockSizes[i]);
+        }
+    }
+    
+    public static void main(String[] args) {
+        int[] blockSizes = {100, 500, 200, 300, 600};
+        int[] processSizes = {212, 417, 112, 426};
+        
+        // Make copies for each algorithm since they modify the array
+        firstFit(Arrays.copyOf(blockSizes, blockSizes.length), Arrays.copyOf(processSizes, processSizes.length));
+        bestFit(Arrays.copyOf(blockSizes, blockSizes.length), Arrays.copyOf(processSizes, processSizes.length));
+        nextFit(Arrays.copyOf(blockSizes, blockSizes.length), Arrays.copyOf(processSizes, processSizes.length));
+        worstFit(Arrays.copyOf(blockSizes, blockSizes.length), Arrays.copyOf(processSizes, processSizes.length));
+    }
+}</code></pre>
+
+  <h2>7. Page Replacement Algorithms</h2>
+  <pre><code>import java.util.*;
+
+public class PageReplacement {
+    
+    // FIFO Page Replacement
+    public static int fifo(int[] pages, int capacity) {
+        Queue<Integer> queue = new LinkedList<>();
+        HashSet<Integer> set = new HashSet<>();
+        int pageFaults = 0;
+        
+        for (int page : pages) {
+            if (!set.contains(page)) {
+                pageFaults++;
+                if (queue.size() == capacity) {
+                    int oldest = queue.poll();
+                    set.remove(oldest);
+                }
+                queue.add(page);
+                set.add(page);
+            }
+        }
+        
+        return pageFaults;
+    }
+    
+    // LRU Page Replacement
+    public static int lru(int[] pages, int capacity) {
+        HashSet<Integer> set = new HashSet<>();
+        HashMap<Integer, Integer> indexes = new HashMap<>();
+        int pageFaults = 0;
+        
+        for (int i = 0; i < pages.length; i++) {
+            int page = pages[i];
+            if (!set.contains(page)) {
+                pageFaults++;
+                if (set.size() == capacity) {
+                    int lru = Integer.MAX_VALUE;
+                    int val = Integer.MIN_VALUE;
+                    
+                    for (int p : set) {
+                        if (indexes.get(p) < lru) {
+                            lru = indexes.get(p);
+                            val = p;
+                        }
+                    }
+                    
+                    set.remove(val);
+                }
+                set.add(page);
+            }
+            indexes.put(page, i);
+        }
+        
+        return pageFaults;
+    }
+    
+    // Optimal Page Replacement
+    public static int optimal(int[] pages, int capacity) {
+        HashSet<Integer> set = new HashSet<>();
+        int pageFaults = 0;
+        
+        for (int i = 0; i < pages.length; i++) {
+            int page = pages[i];
+            if (!set.contains(page)) {
+                pageFaults++;
+                if (set.size() == capacity) {
+                    int farthest = -1;
+                    int victim = -1;
+                    
+                    for (int p : set) {
+                        int j;
+                        for (j = i + 1; j < pages.length; j++) {
+                            if (p == pages[j]) {
+                                if (j > farthest) {
+                                    farthest = j;
+                                    victim = p;
+                                }
+                                break;
+                            }
+                        }
+                        if (j == pages.length) {
+                            victim = p;
+                            break;
+                        }
+                    }
+                    
+                    set.remove(victim);
+                }
+                set.add(page);
+            }
+        }
+        
+        return pageFaults;
+    }
+    
+    public static void main(String[] args) {
+        int[] pages = {7, 0, 1, 2, 0, 3, 0, 4, 2, 3, 0, 3, 2};
+        int capacity = 4;
+        
+        System.out.println("FIFO Page Faults: " + fifo(pages, capacity));
+        System.out.println("LRU Page Faults: " + lru(pages, capacity));
+        System.out.println("Optimal Page Faults: " + optimal(pages, capacity));
+    }
+}</code></pre>
+
+  <h2>8. Disk Scheduling Algorithms</h2>
+  <pre><code>import java.util.*;
+
+public class DiskScheduling {
+    
+    // FIFO (FCFS)
+    public static int fifo(int[] requests, int head) {
+        int totalMovement = 0;
+        int current = head;
+        
+        for (int request : requests) {
+            totalMovement += Math.abs(request - current);
+            current = request;
+        }
+        
+        return totalMovement;
+    }
+    
+    // SSTF (Shortest Seek Time First)
+    public static int sstf(int[] requests, int head) {
+        List<Integer> remainingRequests = new ArrayList<>();
+        for (int request : requests) {
+            remainingRequests.add(request);
+        }
+        
+        int totalMovement = 0;
+        int current = head;
+        
+        while (!remainingRequests.isEmpty()) {
+            int closest = findClosest(remainingRequests, current);
+            totalMovement += Math.abs(closest - current);
+            current = closest;
+            remainingRequests.remove(Integer.valueOf(closest));
+        }
+        
+        return totalMovement;
+    }
+    
+    private static int findClosest(List<Integer> requests, int current) {
+        int closest = requests.get(0);
+        int minDistance = Math.abs(closest - current);
+        
+        for (int request : requests) {
+            int distance = Math.abs(request - current);
+            if (distance < minDistance) {
+                minDistance = distance;
+                closest = request;
+            }
+        }
+        
+        return closest;
+    }
+    
+    // SCAN (Elevator)
+    public static int scan(int[] requests, int head, int diskSize, boolean movingRight) {
+        List<Integer> left = new ArrayList<>();
+        List<Integer> right = new ArrayList<>();
+        
+        for (int request : requests) {
+            if (request < head) {
+                left.add(request);
+            } else {
+                right.add(request);
+            }
+        }
+        
+        Collections.sort(left);
+        Collections.sort(right);
+        
+        int totalMovement = 0;
+        int current = head;
+        
+        if (movingRight) {
+            for (int request : right) {
+                totalMovement += request - current;
+                current = request;
+            }
+            totalMovement += diskSize - 1 - current;
+            current = diskSize - 1;
+            
+            for (int i = left.size() - 1; i >= 0; i--) {
+                totalMovement += current - left.get(i);
+                current = left.get(i);
+            }
+        } else {
+            for (int i = left.size() - 1; i >= 0; i--) {
+                totalMovement += current - left.get(i);
+                current = left.get(i);
+            }
+            totalMovement += current;
+            current = 0;
+            
+            for (int request : right) {
+                totalMovement += request - current;
+                current = request;
+            }
+        }
+        
+        return totalMovement;
+    }
+    
+    // C-SCAN (Circular SCAN)
+    public static int cscan(int[] requests, int head, int diskSize) {
+        List<Integer> left = new ArrayList<>();
+        List<Integer> right = new ArrayList<>();
+        
+        for (int request : requests) {
+            if (request < head) {
+                left.add(request);
+            } else {
+                right.add(request);
+            }
+        }
+        
+        Collections.sort(left);
+        Collections.sort(right);
+        
+        int totalMovement = 0;
+        int current = head;
+        
+        for (int request : right) {
+            totalMovement += request - current;
+            current = request;
+        }
+        totalMovement += diskSize - 1 - current;
+        totalMovement += diskSize - 1;
+        current = 0;
+        
+        for (int request : left) {
+            totalMovement += request - current;
+            current = request;
+        }
+        
+        return totalMovement;
+    }
+    
+    public static void main(String[] args) {
+        int[] requests = {98, 183, 37, 122, 14, 124, 65, 67};
+        int head = 53;
+        int diskSize = 200;
+        
+        System.out.println("FIFO Total Head Movement: " + fifo(requests, head));
+        System.out.println("SSTF Total Head Movement: " + sstf(requests, head));
+        System.out.println("SCAN Total Head Movement: " + scan(requests, head, diskSize, true));
+        System.out.println("C-SCAN Total Head Movement: " + cscan(requests, head, diskSize));
+    }
+}</code></pre>
+
+  <script>
+    function downloadAll() {
+      const content = document.documentElement.outerHTML;
+      const blob = new Blob([content], { type: 'text/html' });
+      const url = URL.createObjectURL(blob);
+
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'os_programming_answers.html';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    }
+  </script>
 </body>
 
 </html>
