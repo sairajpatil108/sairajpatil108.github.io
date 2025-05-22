@@ -2,48 +2,500 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Windows Download</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0px;
-        }
-
-        button {
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-            background-color: #0078d7;
-            color: white;
-            border: none;
-            border-radius: 4px;
-        }
-
-        button:hover {
-            background-color: #005a9e;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="mediaqueries.css" />
+  <style>
+    #role {
+      transition: opacity 0.5s ease-in-out;
+    }
+  </style>
 </head>
 
-<body>
-    <button id="downloadBtn">Download Windows Files</button>
+<body class="body">
+  <nav id="desktop-nav">
+    <div class="logo">Sairaj Patil</div>
+    <div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  <nav id="hamburger-nav">
+    <div class="logo">Sairaj Patil</div>
+    <div class="hamburger-menu">
+      <div class="hamburger-icon" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="menu-links">
+        <li><a href="#about" onclick="toggleMenu()">About</a></li>
+        <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+        <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+        <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+      </div>
+    </div>
+  </nav>
+  <section id="profile">
+    <div class="section__pic-container">
+      <img src="./assets/profile1.png" alt="Profile picture" class="about-pic" id="profile-pic" />
+    </div>
+    <div class="section__text">
+      <p class="section__text__p1">Hello, I'm</p>
+      <h1 class="title">Sairaj</h1>
+      <p class="section__text__p2">Software Developer</p>
+      <p>
+      <h4 class="Role" id="role">Android Developer</h4>
+      </p>
+      <br>
+      <div class="btn-container">
+        <button class="download-cv-btn-color btn btn-color-2"
+          onclick="window.open('https://drive.google.com/file/d/1v-Pb0VuKXhG6WnXRhrQ9iG385fLxvKmk/view?usp=sharing')">
+          Download CV
+        </button>
+        <button class="contact-info-btn-color btn btn-color-2 " onclick="location.href='./#contact'">
+          Contact Info
+        </button>
+      </div>
+      <div id="socials-container">
+        <img src="./assets/linkedin logo.png" alt="My LinkedIn profile" class="icon"
+          onclick="window.open('https://www.linkedin.com/in/sairajpatil108/')" />
+        <img src="./assets/github.png" alt="My Github profile" class="icon"
+          onclick="window.open('https://github.com/sairajpatil108')" />
+        <img src="./assets/GoogleDeveloper.png" width="45px" alt="My Github profile" class="icon"
+          onclick="window.open('https://developers.google.com/profile/u/sairajpatil108')" />
+        <img src="./assets/icons8-leetcode-96.png" alt="My leetcode profile" class=" icon"
+          onclick="window.open('https://leetcode.com/sairajpatil108/')" />
+        <img src="./assets/google cloud logo.png" alt="My leetcode profile" class=" icon"
+          onclick="window.open('https://www.cloudskillsboost.google/public_profiles/372a8e89-a961-4e3d-aa55-3311de5c539b')" />
+        <img src="./assets/coursera logo.png" alt="My leetcode profile" class=" icon"
+          onclick="window.open('https://www.coursera.org/user/cbbcdd32bef60224fd6b86ba12af9fe8')" />
+      </div>
+    </div>
+  </section>
+  <section id="about">
+    <p class="section__text__p1">Get To Know More</p>
+    <h1 class="title">About Me</h1>
+    <!-- <div class="section-container">
+      <div class="section__pic-container">
+        <img src="./assets/profile1.png" alt="Profile picture" class="about-pic" />
+      </div> -->
+    <div class="about-details-container">
+      <div class="about-containers">
+        <div class="about-details-container">
+          <h2 class="section-title">Professional Journey</h2>
+          <div class="timeline-container">
+            <div class="timeline-item">
+              <span class="timeline-date">Jan 2024 - Present</span>
+              <div class="timeline-content">
+                <h3 class="timeline-title">
+                  <img src="./assets/experience.png" alt="Experience icon" class="icon" />
+                  Android (Kotlin) Developer Intern
+                </h3>
+                <div class="timeline-company">@ScriptAnalytica</div>
+                <div class="timeline-description">
+                  Working on Android app development using Kotlin and modern Android development practices.
+                </div>
+                <div>
+                  <span class="badge">Kotlin</span>
+                  <span class="badge">Android SDK</span>
+                  <span class="badge">Material Design</span>
+                </div>
+              </div>
+            </div>
 
-    <script>
-        document.getElementById('downloadBtn').addEventListener('click', function () {
-            // Create a link to the zip file
-            const a = document.createElement("a");
-            a.href = "windows.zip"; // This assumes you've zipped your windows folder
-            a.download = "windows.zip";
-            document.body.appendChild(a);
-            a.click();
-            setTimeout(function () {
-                document.body.removeChild(a);
-            }, 0);
-        });
-    </script>
+            <div class="timeline-item">
+              <span class="timeline-date">Aug 2023 - Present</span>
+              <div class="timeline-content">
+                <h3 class="timeline-title">
+                  <img src="./assets/experience.png" alt="Experience icon" class="icon" />
+                  Executive Member @GoogleDSC
+                </h3>
+                <div class="timeline-company">Flutter Domain</div>
+                <div class="timeline-description">
+                  Leading Flutter development initiatives and mentoring fellow students in mobile app development.
+                </div>
+                <div>
+                  <span class="badge">Flutter</span>
+                  <span class="badge">Dart</span>
+                  <span class="badge">Cross-platform</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <span class="timeline-date">Jun 2023 - Aug 2023</span>
+              <div class="timeline-content">
+                <h3 class="timeline-title">
+                  <img src="./assets/experience.png" alt="Experience icon" class="icon" />
+                  Android Development Educational Internship
+                </h3>
+                <div class="timeline-company">AICTE and EduSkills</div>
+                <div class="timeline-description">
+                  Completed intensive training in Android development fundamentals and best practices.
+                </div>
+                <div>
+                  <span class="badge">Android</span>
+                  <span class="badge">Java</span>
+                  <span class="badge">Mobile Development</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="education-container">
+          <h2 class="section-title">Education</h2>
+          <div class="education-card">
+            <div class="education-header">
+              <div class="degree-info">
+                <img src="./assets/education.png" alt="Education icon" class="icon" />
+                <div>
+                  <h3 class="degree">Bachelor of Technology in Computer Engineering</h3>
+                  <div class="institute">Pimpri Chinchwad College of Engineering, Pune</div>
+                  <div class="duration">2022 - 2026</div>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="education-details">
+              <p>Major in Computer Science with focus on Software Engineering and Mobile Development. Currently in third
+                year, gaining expertise in various programming languages and development frameworks.</p>
+
+              <div class="key-courses">
+                <h4>Key Courses</h4>
+                <div class="badge-container">
+                  <span class="badge">Data Structures & Algorithms</span>
+                  <span class="badge">Mobile App Development</span>
+                  <span class="badge">Database Management</span>
+                  <span class="badge">Web Technologies</span>
+                  <span class="badge">Software Engineering</span>
+                  <span class="badge">Computer Networks</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#experience'" />
+  </section>
+  <section id="About">
+    <div class="text-container">
+      <p>
+        Hello,
+        I've been drawn to technology since I was young, captivated by the glow of a computer screen. Now,
+        as a B.Tech Computer Science student, my passion for the field has only grown stronger.
+        I breathe life into code, weaving intricate patterns of logic with
+        Java,
+        C++, Python, and Kotlin. But it's not just about the lines of code; it's about the stories they tell.
+        Each app I craft, from sleek user interfaces to secure mobile applications using Flutter and Android,
+        is a chapter in my journey.
+
+        As a cybersecurity enthusiast, I see myself as a digital guardian, tirelessly fortifying systems against the
+        ever-looming threats of our online world. But my quest for knowledge doesn't stop there. Like a perennial
+        student,
+        I'm always hungry for more, diving deep into the latest tech trends and emerging technologies. Yet,
+        amidst the bytes and bits, I hold onto a belief: technology is a catalyst for positive change.
+        Whether it's simplifying everyday tasks with intuitive mobile apps or pushing the boundaries of innovation
+        with
+        cutting-edge technologies, I strive to make a difference.
+
+        But what truly ignites my fire is collaboration. Like pieces of a puzzle, diverse perspectives come together
+        in a symphony of creativity. With a collaborative spirit and strong communication skills, I thrive in
+        environments
+        where ideas flow freely, where every voice is heard. And as I stand at the threshold of the future, I am
+        eager for
+        the adventures that lie ahead. I seek not just opportunities, but journeys—journeys where I can contribute
+        meaningfully, learn from the best, and together, shape the future of technology.
+      </p>
+    </div>
+  </section>
+  <section id="experience">
+    <p class="section__text__p1">Explore My</p>
+    <h1 class="title">Tech Stack Experience</h1>
+    <div class="experience-details-container">
+      <div class="about-containers">
+        <div class="details-container">
+          <h2 class="experience-sub-title">Languages</h2>
+          <div class="article-container">
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Java</h3>
+                <p>Experienced</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Python</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Kotlin</h3>
+                <p>Experienced</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>C/C++</h3>
+                <p>Experienced</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Dart</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+          </div>
+        </div>
+        <div class="details-container">
+          <h2 class="experience-sub-title">Developement</h2>
+          <div class="article-container">
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Flutter</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Android</h3>
+                <h6>(Jetpack Compose)</h6>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>SQL</h3>
+                <h6>(MySQL,Oracle SQL)</h6>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Firebase</h3>
+                <p>Basic</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>HTML/CSS</h3>
+                <p>Basic</p>
+              </div>
+            </article>
+          </div>
+        </div>
+        <div class="details-container">
+          <h2 class="experience-sub-title">Developer Tools</h2>
+          <div class="article-container">
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Linux</h3>
+                <p>Experienced</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>GitHub</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Android Studio</h3>
+                <p>Experienced</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Postman</h3>
+                <p>Experienced</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Figma</h3>
+                <p>Basic</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+    <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#projects'" />
+  </section>
+
+  <br><br><br><br>
+  <section id="projects">
+    <p class="section__text__p1">Browse My Recent</p>
+    <h1 class="title">Projects</h1>
+    <div class="experience-details-container">
+      <div class="about-containers">
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img src="./assets/DigiPanchatyat (1).png" alt="DigiPanchatyat" class="project-img" />
+          </div>
+          <h2 class="experience-sub-title project-title">DigiPanchatyat</h2>
+          <div class="btn-container">
+            <button class="btn btn-color-2" onclick="window.open('https://github.com/sairajpatil108/digiPanchayat')">
+              Github
+            </button>
+          </div>
+        </div>
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img src="./assets/NoteIt.png" alt="NoteIt" class="project-img" />
+          </div>
+          <h2 class="experience-sub-title project-title">NoteIt</h2>
+          <div class="btn-container">
+            <button class="btn btn-color-2" onclick="window.open('https://github.com/sairajpatil108/noteit')">
+              Github
+            </button>
+          </div>
+        </div>
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img src="./assets/VisonaryAI.png" alt="VisionaryAI" class="project-img" />
+          </div>
+          <h2 class="experience-sub-title project-title">VisionaryAI</h2>
+          <div class="btn-container">
+            <button class="btn btn-color-2" onclick="window.open('https://github.com/sairajpatil108/VisionaryAI')">
+              Github
+            </button>
+          </div>
+        </div>
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img src="./assets/SkyForecast.png" alt="SkyForecast" class="project-img" />
+          </div>
+          <h2 class="experience-sub-title project-title">SkyForecast</h2>
+          <div class="btn-container">
+            <button class="btn btn-color-2" onclick="window.open('https://github.com/sairajpatil108/Weather-App')">
+              Github
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#contact'" />
+  </section>
+
+  <br><br><br><br>
+
+
+  <section id="certifications">
+    <p class="section__text__p1">Check Out My</p>
+    <h1 class="title">Certifications</h1>
+    <div class="carousel-container">
+      <div class="carousel">
+        <div class="carousel-item">
+          <img src="./assets/AI essentials_page-0001.jpg" alt="AI Essentials Certificate">
+        </div>
+        <div class="carousel-item">
+          <img src="./assets/Assets, Threats, and Vulnerabilities_page-0001.jpg" alt="Python Certificate">
+        </div>
+        <div class="carousel-item">
+          <img src="./assets/connect and protect computer networks_page-0001.jpg" alt="Final Certificate">
+        </div>
+        <div class="carousel-item">
+          <img src="./assets/final certificate_page-0001.jpg" alt="Final Certificate">
+        </div>
+        <div class="carousel-item">
+          <img src="./assets/fundamentals of UI-UX certificate_page-0001.jpg" alt="Final Certificate">
+        </div>
+        <div class="carousel-item">
+          <img src="./assets/intro to generative ai_page-0001.jpg" alt="Final Certificate">
+        </div>
+        <div class="carousel-item">
+          <img src="./assets/introduction to cybersecurity_page-0001.jpg" alt="Final Certificate">
+        </div>
+        <div class="carousel-item">
+          <img src="./assets/linux and SQL certificatate_page-0001.jpg" alt="Final Certificate">
+        </div>
+        <div class="carousel-item">
+          <img src="./assets/play it safe Manage security risks_page-0001.jpg" alt="Final Certificate">
+        </div>
+        <div class="carousel-item">
+          <img src="./assets/python certificate_page-0001.jpg" alt="Final Certificate">
+        </div>
+        <div class="carousel-item">
+          <img src="./assets/Sound the Alarm Detection and Response_page-0001.jpg" alt="Final Certificate">
+        </div>
+        <div class="carousel-item">
+          <img src="./assets/designing for user experiance_page-0001.jpg" alt="Final Certificate">
+        </div>
+        <div class="carousel-item">
+          <img src="./assets/scalar SQL certificate.png" alt="Final Certificate">
+        </div>
+        <div class="carousel-item">
+          <img src="./assets/postman certificate-1.jpg" alt="Final Certificate">
+        </div>
+        <!-- Add more carousel items as needed -->
+      </div>
+    </div>
+  </section>
+
+  <br><br><br><br>
+
+  <section id="contact">
+    <p class="section__text__p1">Get in Touch</p>
+    <h1 class="title">Contact Me</h1>
+    <div class="contact-info-upper-container">
+      <div class="contact-info-container">
+        <a href="mailto:sairajpatil108@gmail.com">
+          <img src="./assets/email.png" alt="Email icon" class="icon contact-icon email-icon" />
+        </a>
+        <p><a href="mailto:sairajpatil108@gmail.com">sairajpatil108@gmail.com</a></p>
+      </div>
+      <div class="contact-info-container">
+        <img src="./assets/linkedin.png" alt="LinkedIn icon" class="icon contact-icon" />
+        <p><a href="https://www.linkedin.com/in/sairajpatil108/">LinkedIn</a></p>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <nav>
+      <div class="nav-links-container">
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <p>Copyright &#169; 2023 Sairaj Patil. All Rights Reserved.</p>
+  </footer>
+  <script src="script.js"></script>
 </body>
 
 </html>
