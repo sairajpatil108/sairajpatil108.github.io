@@ -1,0 +1,148 @@
+{
+    "designSystem": {
+        "colors": {
+            "primary": "#FF7F2E",
+            "secondary": "#1E1E1E",
+            "background": "#FFFFFF",
+            "neutralDark": "#333333",
+            "neutralLight": "#F4F4F4",
+            "textPrimary": "#000000",
+            "textSecondary": "#666666"
+        },
+        "typography": {
+            "fontFamily": [
+                "Poppins",
+                "sans-serif"
+            ],
+            "headingLarge": {
+                "fontSize": "48px",
+                "fontWeight": "700",
+                "lineHeight": "1.2"
+            },
+            "headingMedium": {
+                "fontSize": "36px",
+                "fontWeight": "600"
+            },
+            "headingSmall": {
+                "fontSize": "24px",
+                "fontWeight": "600"
+            },
+            "bodyLarge": {
+                "fontSize": "18px",
+                "fontWeight": "400"
+            },
+            "bodySmall": {
+                "fontSize": "14px",
+                "fontWeight": "400"
+            },
+            "emphasis": {
+                "fontSize": "20px",
+                "fontWeight": "700",
+                "color": "#FF7F2E"
+            }
+        },
+        "buttons": {
+            "primary": {
+                "backgroundColor": "#FF7F2E",
+                "textColor": "#FFFFFF",
+                "borderRadius": "30px",
+                "padding": "12px 24px",
+                "fontWeight": "600",
+                "hoverEffect": "opacity-90"
+            },
+            "secondary": {
+                "backgroundColor": "transparent",
+                "border": "1px solid #FF7F2E",
+                "textColor": "#FF7F2E",
+                "borderRadius": "30px",
+                "padding": "12px 24px"
+            }
+        },
+        "layout": {
+            "header": {
+                "type": "fixed",
+                "height": "80px",
+                "backgroundColor": "#1E1E1E",
+                "padding": "0 40px",
+                "logoAlignment": "center",
+                "menuAlignment": "right",
+                "menuSpacing": "24px"
+            },
+            "hero": {
+                "alignment": "center",
+                "imagePosition": "center",
+                "imageShape": "circularBackground",
+                "textAlignment": "center",
+                "buttonGroup": "horizontal"
+            },
+            "sections": [
+                {
+                    "name": "services",
+                    "background": {
+                        "type": "gradient",
+                        "pattern": "diagonal abstract waves with floating elements"
+                    },
+                    "cardStyle": {
+                        "backgroundColor": "#FFFFFF",
+                        "boxShadow": "0px 4px 20px rgba(0,0,0,0.1)",
+                        "borderRadius": "16px",
+                        "imageTop": true,
+                        "hoverAnimation": "scaleUp",
+                        "icon": {
+                            "shape": "circle",
+                            "backgroundColor": "#1E1E1E",
+                            "iconColor": "#FFFFFF"
+                        }
+                    }
+                },
+                {
+                    "name": "workExperience",
+                    "layout": "twoColumn",
+                    "background": "#FFFFFF",
+                    "divider": {
+                        "type": "dotted",
+                        "color": "#FF7F2E"
+                    }
+                }
+            ]
+        },
+        "components": {
+            "testimonialBox": {
+                "icon": "quote",
+                "alignment": "left",
+                "fontStyle": "italic",
+                "size": "small"
+            },
+            "experienceTimeline": {
+                "type": "horizontal",
+                "dotColor": "#FF7F2E",
+                "lineColor": "#E0E0E0",
+                "textAlign": "center"
+            },
+            "carousel": {
+                "cardCountVisible": 3,
+                "navigation": "dot",
+                "buttonStyle": {
+                    "shape": "circle",
+                    "backgroundColor": "#1E1E1E",
+                    "iconColor": "#FFFFFF"
+                }
+            }
+        },
+        "icons": {
+            "style": "outlined",
+            "color": "#FF7F2E",
+            "size": "24px"
+        },
+        "imagery": {
+            "style": "realistic cutout with colored circular background",
+            "accentShapes": "abstract soft blobs",
+            "usage": "supportive visual next to hero or cards"
+        },
+        "effects": {
+            "shadow": "0px 10px 30px rgba(0, 0, 0, 0.05)",
+            "hoverCardLift": "translateY(-8px)",
+            "transition": "all 0.3s ease-in-out"
+        }
+    }
+}

@@ -3,9 +3,11 @@
     height: 83vh;
     margin-bottom: 6rem;
   }
+
   .about-containers {
     flex-wrap: wrap;
   }
+
   #contact,
   #projects {
     height: fit-content;
@@ -14,90 +16,521 @@
 
 @media screen and (max-width: 1200px) {
   #desktop-nav {
-    display: none;
-  }
-  #hamburger-nav {
     display: flex;
   }
+
+  #hamburger-nav {
+    display: none !important;
+  }
+
   #experience,
   .experience-details-container {
     margin-top: 2rem;
   }
+
   #profile,
   .section-container {
     display: block;
   }
+
   .arrow {
     display: none;
   }
+
   section,
   .section-container {
     height: fit-content;
   }
+
   section {
     margin: 0 5%;
+    padding-top: 120px;
   }
+
   .section__pic-container {
     width: 275px;
     height: 275px;
     margin: 0 auto 2rem;
+    aspect-ratio: 1 / 1;
   }
+
   .about-containers {
     margin-top: 0;
+  }
+
+  .title {
+    font-size: 36px;
+  }
+
+  .section__text__p2 {
+    font-size: 20px;
+  }
+
+  .Role {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #desktop-nav {
+    display: flex;
+  }
+
+  #hamburger-nav {
+    display: none !important;
+  }
+
+  nav {
+    padding: 0 20px;
+    width: 95%;
+    height: 60px;
+    bottom: 20px;
+  }
+
+  .logo {
+    font-size: 24px;
+  }
+
+  .nav-links {
+    gap: 12px;
+    font-size: 14px;
+  }
+
+  nav a {
+    font-size: 14px;
+    padding: 6px 10px;
+  }
+
+  section {
+    margin: 0 2rem;
+    padding-top: 100px;
+  }
+
+  .section__pic-container {
+    width: 140px;
+    height: 140px;
+    aspect-ratio: 1 / 1;
+    justify-content: center;
+  }
+
+  .title {
+    font-size: 32px;
+  }
+
+  .section__text__p2 {
+    font-size: 18px;
+  }
+
+  .Role {
+    font-size: 16px;
+  }
+
+  .btn {
+    font-size: 14px;
+    padding: 10px 20px;
+    min-width: 120px;
+  }
+
+  .details-container {
+    padding: 1.5rem;
+    flex: 1 1 100%;
+    margin-bottom: 2rem;
+  }
+
+  .experience-sub-title {
+    font-size: 24px;
+  }
+
+  .article-container {
+    gap: 0.8rem;
+  }
+
+  article {
+    width: 100px;
+    height: 100px;
+    padding: 0.8rem;
+  }
+
+  article h3 {
+    font-size: 12px;
+  }
+
+  article h6 {
+    font-size: 10px;
+  }
+
+  article p {
+    font-size: 11px;
+  }
+
+  .timeline-container {
+    padding-left: 60px;
+  }
+
+  .timeline-container::before {
+    left: 52px;
+    width: 12px;
+  }
+
+  .timeline-container::after {
+    left: 56px;
+    width: 4px;
+  }
+
+  .timeline-item {
+    margin-left: 2rem;
+  }
+
+  .timeline-item::before {
+    display: none;
+  }
+
+  .timeline-date {
+    position: relative;
+    left: -4rem;
+    top: -1rem;
+    margin-bottom: 1rem;
+    display: inline-block;
+    min-width: 110px;
+    font-size: 11px;
+    transform: rotate(-5deg);
+  }
+
+  .timeline-content {
+    padding: 1.2rem;
+  }
+
+  .section-title {
+    font-size: 28px;
+  }
+
+  .education-card {
+    padding: 1.5rem;
+  }
+
+  .education-header {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .degree {
+    font-size: 20px;
+  }
+
+  /* Mobile Navigation Improvements */
+  .hamburger-icon {
+    height: 28px;
+    width: 35px;
+    padding: 6px;
+  }
+
+  .hamburger-icon span {
+    height: 3px;
+  }
+
+  .menu-links {
+    width: 250px;
+    right: -20px;
+    top: 130%;
+    border-radius: 20px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+  }
+
+  .menu-links a {
+    padding: 18px 24px;
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  .menu-links a:hover {
+    padding-left: 32px;
+    background: rgba(255, 127, 46, 0.15);
+  }
+
+  /* Carousel mobile styles */
+  .carousel-container {
+    max-width: 95%;
+  }
+
+  .carousel-item {
+    width: 350px;
+    height: 245px;
+  }
+
+  .carousel-nav {
+    margin-top: 1.5rem;
+  }
+
+  .carousel-btn {
+    width: 45px;
+    height: 45px;
+    font-size: 18px;
+  }
+
+  .carousel-indicators {
+    margin-top: 1.5rem;
+  }
+
+  /* Project cards responsive */
+  .about-containers {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .details-container {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .color-container {
+    height: 450px;
+    padding: 1.5rem;
+  }
+
+  .color-container .btn-container {
+    padding-top: 1rem;
+    margin-top: auto;
+  }
+
+  .color-container .btn {
+    width: 100px;
+    padding: 8px 16px;
+    font-size: 13px;
+  }
+
+  .project-img {
+    height: 220px;
+  }
+
+  .project-title {
+    font-size: 20px;
+    margin: 0.8rem 0 0.3rem 0;
   }
 }
 
 @media screen and (max-width: 600px) {
+  #desktop-nav {
+    display: flex;
+  }
+
+  #hamburger-nav {
+    display: none !important;
+  }
+
+  nav {
+    width: 96%;
+    padding: 0 10px;
+    height: 55px;
+    bottom: 16px;
+  }
+
+  .logo {
+    font-size: 20px;
+  }
+
   #contact,
   footer {
     height: 40vh;
   }
+
   #profile {
     height: 83vh;
     margin-bottom: 0;
   }
+
   article {
-    font-size: 1rem;
+    font-size: 16px;
   }
+
   footer nav {
     height: fit-content;
     margin-bottom: 2rem;
   }
+
   .about-containers,
   .contact-info-upper-container,
   .btn-container {
     flex-wrap: wrap;
   }
+
   .contact-info-container {
     margin: 0;
   }
+
   .contact-info-container p,
   .nav-links li a {
-    font-size: 1rem;
+    font-size: 16px;
   }
+
   .experience-sub-title {
-    font-size: 1.25rem;
+    font-size: 20px;
   }
-  .logo {
-    font-size: 1.5rem;
-  }
+
   .nav-links {
-    flex-direction: column;
-    gap: 0.5rem;
+    flex-direction: row;
+    gap: 0.1rem;
     text-align: center;
+    font-size: 10px;
+    justify-content: space-between;
+    width: 100%;
   }
+
+  nav a {
+    font-size: 10px;
+    padding: 4px 6px;
+    white-space: nowrap;
+  }
+
   .section__pic-container {
     width: auto;
     height: 46vw;
     justify-content: center;
   }
+
   .section__text__p2 {
-    font-size: 1.25rem;
+    font-size: 16px;
   }
+
   .title {
-    font-size: 2rem;
+    font-size: 28px;
   }
+
   .text-container {
     text-align: justify;
+    padding: 1rem;
+  }
+
+  .text-container p {
+    font-size: 16px;
+  }
+
+  .carousel-container {
+    max-width: 98%;
+  }
+
+  .btn-container:not(.color-container .btn-container) {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn:not(.color-container .btn) {
+    width: 100%;
+    max-width: 200px;
+  }
+
+  section {
+    padding-top: 90px;
+  }
+
+  /* Mobile Navigation Improvements for Small Screens */
+  .hamburger-icon {
+    height: 26px;
+    width: 32px;
+    padding: 5px;
+  }
+
+  .hamburger-icon span {
+    height: 2.5px;
+  }
+
+  .menu-links {
+    width: 220px;
+    right: -15px;
+    top: 125%;
+  }
+
+  .menu-links a {
+    padding: 16px 20px;
+    font-size: 15px;
+    font-weight: 600;
+  }
+
+  .menu-links a:hover {
+    padding-left: 28px;
+  }
+
+  /* Carousel mobile styles */
+  .carousel-item {
+    width: 320px;
+    height: 224px;
+  }
+
+  .carousel-nav {
+    margin-top: 1rem;
+  }
+
+  .carousel-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+
+  .carousel-indicators {
+    margin-top: 1rem;
+  }
+
+  .carousel-indicator {
+    width: 10px;
+    height: 10px;
+  }
+
+  /* Project cards responsive for small screens */
+  .details-container {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .color-container {
+    height: 420px;
+    padding: 1.5rem;
+  }
+
+  .color-container .btn-container {
+    padding-top: 0.8rem;
+    margin-top: auto;
+  }
+
+  .color-container .btn {
+    width: 90px;
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+
+  .project-img {
+    height: 200px;
+  }
+
+  .project-title {
+    font-size: 18px;
+    margin: 0.6rem 0 0.2rem 0;
+  }
+
+  /* Tech stack responsive for small screens */
+  .article-container {
+    gap: 0.6rem;
+  }
+
+  article {
+    width: 90px;
+    height: 90px;
+    padding: 0.6rem;
+  }
+
+  article .icon {
+    width: 32px;
+    height: 32px;
+    padding: 6px;
+  }
+
+  article h3 {
+    font-size: 11px;
+  }
+
+  article h6 {
+    font-size: 9px;
+  }
+
+  article p {
+    font-size: 10px;
   }
 }
