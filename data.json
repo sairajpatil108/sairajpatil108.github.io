@@ -57,12 +57,13 @@
             "period": "Apr 2025 – Present",
             "title": "Product Engineer",
             "company": "TellMe Digiinfotech Pvt. Ltd.",
-            "description": "Built a VR video streaming web experience for proprietary content; developed an immersive game for the Digital Museum of Bhopal; contributed to secure coding practices and architecture; supported engineering with code reviews, implementation strategies, and R&D in performance and security.",
+            "description": "Leading end-to-end development of a mobile app that streams VR (360°) videos—our primary channel for monetizing proprietary content. Earlier developed an immersive game for the Digital Museum of Bhopal. Contribute to secure coding practices, architecture, code reviews, implementation strategies, and ongoing R&D in performance and security.",
             "technologies": [
-                "Web",
-                "VR",
-                "Security",
-                "R&D"
+                "Mobile",
+                "Android",
+                "VR Streaming",
+                "Monetization",
+                "Security"
             ]
         },
         {
