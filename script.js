@@ -9,8 +9,7 @@ async function loadPortfolioData() {
     initializeWebsite();
   } catch (error) {
     console.error('Error loading portfolio data:', error);
-    // Fallback to original hardcoded values if JSON fails to load
-    initializeFallback();
+    // If JSON fails to load, the website will still work with static HTML content
   }
 }
 
@@ -20,7 +19,6 @@ function initializeWebsite() {
 
   populatePersonalInfo();
   populateSocialLinks();
-  populateAboutSection();
   populateProfessionalJourney();
   populateEducation();
   populateTechStack();
@@ -28,7 +26,7 @@ function initializeWebsite() {
   populateCertifications();
   populateContact();
   initializeRoleRotation();
-  initializeProfileImageRotation();
+  setStaticProfileImage();
   initCarousel();
 }
 
@@ -42,8 +40,8 @@ function populatePersonalInfo() {
   // Update title
   document.querySelector('.section__text__p2').textContent = personal.title;
 
-  // Update main profile image
-  document.getElementById('profile-pic').src = personal.mainProfileImage;
+  // Set static profile image
+  document.getElementById('profile-pic').src = './assets/Untitled design.png';
 
   // Update CV link
   document.querySelector('.download-cv-btn-color').onclick = () => {
@@ -71,14 +69,7 @@ function populateSocialLinks() {
   });
 }
 
-// Populate about section
-function populateAboutSection() {
-  const { about } = portfolioData;
-  const aboutTextContainer = document.querySelector('#About .text-container p');
-  if (aboutTextContainer) {
-    aboutTextContainer.textContent = about.description;
-  }
-}
+
 
 // Function to generate trees throughout the timeline
 function generateTimelineTrees() {
@@ -425,53 +416,15 @@ function initializeRoleRotation() {
   setInterval(changeRole, 2000);
 }
 
-// Initialize profile image rotation with JSON data
-function initializeProfileImageRotation() {
-  const profilePics = portfolioData.personal.profileImages;
-  let currentIndex = 0;
+// Set static profile image
+function setStaticProfileImage() {
   const profileImageElement = document.getElementById('profile-pic');
-
-  function changeProfilePicture() {
-    currentIndex = (currentIndex + 1) % profilePics.length;
-    profileImageElement.src = profilePics[currentIndex];
+  if (profileImageElement) {
+    profileImageElement.src = './assets/Untitled design.png';
   }
-
-  setInterval(changeProfilePicture, 500);
 }
 
-// Fallback initialization with original hardcoded values
-function initializeFallback() {
-  const roles = ["Android Developer", "Cross Platform App Developer", "Cybersecurity Analyst", "Java Developer"];
-  let currentRoleIndex = 0;
 
-  function changeRole() {
-    document.getElementById('role').style.opacity = '0';
-    setTimeout(() => {
-      currentRoleIndex = (currentRoleIndex + 1) % roles.length;
-      document.getElementById('role').innerText = roles[currentRoleIndex];
-      document.getElementById('role').style.opacity = '1';
-    }, 500);
-  }
-  setInterval(changeRole, 2000);
-
-  const profilePics = [
-    './assets/Untitled design (1).png',
-    './assets/Untitled design (2).png',
-    './assets/Untitled design (4).png',
-    './assets/Untitled design.png',
-  ];
-
-  let currentIndex = 0;
-  const profileImageElement = document.getElementById('profile-pic');
-
-  function changeProfilePicture() {
-    currentIndex = (currentIndex + 1) % profilePics.length;
-    profileImageElement.src = profilePics[currentIndex];
-  }
-
-  setInterval(changeProfilePicture, 500);
-  initCarousel();
-}
 
 // Toggle menu function
 function toggleMenu() {

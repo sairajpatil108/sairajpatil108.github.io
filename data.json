@@ -1,12 +1,12 @@
 {
     "personal": {
-        "name": "Sairaj",
+        "name": "Sairaj Patil",
         "title": "Software Developer",
         "roles": [
+            "Product Engineer",
             "Android Developer",
-            "Cross Platform App Developer",
-            "Cybersecurity Analyst",
-            "Java Developer"
+            "Flutter Developer",
+            "Cybersecurity Enthusiast"
         ],
         "profileImages": [
             "./assets/Untitled design (1).png",
@@ -15,7 +15,7 @@
             "./assets/Untitled design.png"
         ],
         "mainProfileImage": "./assets/profile1.png",
-        "cvLink": "https://drive.google.com/file/d/1v-Pb0VuKXhG6WnXRhrQ9iG385fLxvKmk/view?usp=sharing"
+        "cvLink": "https://drive.google.com/file/d/1DSyxwNKJJD-3nutCufKRX7hb1tpB-l8-/view?usp=sharing"
     },
     "socialLinks": [
         {
@@ -54,51 +54,66 @@
     },
     "professionalJourney": [
         {
-            "period": "Jan 2024 - Present",
-            "title": "Android (Kotlin) Developer Intern",
-            "company": "@ScriptAnalytica",
-            "description": "Working on Android app development using Kotlin and modern Android development practices.",
+            "period": "Apr 2025 – Present",
+            "title": "Product Engineer",
+            "company": "TellMe Digiinfotech Pvt. Ltd.",
+            "description": "Built a VR video streaming web experience for proprietary content; developed an immersive game for the Digital Museum of Bhopal; contributed to secure coding practices and architecture; supported engineering with code reviews, implementation strategies, and R&D in performance and security.",
+            "technologies": [
+                "Web",
+                "VR",
+                "Security",
+                "R&D"
+            ]
+        },
+        {
+            "period": "Jan 2025 – Apr 2025",
+            "title": "Mobile App Developer Intern",
+            "company": "Venoh Tech",
+            "description": "Designed and delivered a production-ready Android app with Kotlin and Jetpack Compose; implemented real-time communication and a secure payment gateway; defined coding standards and architecture; led Play Store deployment and post-release management.",
             "technologies": [
                 "Kotlin",
-                "Android SDK",
-                "Material Design"
+                "Jetpack Compose",
+                "Realtime",
+                "Payments"
             ]
         },
         {
-            "period": "Aug 2023 - Present",
-            "title": "Executive Member @GoogleDSC",
-            "company": "Flutter Domain",
-            "description": "Leading Flutter development initiatives and mentoring fellow students in mobile app development.",
+            "period": "Aug 2024 – Dec 2024",
+            "title": "Flutter Developer Intern",
+            "company": "ScriptAnalytica Technologies Pvt. Ltd.",
+            "description": "Migrated a native app to Flutter, reducing development cost by 50%; integrated Firebase Cloud Storage and secure payments.",
             "technologies": [
                 "Flutter",
-                "Dart",
-                "Cross-platform"
+                "Kotlin",
+                "Firebase",
+                "Payments"
             ]
         },
         {
-            "period": "Jun 2023 - Aug 2023",
-            "title": "Android Development Educational Internship",
-            "company": "AICTE and EduSkills",
-            "description": "Completed intensive training in Android development fundamentals and best practices.",
+            "period": "Sep 2024 – Present",
+            "title": "Android Head",
+            "company": "Google Developer Group on Campus, PCCOE",
+            "description": "Led Android development initiatives and mentored 50+ students on Kotlin and Jetpack Compose, increasing project completion rates by 30%.",
             "technologies": [
                 "Android",
-                "Java",
-                "Mobile Development"
+                "Kotlin",
+                "Jetpack Compose",
+                "Leadership"
             ]
         }
     ],
     "education": {
-        "degree": "Bachelor of Technology in Computer Engineering",
+        "degree": "Bachelor of Science in Computer Science",
         "institute": "Pimpri Chinchwad College of Engineering, Pune",
-        "duration": "2022 - 2026",
-        "description": "Major in Computer Science with focus on Software Engineering and Mobile Development. Currently in third year, gaining expertise in various programming languages and development frameworks.",
+        "duration": "Nov 2022 – Jun 2026",
+        "description": "B.Sc. in Computer Science focused on Software Engineering, Operating Systems, Computer Networks, and Mobile Development.",
         "keyCourses": [
-            "Data Structures & Algorithms",
-            "Mobile App Development",
-            "Database Management",
-            "Web Technologies",
+            "Data Structures and Algorithms",
             "Software Engineering",
-            "Computer Networks"
+            "Computer Networks",
+            "Database Management Systems",
+            "Object Oriented Programming",
+            "Operating Systems"
         ]
     },
     "techStack": {
@@ -150,8 +165,8 @@
         ],
         "tools": [
             {
-                "name": "Linux",
-                "level": "Experienced"
+                "name": "Git",
+                "level": "Intermediate"
             },
             {
                 "name": "GitHub",
@@ -162,35 +177,47 @@
                 "level": "Experienced"
             },
             {
+                "name": "IntelliJ IDEA",
+                "level": "Intermediate"
+            },
+            {
+                "name": "Jira",
+                "level": "Basic"
+            },
+            {
                 "name": "Postman",
                 "level": "Experienced"
             },
             {
                 "name": "Figma",
                 "level": "Basic"
+            },
+            {
+                "name": "Linux",
+                "level": "Experienced"
             }
         ]
     },
     "projects": [
+        {
+            "name": "Soilmaster",
+            "image": "./assets/Untitled design (1).png",
+            "githubUrl": "https://play.google.com/store/apps/details?id=com.towardimagination.soilmaster&hl=en-US"
+        },
+        {
+            "name": "Venoh",
+            "image": "./assets/Untitled design (2).png",
+            "githubUrl": "#"
+        },
         {
             "name": "DigiPanchatyat",
             "image": "./assets/DigiPanchatyat (1).png",
             "githubUrl": "https://github.com/sairajpatil108/digiPanchayat"
         },
         {
-            "name": "NoteIt",
-            "image": "./assets/NoteIt.png",
-            "githubUrl": "https://github.com/sairajpatil108/noteit"
-        },
-        {
-            "name": "VisionaryAI",
-            "image": "./assets/VisonaryAI.png",
-            "githubUrl": "https://github.com/sairajpatil108/VisionaryAI"
-        },
-        {
-            "name": "SkyForecast",
-            "image": "./assets/SkyForecast.png",
-            "githubUrl": "https://github.com/sairajpatil108/Weather-App"
+            "name": "The Secrets of Gwalior Fort",
+            "image": "./assets/Untitled design (4).png",
+            "githubUrl": "#"
         }
     ],
     "certifications": [
@@ -249,6 +276,10 @@
         {
             "name": "Postman Certificate",
             "image": "./assets/postman certificate-1.jpg"
+        },
+        {
+            "name": "Oracle Java Explorer",
+            "image": "./assets/oracle java explorer (2).png"
         }
     ],
     "contact": {

@@ -157,12 +157,15 @@ nav a:hover::after {
    4. Section Layout
 =================== */
 section {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: 60px;
+  padding-bottom: 60px;
   height: auto;
-  margin: 0 10rem;
+  margin: 0;
   box-sizing: border-box;
   min-height: fit-content;
+  width: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .section-container {
@@ -177,13 +180,15 @@ section {
 #profile {
   display: flex;
   justify-content: center;
-  gap: 5rem;
-  height: 100vh;
+  gap: 3rem;
+  min-height: 100vh;
   align-items: center;
   background: linear-gradient(180deg, #F0F8FF 0%, #F8FBFF 20%, #FFFFFF 40%, #F5F9FF 70%, #F8FBFF 90%, #FFFFFF 100%);
   position: relative;
   overflow: hidden;
   margin: 0;
+  padding: 2rem 1rem;
+  flex-direction: row;
 }
 
 /* Fog effect */
@@ -339,12 +344,12 @@ section {
 
 .section__pic-container {
   display: flex;
-  height: 400px;
-  width: 400px;
+  height: 300px;
+  width: 300px;
   margin: auto 0;
   border-radius: 50%;
   background: linear-gradient(135deg, #F8F9FA, #E9ECEF);
-  padding: 20px;
+  padding: 15px;
   box-shadow:
     0px 15px 35px rgba(255, 127, 46, 0.1),
     0px 5px 15px rgba(0, 0, 0, 0.08);
@@ -441,7 +446,7 @@ section {
 }
 
 .title {
-  font-size: 48px;
+  font-size: 36px;
   font-weight: 700;
   text-align: center;
   color: #1E1E1E;
@@ -1120,31 +1125,378 @@ footer a {
   transform: scale(1.1);
 }
 
-.text-container {
+/* ===================
+   Realistic Handwriting Experience
+=================== */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap');
+
+.handwritten-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
-  padding: 2rem;
-  background: #FFFFFF;
-  border-radius: 16px;
-  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
-  margin: 2rem 0;
+  padding: 4rem 2rem;
+  min-height: 80vh;
+  background: #f8f9fa;
+  position: relative;
 }
 
-/* Project Description Transitions */
-.project-description {
-  display: none;
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
-  max-height: 0;
+.paper-background {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  min-height: 600px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.1),
+    0 5px 15px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(200, 200, 200, 0.3);
   overflow: hidden;
 }
 
-.project-description.show {
-  display: block;
-  opacity: 1;
-  max-height: 1000px;
+.handwritten-text {
+  position: relative;
+  padding: 40px;
+  z-index: 10;
+  font-family: 'Dancing Script', cursive;
+  font-size: 20px;
+  line-height: 1.8;
+  color: #2c3e50;
+  font-weight: 500;
+}
+
+.handwritten-content {
+  position: relative;
+}
+
+.handwritten-content p {
+  margin-bottom: 20px;
+  text-align: left;
+  color: #2c3e50;
+}
+
+.signature-line {
+  margin-top: 30px;
+  text-align: right;
+  font-size: 24px;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+/* ===================
+   Mobile Responsive Design
+=================== */
+
+/* Tablet and small desktop */
+@media (max-width: 1024px) {
+  section {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  #profile {
+    gap: 2rem;
+    padding: 1.5rem;
+  }
+
+  .section__pic-container {
+    height: 280px;
+    width: 280px;
+  }
+
+  .title {
+    font-size: 32px;
+  }
+}
+
+/* Mobile landscape and large phones */
+@media (max-width: 768px) {
+  section {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
+  #profile {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem;
+    min-height: auto;
+    height: auto;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .section__pic-container {
+    height: 250px;
+    width: 250px;
+    margin: 0 auto;
+  }
+
+  .section__text {
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .title {
+    font-size: 28px;
+    margin-bottom: 0.5rem;
+  }
+
+  .section__text__p1 {
+    font-size: 16px;
+  }
+
+  .section__text__p2 {
+    font-size: 20px;
+    margin-bottom: 0.5rem;
+  }
+
+  .Role {
+    font-size: 18px;
+  }
+
+  .btn-container {
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-top: 1.5rem;
+    align-items: center;
+  }
+
+  .btn {
+    width: 100%;
+    max-width: 200px;
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+
+  #socials-container {
+    margin-top: 1.5rem;
+    gap: 0.8rem;
+    justify-content: center;
+  }
+
+  .icon {
+    height: 28px;
+    width: 28px;
+    padding: 4px;
+  }
+
+  /* Experience section mobile */
+  .experience-details-container {
+    padding: 0;
+  }
+
+  .about-containers {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .details-container {
+    margin: 0;
+    padding: 1.5rem;
+    min-height: auto;
+  }
+
+  .experience-sub-title {
+    font-size: 20px;
+    margin-bottom: 1rem;
+  }
+
+  .article-container {
+    gap: 1rem;
+  }
+
+  article {
+    padding: 1rem;
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
+
+  article h3 {
+    font-size: 16px;
+  }
+
+  /* Projects section mobile */
+  #projects .about-containers {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .color-container {
+    width: 100%;
+    max-width: 300px;
+    margin: 0;
+  }
+
+  .project-img {
+    height: 200px;
+  }
+
+  .project-title {
+    font-size: 20px;
+  }
+
+  /* Contact section mobile */
+  .contact-info-upper-container {
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 100%;
+  }
+
+  .contact-info-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
+
+  /* Handwritten section mobile */
+  .handwritten-container {
+    padding: 2rem 1rem;
+    min-height: auto;
+  }
+
+  .paper-background {
+    max-width: 100%;
+    min-height: 400px;
+  }
+
+  .handwritten-text {
+    padding: 30px;
+    font-size: 18px;
+    line-height: 1.6;
+  }
+
+  .signature-line {
+    font-size: 20px;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  section {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+  }
+
+  #profile {
+    padding: 0.5rem;
+    gap: 1.5rem;
+  }
+
+  .section__pic-container {
+    height: 200px;
+    width: 200px;
+    padding: 10px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  .section__text__p1 {
+    font-size: 14px;
+  }
+
+  .section__text__p2 {
+    font-size: 18px;
+  }
+
+  .Role {
+    font-size: 16px;
+  }
+
+  .btn {
+    max-width: 180px;
+    padding: 10px 16px;
+    font-size: 13px;
+  }
+
+  .icon {
+    height: 24px;
+    width: 24px;
+  }
+
+  /* Experience section small mobile */
+  .details-container {
+    padding: 1rem;
+  }
+
+  .experience-sub-title {
+    font-size: 18px;
+  }
+
+  article {
+    padding: 0.8rem;
+  }
+
+  article h3 {
+    font-size: 14px;
+  }
+
+  article p {
+    font-size: 12px;
+  }
+
+  /* Projects small mobile */
+  .color-container {
+    max-width: 280px;
+  }
+
+  .project-img {
+    height: 180px;
+  }
+
+  .project-title {
+    font-size: 18px;
+  }
+
+  /* Handwritten small mobile */
+  .handwritten-text {
+    padding: 20px;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .signature-line {
+    font-size: 18px;
+  }
+}
+
+/* Extra small phones */
+@media (max-width: 360px) {
+  .section__pic-container {
+    height: 180px;
+    width: 180px;
+  }
+
+  .title {
+    font-size: 22px;
+  }
+
+  .btn {
+    max-width: 160px;
+    font-size: 12px;
+  }
+
+  .handwritten-text {
+    padding: 15px;
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  .signature-line {
+    font-size: 16px;
+  }
+
+  .color-container {
+    max-width: 260px;
+  }
 }
 
 /* ------------------------------------------------------------------------------ */
@@ -1615,203 +1967,167 @@ footer a {
   box-shadow: 0 4px 12px rgba(255, 127, 46, 0.3);
 }
 
-@media (max-width: 768px) {
-  section {
-    margin: 0 2rem;
-    padding-top: 100px;
-    padding-bottom: 100px;
-  }
-
-  /* Mobile gamified profile adjustments */
-  #profile {
-    flex-direction: column;
-    gap: 2rem;
-    padding: 2rem 1rem;
-    height: auto;
-    min-height: 100vh;
-  }
-
-  .section__pic-container {
-    width: 300px;
-    height: 300px;
-  }
-
-  .sky-element {
-    opacity: 0.4;
-  }
-
-  .cloud {
-    font-size: 45px;
-  }
-
-  .kite {
-    font-size: 28px;
-  }
-
-  .balloon {
-    font-size: 26px;
-  }
+/* These mobile styles are now handled in the main responsive section above */
 
 
 
-  .about-details-container {
-    padding: 1rem;
-  }
+.about-details-container {
+  padding: 1rem;
+}
 
-  .adventure-journey {
-    padding: 0.5rem 0;
-    margin: 0;
-  }
+.adventure-journey {
+  padding: 0.5rem 0;
+  margin: 0;
+}
 
-  .adventure-journey::before {
-    font-size: 25px;
-    top: -5px;
-    right: 15px;
-    opacity: 0.1;
-  }
+.adventure-journey::before {
+  font-size: 25px;
+  top: -5px;
+  right: 15px;
+  opacity: 0.1;
+}
 
-  .adventure-journey::after {
-    font-size: 18px;
-    bottom: -5px;
-    left: 15px;
-    opacity: 0.08;
-  }
+.adventure-journey::after {
+  font-size: 18px;
+  bottom: -5px;
+  left: 15px;
+  opacity: 0.08;
+}
 
-  .section-title.adventure-title {
-    font-size: 32px;
-    padding: 0.8rem 1rem;
-  }
+.section-title.adventure-title {
+  font-size: 32px;
+  padding: 0.8rem 1rem;
+}
 
-  .section-title.adventure-title::before {
-    left: -40px;
-    font-size: 24px;
-  }
+.section-title.adventure-title::before {
+  left: -40px;
+  font-size: 24px;
+}
 
-  .section-title.adventure-title::after {
-    right: -50px;
-    font-size: 16px;
-  }
+.section-title.adventure-title::after {
+  right: -50px;
+  font-size: 16px;
+}
 
-  .timeline-container {
-    padding-left: 60px;
-  }
+.timeline-container {
+  padding-left: 60px;
+}
 
-  .timeline-container::before {
-    left: 45px;
-    width: 30px;
-    background: linear-gradient(90deg, #2a2a2a 0%, #1a1a1a 20%, #0f0f0f 50%, #1a1a1a 80%, #2a2a2a 100%);
-  }
+.timeline-container::before {
+  left: 45px;
+  width: 30px;
+  background: linear-gradient(90deg, #2a2a2a 0%, #1a1a1a 20%, #0f0f0f 50%, #1a1a1a 80%, #2a2a2a 100%);
+}
 
-  .timeline-container::after {
-    left: 57px;
-    width: 4px;
-    background: repeating-linear-gradient(180deg,
-        #FFFF00 0px,
-        #FFFF00 15px,
-        transparent 15px,
-        transparent 25px);
-  }
+.timeline-container::after {
+  left: 57px;
+  width: 4px;
+  background: repeating-linear-gradient(180deg,
+      #FFFF00 0px,
+      #FFFF00 15px,
+      transparent 15px,
+      transparent 25px);
+}
 
-  /* Mobile tree adjustments */
-  .timeline-tree-left {
-    font-size: 22px !important;
-    left: 8px !important;
-  }
+/* Mobile tree adjustments */
+.timeline-tree-left {
+  font-size: 22px !important;
+  left: 8px !important;
+}
 
-  .timeline-tree-right {
-    font-size: 24px !important;
-    right: -15px !important;
-  }
+.timeline-tree-right {
+  font-size: 24px !important;
+  right: -15px !important;
+}
 
-  .timeline-tree-bg {
-    font-size: 16px !important;
-  }
+.timeline-tree-bg {
+  font-size: 16px !important;
+}
 
-  .timeline-item {
-    margin-left: 2rem;
-  }
+.timeline-item {
+  margin-left: 2rem;
+}
 
-  .traveling-car {
-    left: 47px;
-    width: 40px;
-    height: 30px;
-  }
+.traveling-car {
+  left: 47px;
+  width: 40px;
+  height: 30px;
+}
 
-  .timeline-milestone {
-    left: 90px;
-    width: 30px;
-    height: 40px;
-    font-size: 16px;
-  }
+.timeline-milestone {
+  left: 90px;
+  width: 30px;
+  height: 40px;
+  font-size: 16px;
+}
 
-  .timeline-date {
-    font-size: 11px;
-    padding: 0.5rem 0.8rem;
-  }
+.timeline-date {
+  font-size: 11px;
+  padding: 0.5rem 0.8rem;
+}
 
-  .timeline-content {
-    padding: 1.8rem;
-  }
+.timeline-content {
+  padding: 1.8rem;
+}
 
-  .timeline-content::before {
-    font-size: 22px;
-    top: 12px;
-    right: 15px;
-    opacity: 0.3;
-  }
+.timeline-content::before {
+  font-size: 22px;
+  top: 12px;
+  right: 15px;
+  opacity: 0.3;
+}
 
-  .carousel-container {
-    padding: 1rem 0.5rem;
-  }
+.carousel-container {
+  padding: 1rem 0.5rem;
+}
 
-  .carousel-item {
-    width: 300px;
-    height: 200px;
-  }
+.carousel-item {
+  width: 300px;
+  height: 200px;
+}
 
-  .carousel {
-    gap: 1rem;
-  }
+.carousel {
+  gap: 1rem;
+}
 
-  #contact {
-    padding: 1rem 0.5rem;
-  }
+#contact {
+  padding: 1rem 0.5rem;
+}
 
-  .contact-info-container p {
-    font-size: 16px;
-  }
+.contact-info-container p {
+  font-size: 16px;
+}
 
-  nav {
-    height: 60px;
-    padding: 0 16px;
-    width: calc(100vw - 32px);
-    max-width: calc(100vw - 32px);
-    min-width: 300px;
-    bottom: 20px;
-    border-radius: 20px 20px 18px 18px;
-  }
+nav {
+  height: 60px;
+  padding: 0 16px;
+  width: calc(100vw - 32px);
+  max-width: calc(100vw - 32px);
+  min-width: 300px;
+  bottom: 20px;
+  border-radius: 20px 20px 18px 18px;
+}
 
-  .nav-links {
-    gap: 0.6rem;
-    font-size: 12px;
-  }
+.nav-links {
+  gap: 0.6rem;
+  font-size: 12px;
+}
 
-  .logo {
-    font-size: 22px;
-    margin-right: 0.5rem;
-  }
+.logo {
+  font-size: 22px;
+  margin-right: 0.5rem;
+}
 
-  nav a {
-    padding: 6px 8px;
-    font-size: 12px;
-  }
+nav a {
+  padding: 6px 8px;
+  font-size: 12px;
 }
 
 @media (max-width: 600px) {
   section {
-    margin: 0 1rem;
-    padding-top: 80px;
-    padding-bottom: 100px;
+    margin: 0;
+    padding: 80px 0.5rem 100px;
+    width: 100%;
   }
 
   /* Smaller mobile profile adjustments */
@@ -1906,9 +2222,9 @@ footer a {
 
 @media (max-width: 480px) {
   section {
-    margin: 0 0.5rem;
-    padding-top: 70px;
-    padding-bottom: 90px;
+    margin: 0;
+    padding: 70px 0.25rem 90px;
+    width: 100%;
   }
 
   .traveling-car {
@@ -1981,9 +2297,9 @@ footer a {
 
 @media (max-width: 360px) {
   section {
-    margin: 0 0.25rem;
-    padding-top: 60px;
-    padding-bottom: 80px;
+    margin: 0;
+    padding: 60px 0.1rem 80px;
+    width: 100%;
   }
 
   .traveling-car {
@@ -2057,9 +2373,9 @@ footer a {
 /* ============================================================================ */
 
 .education-container {
-  padding: 2rem;
-  max-width: 800px;
-  margin: 0 auto;
+  padding: 2rem 1rem;
+  max-width: 100%;
+  margin: 0;
 }
 
 .section-title {

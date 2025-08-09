@@ -8,6 +8,9 @@
   <title>My Portfolio</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="mediaqueries.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Caveat:wght@400;500;600;700&family=Dancing+Script:wght@400;500;600;700&family=Handlee&display=swap"
+    rel="stylesheet">
   <style>
     #role {
       transition: opacity 0.5s ease-in-out;
@@ -16,6 +19,7 @@
 </head>
 
 <body class="body">
+  <!-- Navigation bars commented out for now - can be restored later
   <nav id="desktop-nav">
     <div>
       <ul class="nav-links">
@@ -43,9 +47,10 @@
       </div>
     </div>
   </nav>
+  -->
   <section id="profile">
     <div class="section__pic-container">
-      <img src="./assets/profile1.png" alt="Profile picture" class="about-pic" id="profile-pic" />
+      <img src="./assets/Untitled design.png" alt="Profile picture" class="about-pic" id="profile-pic" />
     </div>
     <div class="section__text">
       <p class="section__text__p1">Hello, I'm</p>
@@ -57,7 +62,7 @@
       <br>
       <div class="btn-container">
         <button class="download-cv-btn-color btn btn-color-2"
-          onclick="window.open('https://drive.google.com/file/d/1v-Pb0VuKXhG6WnXRhrQ9iG385fLxvKmk/view?usp=sharing')">
+          onclick="window.open('https://drive.google.com/file/d/1DSyxwNKJJD-3nutCufKRX7hb1tpB-l8-/view?usp=sharing')">
           Download CV
         </button>
         <button class="contact-info-btn-color btn btn-color-2 " onclick="location.href='./#contact'">
@@ -135,34 +140,37 @@
     <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#experience'" />
   </section>
   <section id="About">
-    <div class="text-container">
-      <p>
-        Hello,
-        I've been drawn to technology since I was young, captivated by the glow of a computer screen. Now,
-        as a B.Tech Computer Science student, my passion for the field has only grown stronger.
-        I breathe life into code, weaving intricate patterns of logic with
-        Java,
-        C++, Python, and Kotlin. But it's not just about the lines of code; it's about the stories they tell.
-        Each app I craft, from sleek user interfaces to secure mobile applications using Flutter and Android,
-        is a chapter in my journey.
+    <div class="handwritten-container">
+      <div class="paper-background">
+        <div class="handwritten-text">
+          <div class="handwritten-content" id="handwritten-content">
+            <p>Hello, I've been drawn to technology since I was young, captivated by the glow of a computer screen. Now,
+              as a B.Tech Computer Science student, my passion for the field has only grown stronger. I breathe life
+              into code, weaving intricate patterns of logic with Java, C++, Python, and Kotlin.</p>
 
-        As a cybersecurity enthusiast, I see myself as a digital guardian, tirelessly fortifying systems against the
-        ever-looming threats of our online world. But my quest for knowledge doesn't stop there. Like a perennial
-        student,
-        I'm always hungry for more, diving deep into the latest tech trends and emerging technologies. Yet,
-        amidst the bytes and bits, I hold onto a belief: technology is a catalyst for positive change.
-        Whether it's simplifying everyday tasks with intuitive mobile apps or pushing the boundaries of innovation
-        with
-        cutting-edge technologies, I strive to make a difference.
+            <p>But it's not just about the lines of code; it's about the stories they tell. Each app I craft, from sleek
+              user interfaces to secure mobile applications using Flutter and Android, is a chapter in my journey. As a
+              cybersecurity enthusiast, I see myself as a digital guardian, tirelessly fortifying systems against the
+              ever-looming threats of our online world.</p>
 
-        But what truly ignites my fire is collaboration. Like pieces of a puzzle, diverse perspectives come together
-        in a symphony of creativity. With a collaborative spirit and strong communication skills, I thrive in
-        environments
-        where ideas flow freely, where every voice is heard. And as I stand at the threshold of the future, I am
-        eager for
-        the adventures that lie ahead. I seek not just opportunities, but journeys—journeys where I can contribute
-        meaningfully, learn from the best, and together, shape the future of technology.
-      </p>
+            <p>But my quest for knowledge doesn't stop there. Like a perennial student, I'm always hungry for more,
+              diving deep into the latest tech trends and emerging technologies. Yet, amidst the bytes and bits, I hold
+              onto a belief: technology is a catalyst for positive change.</p>
+
+            <p>Whether it's simplifying everyday tasks with intuitive mobile apps or pushing the boundaries of
+              innovation with cutting-edge technologies, I strive to make a difference. But what truly ignites my fire
+              is collaboration. Like pieces of a puzzle, diverse perspectives come together in a symphony of creativity.
+            </p>
+
+            <p>With a collaborative spirit and strong communication skills, I thrive in environments where ideas flow
+              freely, where every voice is heard. And as I stand at the threshold of the future, I am eager for the
+              adventures that lie ahead. I seek not just opportunities, but journeys—journeys where I can contribute
+              meaningfully, learn from the best, and together, shape the future of technology.</p>
+
+            <p class="signature-line">— Sairaj</p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
   <section id="experience">
