@@ -216,7 +216,7 @@
         {
             "name": "MP Tourism TFC System",
             "description": "Digital ticketing system for MP Tourism Facilitation Centres. Replaced manual bottlenecks and directly enabled 3\u00d7 scale of TFC centre operations across Madhya Pradesh.",
-            "image": "./assets/Untitled design (2).png",
+            "image": "./assets/mp_tourism_cover.png",
             "githubUrl": "#",
             "period": "March 2026",
             "role": "Product Owner"
@@ -224,7 +224,7 @@
         {
             "name": "NABARD WMS Advisory",
             "description": "Advised on modernising a Warehouse Management System for NABARD. Proposed AI roadmap spanning quality assurance, demand forecasting, inventory optimisation, and IoT-based real-time tracking.",
-            "image": "./assets/DigiPanchatyat (1).png",
+            "image": "./assets/nabard_wms_cover.png",
             "githubUrl": "#",
             "period": "Jan 2026",
             "role": "Advisor"
