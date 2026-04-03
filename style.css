@@ -823,7 +823,8 @@ article p {
   padding: 2rem;
   transition: all 0.4s ease-in-out;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
-  height: 500px;
+  min-height: 520px;
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -1101,6 +1102,44 @@ footer a {
 /* ===================
    13. Utility Classes
 =================== */
+
+/* Profile tagline */
+.section__text__tagline {
+  font-size: 15px;
+  color: #888888;
+  font-weight: 400;
+  margin-top: 0.25rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Project card extras */
+.project-meta {
+  font-size: 13px;
+  color: #FF7F2E;
+  font-weight: 600;
+  margin: 0.4rem 0 0.5rem 0;
+  text-align: center;
+}
+
+.project-description {
+  font-size: 14px;
+  color: #666666;
+  line-height: 1.6;
+  text-align: center;
+  margin: 0 0 0.5rem 0;
+  flex-grow: 1;
+}
+
+/* Phone icon in contact */
+.phone-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  cursor: default;
+}
+
+
 .Role {
   color: #FF7F2E;
   font-weight: 700;

@@ -1,12 +1,12 @@
 {
     "personal": {
         "name": "Sairaj Patil",
-        "title": "Software Developer",
+        "title": "Product Manager & Tech Advisor",
         "roles": [
-            "Product Engineer",
-            "Android Developer",
+            "Product Manager",
+            "Tech Advisor",
             "Flutter Developer",
-            "Cybersecurity Enthusiast"
+            "AI Builder"
         ],
         "profileImages": [
             "./assets/Untitled design (1).png",
@@ -50,175 +50,155 @@
         }
     ],
     "about": {
-        "description": "Hello, I've been drawn to technology since I was young, captivated by the glow of a computer screen. Now, as a B.Tech Computer Science student, my passion for the field has only grown stronger. I breathe life into code, weaving intricate patterns of logic with Java, C++, Python, and Kotlin. But it's not just about the lines of code; it's about the stories they tell. Each app I craft, from sleek user interfaces to secure mobile applications using Flutter and Android, is a chapter in my journey. As a cybersecurity enthusiast, I see myself as a digital guardian, tirelessly fortifying systems against the ever-looming threats of our online world. But my quest for knowledge doesn't stop there. Like a perennial student, I'm always hungry for more, diving deep into the latest tech trends and emerging technologies. Yet, amidst the bytes and bits, I hold onto a belief: technology is a catalyst for positive change. Whether it's simplifying everyday tasks with intuitive mobile apps or pushing the boundaries of innovation with cutting-edge technologies, I strive to make a difference. But what truly ignites my fire is collaboration. Like pieces of a puzzle, diverse perspectives come together in a symphony of creativity. With a collaborative spirit and strong communication skills, I thrive in environments where ideas flow freely, where every voice is heard. And as I stand at the threshold of the future, I am eager for the adventures that lie ahead. I seek not just opportunities, but journeys—journeys where I can contribute meaningfully, learn from the best, and together, shape the future of technology."
+        "description": "Engineer turned product thinker. I've shipped mobile apps, built government-scale systems, advised CEOs, enabled a funding round, and scaled operations 3×. I work across UX, AI, cloud, mobile, security, and games. I don't just build features — I own outcomes."
     },
     "professionalJourney": [
         {
-            "period": "Apr 2025 – Present",
-            "title": "Product Engineer",
+            "period": "Feb 2025 – Present",
+            "title": "Product Manager & Tech Advisor to CEO",
             "company": "TellMe Digiinfotech Pvt. Ltd.",
-            "description": "Leading end-to-end development of a mobile app that streams VR (360°) videos—our primary channel for monetizing proprietary content. Earlier developed an immersive game for the Digital Museum of Bhopal. Contribute to secure coding practices, architecture, code reviews, implementation strategies, and ongoing R&D in performance and security.",
+            "description": "Proposed and led development of the company's first owned product — a strategic pivot from services to product-led. The product successfully launched and enabled the company to raise funding. Led projects of national importance (Tourism Dept. MP Govt., NABARD), launching 3 new digital products from concept through deployment. Developed software solutions that scaled offline operations 3×. Advised the CEO on technology stack, AI, automation, vendor selection, and digital transformation strategy.",
             "technologies": [
+                "Product Strategy",
+                "B2G",
+                "AI / ML",
                 "Mobile",
-                "Android",
-                "VR Streaming",
-                "Monetization",
-                "Security"
+                "Stakeholder Mgmt"
             ]
         },
         {
-            "period": "Jan 2025 – Apr 2025",
-            "title": "Mobile App Developer Intern",
-            "company": "Venoh Tech",
-            "description": "Designed and delivered a production-ready Android app with Kotlin and Jetpack Compose; implemented real-time communication and a secure payment gateway; defined coding standards and architecture; led Play Store deployment and post-release management.",
+            "period": "Jan 2025 – Jul 2025",
+            "title": "Product & Engineering Lead",
+            "company": "Venoh Ventures",
+            "description": "Led cross-functional teams through end-to-end product development and delivery, setting timelines, unblocking engineers, and ensuring quality at launch. Delivered a fully production-ready app in under 2 months — from zero to Play Store. Served as Advisor to the CEO, translating business goals into product strategy and providing technical guidance on architecture and platform choices.",
             "technologies": [
                 "Kotlin",
                 "Jetpack Compose",
-                "Realtime",
+                "Product Management",
+                "Play Store",
                 "Payments"
             ]
         },
         {
             "period": "Aug 2024 – Dec 2024",
-            "title": "Flutter Developer Intern",
+            "title": "Product & Engineering Intern",
             "company": "ScriptAnalytica Technologies Pvt. Ltd.",
-            "description": "Migrated a native app to Flutter, reducing development cost by 50%; integrated Firebase Cloud Storage and secure payments.",
+            "description": "Led the product end-to-end from initial design and architecture through production launch, owning every phase of the development lifecycle. Scaled the product to iOS, expanding the addressable user base. Drove a 40% reduction in development time by streamlining engineering workflows and introducing reusable component libraries.",
             "technologies": [
                 "Flutter",
-                "Kotlin",
+                "iOS",
                 "Firebase",
+                "Component Libraries",
                 "Payments"
-            ]
-        },
-        {
-            "period": "Sep 2024 – Present",
-            "title": "Android Head",
-            "company": "Google Developer Group on Campus, PCCOE",
-            "description": "Led Android development initiatives and mentored 50+ students on Kotlin and Jetpack Compose, increasing project completion rates by 30%.",
-            "technologies": [
-                "Android",
-                "Kotlin",
-                "Jetpack Compose",
-                "Leadership"
             ]
         }
     ],
     "education": {
-        "degree": "Bachelor of Science in Computer Science",
+        "degree": "Bachelor of Engineering in Computer Science",
         "institute": "Pimpri Chinchwad College of Engineering, Pune",
-        "duration": "Nov 2022 – Jun 2026",
-        "description": "B.Sc. in Computer Science focused on Software Engineering, Operating Systems, Computer Networks, and Mobile Development.",
+        "duration": "2022 – 2026",
+        "description": "B.E. in Computer Science with focus on Software Engineering, Mobile Development, and Systems Design. Final year student building at the intersection of product, engineering, and AI.",
         "keyCourses": [
-            "Data Structures and Algorithms",
+            "Data Structures & Algorithms",
+            "Mobile App Development",
+            "Database Management Systems",
             "Software Engineering",
             "Computer Networks",
-            "Database Management Systems",
-            "Object Oriented Programming",
             "Operating Systems"
         ]
     },
     "techStack": {
-        "languages": [
-            {
-                "name": "Java",
-                "level": "Experienced"
-            },
-            {
-                "name": "Python",
-                "level": "Intermediate"
-            },
-            {
-                "name": "Kotlin",
-                "level": "Experienced"
-            },
-            {
-                "name": "C/C++",
-                "level": "Experienced"
-            },
-            {
-                "name": "Dart",
-                "level": "Intermediate"
-            }
+        "product": [
+            { "name": "Product Roadmapping", "level": "Experienced" },
+            { "name": "PRD Writing", "level": "Experienced" },
+            { "name": "Agile / Sprint", "level": "Experienced" },
+            { "name": "Stakeholder Mgmt", "level": "Experienced" },
+            { "name": "User Research", "level": "Intermediate" },
+            { "name": "Go-to-Market", "level": "Experienced" }
         ],
-        "development": [
-            {
-                "name": "Flutter",
-                "level": "Intermediate"
-            },
-            {
-                "name": "Android",
-                "subtitle": "(Jetpack Compose)",
-                "level": "Intermediate"
-            },
-            {
-                "name": "SQL",
-                "subtitle": "(MySQL,Oracle SQL)",
-                "level": "Intermediate"
-            },
-            {
-                "name": "Firebase",
-                "level": "Basic"
-            },
-            {
-                "name": "HTML/CSS",
-                "level": "Basic"
-            }
+        "engineering": [
+            { "name": "Flutter", "level": "Intermediate" },
+            { "name": "Kotlin", "level": "Experienced" },
+            { "name": "Python", "level": "Intermediate" },
+            { "name": "Java", "level": "Experienced" },
+            { "name": "SQL", "level": "Intermediate" },
+            { "name": "REST APIs", "level": "Experienced" },
+            { "name": "Git", "level": "Experienced" },
+            { "name": "Figma", "level": "Intermediate" }
         ],
-        "tools": [
-            {
-                "name": "Git",
-                "level": "Intermediate"
-            },
-            {
-                "name": "GitHub",
-                "level": "Intermediate"
-            },
-            {
-                "name": "Android Studio",
-                "level": "Experienced"
-            },
-            {
-                "name": "IntelliJ IDEA",
-                "level": "Intermediate"
-            },
-            {
-                "name": "Jira",
-                "level": "Basic"
-            },
-            {
-                "name": "Postman",
-                "level": "Experienced"
-            },
-            {
-                "name": "Figma",
-                "level": "Basic"
-            },
-            {
-                "name": "Linux",
-                "level": "Experienced"
-            }
+        "domains": [
+            { "name": "AI / ML", "level": "Applied" },
+            { "name": "Cloud", "level": "Applied" },
+            { "name": "Mobile", "subtitle": "(iOS & Android)", "level": "Experienced" },
+            { "name": "UX & Design", "level": "Intermediate" },
+            { "name": "Security", "level": "Intermediate" },
+            { "name": "B2G", "level": "Experienced" }
         ]
     },
     "projects": [
         {
-            "name": "Soilmaster",
-            "image": "./assets/Untitled design (1).png",
-            "githubUrl": "https://play.google.com/store/apps/details?id=com.towardimagination.soilmaster&hl=en-US"
+            "name": "DivyaDarshan360",
+            "description": "360° VR spiritual streaming app for elderly users. Features live temple rituals, aartis, and heritage experiences from sacred sites across India.",
+            "image": "./assets/Untitled design (4).png",
+            "githubUrl": "#",
+            "period": "Oct 2025",
+            "role": "Product Owner"
         },
         {
-            "name": "Venoh",
+            "name": "ZillionFit",
+            "description": "Personal AI wellness coach ingesting real-time wearable data (heart rate, SpO2, sleep) to deliver personalized health guidance. HIPAA-compliant AI ensures clinical-grade data privacy.",
+            "image": "./assets/Untitled design (1).png",
+            "githubUrl": "#",
+            "period": "Feb 2026",
+            "role": "Solo Builder"
+        },
+        {
+            "name": "MP Tourism TFC System",
+            "description": "Digital ticketing system for MP Tourism Facilitation Centres. Replaced manual bottlenecks and directly enabled 3× scale of TFC centre operations across Madhya Pradesh.",
             "image": "./assets/Untitled design (2).png",
-            "githubUrl": "#"
+            "githubUrl": "#",
+            "period": "March 2026",
+            "role": "Product Owner"
+        },
+        {
+            "name": "NABARD WMS Advisory",
+            "description": "Advised on modernising a Warehouse Management System for NABARD. Proposed AI roadmap spanning quality assurance, demand forecasting, inventory optimisation, and IoT-based real-time tracking.",
+            "image": "./assets/DigiPanchatyat (1).png",
+            "githubUrl": "#",
+            "period": "Jan 2026",
+            "role": "Advisor"
         },
         {
             "name": "DigiPanchatyat",
+            "description": "A digital governance app that brings gram panchayat services online — enabling citizens to access government schemes, file complaints, and track local development work.",
             "image": "./assets/DigiPanchatyat (1).png",
-            "githubUrl": "https://github.com/sairajpatil108/digiPanchayat"
+            "githubUrl": "https://github.com/sairajpatil108/digiPanchayat",
+            "period": "2024",
+            "role": "Developer"
         },
         {
-            "name": "The Secrets of Gwalior Fort",
-            "image": "./assets/Untitled design (4).png",
-            "githubUrl": "#"
+            "name": "NoteIt",
+            "description": "A clean, minimal note-taking Android app built with Kotlin. Supports rich text editing, colour-coded notebooks, and offline-first sync.",
+            "image": "./assets/NoteIt.png",
+            "githubUrl": "https://github.com/sairajpatil108/noteit",
+            "period": "2024",
+            "role": "Developer"
+        },
+        {
+            "name": "VisionaryAI",
+            "description": "An AI-powered image recognition Android app that uses Google ML Kit and custom models to identify objects, translate text in real-time, and describe scenes.",
+            "image": "./assets/VisonaryAI.png",
+            "githubUrl": "https://github.com/sairajpatil108/VisionaryAI",
+            "period": "2023",
+            "role": "Developer"
+        },
+        {
+            "name": "SkyForecast",
+            "description": "A beautiful weather app with real-time forecasts, hourly breakdowns, and animated weather conditions. Built with Kotlin using OpenWeather API.",
+            "image": "./assets/SkyForecast.png",
+            "githubUrl": "https://github.com/sairajpatil108/Weather-App",
+            "period": "2023",
+            "role": "Developer"
         }
     ],
     "certifications": [
@@ -285,6 +265,7 @@
     ],
     "contact": {
         "email": "sairajpatil108@gmail.com",
-        "linkedin": "https://www.linkedin.com/in/sairajpatil108/"
+        "linkedin": "https://www.linkedin.com/in/sairajpatil108/",
+        "phone": "+91 8767069180"
     }
 }

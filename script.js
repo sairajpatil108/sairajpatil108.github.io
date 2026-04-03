@@ -308,18 +308,11 @@ function populateEducation() {
 // Populate tech stack
 function populateTechStack() {
   const { techStack } = portfolioData;
+  const containers = document.querySelectorAll('#experience .details-container .article-container');
 
-  // Populate languages
-  const languagesContainer = document.querySelector('.details-container:nth-child(1) .article-container');
-  populateTechSection(languagesContainer, techStack.languages);
-
-  // Populate development
-  const developmentContainer = document.querySelector('.details-container:nth-child(2) .article-container');
-  populateTechSection(developmentContainer, techStack.development);
-
-  // Populate tools
-  const toolsContainer = document.querySelector('.details-container:nth-child(3) .article-container');
-  populateTechSection(toolsContainer, techStack.tools);
+  if (containers[0]) populateTechSection(containers[0], techStack.product);
+  if (containers[1]) populateTechSection(containers[1], techStack.engineering);
+  if (containers[2]) populateTechSection(containers[2], techStack.domains);
 }
 
 function populateTechSection(container, items) {
@@ -349,14 +342,17 @@ function populateProjects() {
   projects.forEach(project => {
     const projectDiv = document.createElement('div');
     projectDiv.className = 'details-container color-container';
+    const btnLabel = project.githubUrl === '#' ? 'Learn More' : 'GitHub';
     projectDiv.innerHTML = `
       <div class="article-container">
         <img src="${project.image}" alt="${project.name}" class="project-img" />
       </div>
       <h2 class="experience-sub-title project-title">${project.name}</h2>
+      ${project.role ? `<p class="project-meta">${project.role} &nbsp;·&nbsp; ${project.period}</p>` : ''}
+      ${project.description ? `<p class="project-description">${project.description}</p>` : ''}
       <div class="btn-container">
         <button class="btn btn-color-2" onclick="window.open('${project.githubUrl}')">
-          Github
+          ${btnLabel}
         </button>
       </div>
     `;
