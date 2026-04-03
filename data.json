@@ -50,14 +50,14 @@
         }
     ],
     "about": {
-        "description": "Engineer turned product thinker. I've shipped mobile apps, built government-scale systems, advised CEOs, enabled a funding round, and scaled operations 3×. I work across UX, AI, cloud, mobile, security, and games. I don't just build features — I own outcomes."
+        "description": "Engineer turned product thinker. I've shipped mobile apps, built government-scale systems, advised CEOs, enabled a funding round, and scaled operations 3\u00d7. I work across UX, AI, cloud, mobile, security, and games. I don't just build features \u2014 I own outcomes."
     },
     "professionalJourney": [
         {
-            "period": "Feb 2025 – Present",
+            "period": "Feb 2025 \u2013 Present",
             "title": "Product Manager & Tech Advisor to CEO",
             "company": "TellMe Digiinfotech Pvt. Ltd.",
-            "description": "Proposed and led development of the company's first owned product — a strategic pivot from services to product-led. The product successfully launched and enabled the company to raise funding. Led projects of national importance (Tourism Dept. MP Govt., NABARD), launching 3 new digital products from concept through deployment. Developed software solutions that scaled offline operations 3×. Advised the CEO on technology stack, AI, automation, vendor selection, and digital transformation strategy.",
+            "description": "Proposed and led development of the company's first owned product \u2014 a strategic pivot from services to product-led. The product successfully launched and enabled the company to raise funding. Led projects of national importance (Tourism Dept. MP Govt., NABARD), launching 3 new digital products from concept through deployment. Developed software solutions that scaled offline operations 3\u00d7. Advised the CEO on technology stack, AI, automation, vendor selection, and digital transformation strategy.",
             "technologies": [
                 "Product Strategy",
                 "B2G",
@@ -67,10 +67,10 @@
             ]
         },
         {
-            "period": "Jan 2025 – Jul 2025",
+            "period": "Jan 2025 \u2013 Jul 2025",
             "title": "Product & Engineering Lead",
             "company": "Venoh Ventures",
-            "description": "Led cross-functional teams through end-to-end product development and delivery, setting timelines, unblocking engineers, and ensuring quality at launch. Delivered a fully production-ready app in under 2 months — from zero to Play Store. Served as Advisor to the CEO, translating business goals into product strategy and providing technical guidance on architecture and platform choices.",
+            "description": "Led cross-functional teams through end-to-end product development and delivery, setting timelines, unblocking engineers, and ensuring quality at launch. Delivered a fully production-ready app in under 2 months \u2014 from zero to Play Store. Served as Advisor to the CEO, translating business goals into product strategy and providing technical guidance on architecture and platform choices.",
             "technologies": [
                 "Kotlin",
                 "Jetpack Compose",
@@ -80,7 +80,7 @@
             ]
         },
         {
-            "period": "Aug 2024 – Dec 2024",
+            "period": "Aug 2024 \u2013 Dec 2024",
             "title": "Product & Engineering Intern",
             "company": "ScriptAnalytica Technologies Pvt. Ltd.",
             "description": "Led the product end-to-end from initial design and architecture through production launch, owning every phase of the development lifecycle. Scaled the product to iOS, expanding the addressable user base. Drove a 40% reduction in development time by streamlining engineering workflows and introducing reusable component libraries.",
@@ -96,7 +96,7 @@
     "education": {
         "degree": "Bachelor of Engineering in Computer Science",
         "institute": "Pimpri Chinchwad College of Engineering, Pune",
-        "duration": "2022 – 2026",
+        "duration": "2022 \u2013 2026",
         "description": "B.E. in Computer Science with focus on Software Engineering, Mobile Development, and Systems Design. Final year student building at the intersection of product, engineering, and AI.",
         "keyCourses": [
             "Data Structures & Algorithms",
@@ -109,52 +109,113 @@
     },
     "techStack": {
         "product": [
-            { "name": "Product Roadmapping", "level": "Experienced" },
-            { "name": "PRD Writing", "level": "Experienced" },
-            { "name": "Agile / Sprint", "level": "Experienced" },
-            { "name": "Stakeholder Mgmt", "level": "Experienced" },
-            { "name": "User Research", "level": "Intermediate" },
-            { "name": "Go-to-Market", "level": "Experienced" }
+            {
+                "name": "Product Roadmapping",
+                "level": "Experienced"
+            },
+            {
+                "name": "PRD Writing",
+                "level": "Experienced"
+            },
+            {
+                "name": "Agile / Sprint",
+                "level": "Experienced"
+            },
+            {
+                "name": "Stakeholder Mgmt",
+                "level": "Experienced"
+            },
+            {
+                "name": "User Research",
+                "level": "Intermediate"
+            },
+            {
+                "name": "Go-to-Market",
+                "level": "Experienced"
+            }
         ],
         "engineering": [
-            { "name": "Flutter", "level": "Intermediate" },
-            { "name": "Kotlin", "level": "Experienced" },
-            { "name": "Python", "level": "Intermediate" },
-            { "name": "Java", "level": "Experienced" },
-            { "name": "SQL", "level": "Intermediate" },
-            { "name": "REST APIs", "level": "Experienced" },
-            { "name": "Git", "level": "Experienced" },
-            { "name": "Figma", "level": "Intermediate" }
+            {
+                "name": "Flutter",
+                "level": "Intermediate"
+            },
+            {
+                "name": "Kotlin",
+                "level": "Experienced"
+            },
+            {
+                "name": "Python",
+                "level": "Intermediate"
+            },
+            {
+                "name": "Java",
+                "level": "Experienced"
+            },
+            {
+                "name": "SQL",
+                "level": "Intermediate"
+            },
+            {
+                "name": "REST APIs",
+                "level": "Experienced"
+            },
+            {
+                "name": "Git",
+                "level": "Experienced"
+            },
+            {
+                "name": "Figma",
+                "level": "Intermediate"
+            }
         ],
         "domains": [
-            { "name": "AI / ML", "level": "Applied" },
-            { "name": "Cloud", "level": "Applied" },
-            { "name": "Mobile", "subtitle": "(iOS & Android)", "level": "Experienced" },
-            { "name": "UX & Design", "level": "Intermediate" },
-            { "name": "Security", "level": "Intermediate" },
-            { "name": "B2G", "level": "Experienced" }
+            {
+                "name": "AI / ML",
+                "level": "Applied"
+            },
+            {
+                "name": "Cloud",
+                "level": "Applied"
+            },
+            {
+                "name": "Mobile",
+                "subtitle": "(iOS & Android)",
+                "level": "Experienced"
+            },
+            {
+                "name": "UX & Design",
+                "level": "Intermediate"
+            },
+            {
+                "name": "Security",
+                "level": "Intermediate"
+            },
+            {
+                "name": "B2G",
+                "level": "Experienced"
+            }
         ]
     },
     "projects": [
         {
             "name": "DivyaDarshan360",
-            "description": "360° VR spiritual streaming app for elderly users. Features live temple rituals, aartis, and heritage experiences from sacred sites across India.",
-            "image": "./assets/Untitled design (4).png",
+            "description": "360\u00b0 VR spiritual streaming app for elderly users. Features live temple rituals, aartis, and heritage experiences from sacred sites across India.",
+            "image": "./assets/divya_darshan_cover.png",
             "githubUrl": "#",
             "period": "Oct 2025",
             "role": "Product Owner"
         },
         {
-            "name": "ZillionFit",
+            "name": "Zylience fit",
             "description": "Personal AI wellness coach ingesting real-time wearable data (heart rate, SpO2, sleep) to deliver personalized health guidance. HIPAA-compliant AI ensures clinical-grade data privacy.",
-            "image": "./assets/Untitled design (1).png",
+            "image": "./assets/zylience_fit_mockup.png",
             "githubUrl": "#",
             "period": "Feb 2026",
             "role": "Solo Builder"
         },
         {
             "name": "MP Tourism TFC System",
-            "description": "Digital ticketing system for MP Tourism Facilitation Centres. Replaced manual bottlenecks and directly enabled 3× scale of TFC centre operations across Madhya Pradesh.",
+            "description": "Digital ticketing system for MP Tourism Facilitation Centres. Replaced manual bottlenecks and directly enabled 3\u00d7 scale of TFC centre operations across Madhya Pradesh.",
             "image": "./assets/Untitled design (2).png",
             "githubUrl": "#",
             "period": "March 2026",
@@ -170,97 +231,19 @@
         },
         {
             "name": "DigiPanchatyat",
-            "description": "A digital governance app that brings gram panchayat services online — enabling citizens to access government schemes, file complaints, and track local development work.",
+            "description": "A digital governance app that brings gram panchayat services online \u2014 enabling citizens to access government schemes, file complaints, and track local development work.",
             "image": "./assets/DigiPanchatyat (1).png",
             "githubUrl": "https://github.com/sairajpatil108/digiPanchayat",
             "period": "2024",
             "role": "Developer"
         },
         {
-            "name": "NoteIt",
-            "description": "A clean, minimal note-taking Android app built with Kotlin. Supports rich text editing, colour-coded notebooks, and offline-first sync.",
-            "image": "./assets/NoteIt.png",
-            "githubUrl": "https://github.com/sairajpatil108/noteit",
-            "period": "2024",
+            "name": "And many more...",
+            "description": "A collection of earlier projects including NoteIt, VisionaryAI, and SkyForecast demonstrating a solid foundation in mobile development and AI integration.",
+            "image": "./assets/many_more_projects.png",
+            "githubUrl": "https://github.com/sairajpatil108",
+            "period": "2023-2024",
             "role": "Developer"
-        },
-        {
-            "name": "VisionaryAI",
-            "description": "An AI-powered image recognition Android app that uses Google ML Kit and custom models to identify objects, translate text in real-time, and describe scenes.",
-            "image": "./assets/VisonaryAI.png",
-            "githubUrl": "https://github.com/sairajpatil108/VisionaryAI",
-            "period": "2023",
-            "role": "Developer"
-        },
-        {
-            "name": "SkyForecast",
-            "description": "A beautiful weather app with real-time forecasts, hourly breakdowns, and animated weather conditions. Built with Kotlin using OpenWeather API.",
-            "image": "./assets/SkyForecast.png",
-            "githubUrl": "https://github.com/sairajpatil108/Weather-App",
-            "period": "2023",
-            "role": "Developer"
-        }
-    ],
-    "certifications": [
-        {
-            "name": "AI Essentials",
-            "image": "./assets/AI essentials_page-0001.jpg"
-        },
-        {
-            "name": "Assets, Threats, and Vulnerabilities",
-            "image": "./assets/Assets, Threats, and Vulnerabilities_page-0001.jpg"
-        },
-        {
-            "name": "Connect and Protect Computer Networks",
-            "image": "./assets/connect and protect computer networks_page-0001.jpg"
-        },
-        {
-            "name": "Final Certificate",
-            "image": "./assets/final certificate_page-0001.jpg"
-        },
-        {
-            "name": "Fundamentals of UI-UX",
-            "image": "./assets/fundamentals of UI-UX certificate_page-0001.jpg"
-        },
-        {
-            "name": "Introduction to Generative AI",
-            "image": "./assets/intro to generative ai_page-0001.jpg"
-        },
-        {
-            "name": "Introduction to Cybersecurity",
-            "image": "./assets/introduction to cybersecurity_page-0001.jpg"
-        },
-        {
-            "name": "Linux and SQL",
-            "image": "./assets/linux and SQL certificatate_page-0001.jpg"
-        },
-        {
-            "name": "Play it Safe Manage Security Risks",
-            "image": "./assets/play it safe Manage security risks_page-0001.jpg"
-        },
-        {
-            "name": "Python Certificate",
-            "image": "./assets/python certificate_page-0001.jpg"
-        },
-        {
-            "name": "Sound the Alarm Detection and Response",
-            "image": "./assets/Sound the Alarm Detection and Response_page-0001.jpg"
-        },
-        {
-            "name": "Designing for User Experience",
-            "image": "./assets/designing for user experiance_page-0001.jpg"
-        },
-        {
-            "name": "Scalar SQL Certificate",
-            "image": "./assets/scalar SQL certificate.png"
-        },
-        {
-            "name": "Postman Certificate",
-            "image": "./assets/postman certificate-1.jpg"
-        },
-        {
-            "name": "Oracle Java Explorer",
-            "image": "./assets/oracle java explorer (2).png"
         }
     ],
     "contact": {

@@ -23,11 +23,9 @@ function initializeWebsite() {
   populateEducation();
   populateTechStack();
   populateProjects();
-  populateCertifications();
   populateContact();
   initializeRoleRotation();
   setStaticProfileImage();
-  initCarousel();
 }
 
 // Populate personal information
@@ -360,20 +358,7 @@ function populateProjects() {
   });
 }
 
-// Populate certifications
-function populateCertifications() {
-  const { certifications } = portfolioData;
-  const carousel = document.querySelector('.carousel');
 
-  carousel.innerHTML = '';
-
-  certifications.forEach(cert => {
-    const carouselItem = document.createElement('div');
-    carouselItem.className = 'carousel-item';
-    carouselItem.innerHTML = `<img src="${cert.image}" alt="${cert.name}">`;
-    carousel.appendChild(carouselItem);
-  });
-}
 
 // Populate contact information
 function populateContact() {
@@ -428,126 +413,6 @@ function toggleMenu() {
   const icon = document.querySelector(".hamburger-icon");
   menu.classList.toggle("open");
   icon.classList.toggle("open");
-}
-
-// Carousel functionality
-const carousel = document.querySelector('.carousel');
-let carouselItems, prevBtn, nextBtn, indicatorsContainer;
-let carouselCurrentIndex = 0;
-let isAutoPlaying = true;
-let autoPlayInterval;
-
-function initCarousel() {
-  // Wait for carousel items to be populated
-  setTimeout(() => {
-    carouselItems = document.querySelectorAll('.carousel-item');
-    prevBtn = document.getElementById('prevBtn');
-    nextBtn = document.getElementById('nextBtn');
-    indicatorsContainer = document.getElementById('carouselIndicators');
-
-    if (carouselItems.length === 0) return;
-
-    // Clear existing indicators
-    if (indicatorsContainer) {
-      indicatorsContainer.innerHTML = '';
-    }
-
-    // Create indicators
-    carouselItems.forEach((_, index) => {
-      const indicator = document.createElement('div');
-      indicator.className = 'carousel-indicator';
-      if (index === 0) indicator.classList.add('active');
-      indicator.addEventListener('click', () => goToSlide(index));
-      if (indicatorsContainer) {
-        indicatorsContainer.appendChild(indicator);
-      }
-    });
-
-    // Start auto-play
-    startAutoPlay();
-
-    // Event listeners
-    if (prevBtn) {
-      prevBtn.addEventListener('click', () => {
-        prevSlide();
-        stopAutoPlay();
-        startAutoPlay();
-      });
-    }
-
-    if (nextBtn) {
-      nextBtn.addEventListener('click', () => {
-        nextSlide();
-        stopAutoPlay();
-        startAutoPlay();
-      });
-    }
-
-    // Pause auto-play on hover
-    if (carousel) {
-      carousel.addEventListener('mouseenter', () => {
-        isAutoPlaying = false;
-      });
-
-      carousel.addEventListener('mouseleave', () => {
-        isAutoPlaying = true;
-      });
-
-      // Handle scroll events
-      carousel.addEventListener('scroll', () => {
-        const itemWidth = carouselItems[0].offsetWidth + 32;
-        const scrollPosition = carousel.scrollLeft;
-        carouselCurrentIndex = Math.round(scrollPosition / itemWidth);
-        updateIndicators();
-      });
-    }
-  }, 100);
-}
-
-// Go to specific slide
-function goToSlide(index) {
-  carouselCurrentIndex = index;
-  const itemWidth = carouselItems[0].offsetWidth + 32;
-  carousel.scrollTo({
-    left: carouselCurrentIndex * itemWidth,
-    behavior: 'smooth'
-  });
-  updateIndicators();
-}
-
-// Update indicators
-function updateIndicators() {
-  if (!indicatorsContainer) return;
-  const indicators = indicatorsContainer.querySelectorAll('.carousel-indicator');
-  indicators.forEach((indicator, index) => {
-    indicator.classList.toggle('active', index === carouselCurrentIndex);
-  });
-}
-
-// Next slide
-function nextSlide() {
-  carouselCurrentIndex = (carouselCurrentIndex + 1) % carouselItems.length;
-  goToSlide(carouselCurrentIndex);
-}
-
-// Previous slide
-function prevSlide() {
-  carouselCurrentIndex = (carouselCurrentIndex - 1 + carouselItems.length) % carouselItems.length;
-  goToSlide(carouselCurrentIndex);
-}
-
-// Start auto-play
-function startAutoPlay() {
-  autoPlayInterval = setInterval(() => {
-    if (isAutoPlaying) {
-      nextSlide();
-    }
-  }, 4000);
-}
-
-// Stop auto-play
-function stopAutoPlay() {
-  clearInterval(autoPlayInterval);
 }
 
 // Initialize minimalist profile section
