@@ -141,14 +141,7 @@ function populateTechSection(container, items) {
 
   items.forEach(item => {
     const article = document.createElement('article');
-    article.innerHTML = `
-      <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-      <div>
-        <h3>${item.name}</h3>
-        ${item.subtitle ? `<h6>${item.subtitle}</h6>` : ''}
-        <p>${item.level}</p>
-      </div>
-    `;
+    article.innerHTML = `<h3>${item.name}</h3>`;
     container.appendChild(article);
   });
 }

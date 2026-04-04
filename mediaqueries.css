@@ -2,259 +2,145 @@
    RESPONSIVE OVERRIDES
    ============================== */
 
-@media screen and (max-width: 1200px) {
-  section {
-    padding: 80px 40px 64px;
-  }
+/* Always use desktop nav */
+#desktop-nav { display: flex; }
+#hamburger-nav { display: none !important; }
 
-  #profile {
-    gap: 3.5rem;
-    padding: 0 40px;
-  }
+@media screen and (max-width: 1200px) {
+  section { padding: 80px 40px 64px; }
+  #profile { gap: 3.5rem; padding: 0 40px; }
 }
 
 @media screen and (max-width: 960px) {
   #profile {
     flex-direction: column;
     text-align: center;
-    gap: 2.5rem;
+    gap: 2rem;
     min-height: auto;
     padding: 100px 40px 64px;
     align-items: center;
   }
 
-  #profile .section__text__p1,
   #profile .title,
   .section__text__p2,
-  .section__text__tagline {
-    text-align: center;
-  }
+  .section__text__tagline { text-align: center; }
 
-  .btn-container {
-    justify-content: center;
-  }
+  .btn-container { justify-content: center; }
+  #socials-container { justify-content: center; }
 
-  #socials-container {
-    justify-content: center;
-  }
-
-  .section__pic-container {
-    width: 200px;
-    height: 200px;
-  }
+  .section__pic-container { width: 180px; height: 180px; }
 
   #profile .title {
     font-size: clamp(44px, 9vw, 68px);
     letter-spacing: -2.5px;
-    margin-bottom: 12px;
   }
 }
 
 @media screen and (max-width: 768px) {
-  section {
-    padding: 72px 28px 56px;
-    margin: 0;
-  }
+  section { padding: 72px 28px 56px; margin: 0; }
+  #profile { padding: 80px 28px 56px; }
 
-  #profile {
-    padding: 80px 28px 56px;
-  }
-
-  .title {
-    font-size: 30px;
-    letter-spacing: -1px;
-    margin-bottom: 44px;
-  }
+  /* Section title */
+  .title { margin-bottom: 32px; }
 
   #profile .title {
     font-size: clamp(36px, 10vw, 52px);
     letter-spacing: -2px;
-    margin-bottom: 10px;
   }
 
-  #about .about-containers,
+  /* About columns stack */
   .about-containers {
     flex-direction: column;
-    align-items: stretch;
-    gap: 24px;
-    max-width: 100%;
+    gap: 32px;
   }
-
   .about-details-container,
-  .education-container {
-    max-width: 100%;
-    min-width: 0;
-    flex: 1 1 100%;
-  }
+  .education-container { max-width: 100%; min-width: 0; flex: 1 1 100%; }
 
-  #experience .about-containers {
-    flex-direction: column;
-    gap: 12px;
-  }
+  /* Stack columns */
+  #experience .about-containers { gap: 32px; }
+  .details-container { max-width: 100%; min-width: 0; flex: 1 1 100%; }
 
-  .details-container {
-    max-width: 100%;
-    min-width: 0;
-    flex: 1 1 100%;
-  }
+  /* Work grid */
+  #projects .about-containers { grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); }
 
-  #projects .about-containers {
-    grid-template-columns: 1fr;
-  }
+  /* Contact */
+  .contact-info-upper-container { flex-direction: column; gap: 18px; padding: 22px 24px; max-width: 100%; }
 
-  .contact-info-upper-container {
-    flex-direction: column;
-    gap: 18px;
-    padding: 22px 24px;
-    max-width: 100%;
-  }
+  /* Nav */
+  nav { min-width: 260px; height: 48px; bottom: 20px; padding: 0 6px; }
+  nav a { padding: 6px 12px; font-size: 12px; }
 
-  nav {
-    min-width: 270px;
-    height: 48px;
-    bottom: 20px;
-    padding: 0 6px;
-  }
+  /* Timeline */
+  .timeline-container { padding-left: 18px; }
+  .timeline-item { padding-left: 18px; padding-bottom: 28px; }
 
-  nav a {
-    padding: 6px 12px;
-    font-size: 12px;
-  }
+  .section__pic-container { width: 160px; height: 160px; }
 
-  .handwritten-text,
-  .handwritten-content p {
-    font-size: 15px;
-  }
-
-  .timeline-container {
-    padding-left: 18px;
-  }
-
-  .timeline-item {
-    padding-left: 18px;
-    padding-bottom: 28px;
-  }
-
-  .section__pic-container {
-    width: 160px;
-    height: 160px;
-  }
+  .handwritten-text, .handwritten-content p { font-size: 15px; }
 }
 
 @media screen and (max-width: 600px) {
-  section {
-    padding: 60px 18px 44px;
-    margin: 0;
-  }
-
-  #profile {
-    padding: 72px 18px 44px;
-  }
+  section { padding: 60px 20px 48px; margin: 0; }
+  #profile { padding: 72px 20px 48px; }
 
   #profile .title {
     font-size: clamp(32px, 11vw, 48px);
     letter-spacing: -1.5px;
   }
 
-  .section__text__p2 {
-    font-size: 16px;
-  }
+  .section__text__p2 { font-size: 15px; }
 
   nav {
     width: calc(100vw - 28px);
     max-width: calc(100vw - 28px);
-    min-width: 250px;
+    min-width: 240px;
     bottom: 18px;
     height: 46px;
-    padding: 0 6px;
   }
+  nav a { padding: 5px 10px; font-size: 11.5px; }
 
-  nav a {
-    padding: 5px 10px;
-    font-size: 11.5px;
-  }
+  .btn-container { flex-wrap: wrap; gap: 8px; }
+  .btn { flex: 1 1 auto; min-width: 120px; }
 
-  .btn-container {
-    flex-wrap: wrap;
-    gap: 8px;
-  }
+  #projects .about-containers { grid-template-columns: 1fr; }
+  .project-img { height: 180px; }
 
-  .btn {
-    flex: 1 1 auto;
-    min-width: 130px;
-  }
-
-  #projects .about-containers {
-    grid-template-columns: 1fr;
-  }
-
-  .project-img {
-    height: 180px;
-  }
+  #experience .about-containers { flex-direction: column; gap: 28px; }
 }
 
 @media screen and (max-width: 480px) {
-  section {
-    padding: 52px 14px 36px;
-  }
-
-  #profile {
-    padding: 64px 14px 36px;
-  }
+  section { padding: 52px 16px 40px; }
+  #profile { padding: 64px 16px 40px; }
 
   nav {
     width: calc(100vw - 20px);
     max-width: calc(100vw - 20px);
-    min-width: 240px;
+    min-width: 220px;
     bottom: 14px;
     height: 44px;
     padding: 0 4px;
   }
+  nav a { padding: 5px 8px; font-size: 11px; }
 
-  nav a {
-    padding: 5px 8px;
-    font-size: 11px;
-  }
-
-  .section__pic-container {
-    width: 140px;
-    height: 140px;
-  }
-
-  .title {
-    font-size: 26px;
-    margin-bottom: 36px;
-  }
-
-  article {
-    padding: 8px 10px;
-  }
-
-  article h3 {
-    font-size: 12px;
-  }
+  .section__pic-container { width: 140px; height: 140px; }
+  .title { margin-bottom: 28px; }
+  .article-container { gap: 5px; }
+  article { padding: 4px 11px; }
+  article h3 { font-size: 11px; }
 }
 
 @media screen and (max-width: 360px) {
   nav {
     width: calc(100vw - 12px);
     max-width: calc(100vw - 12px);
-    min-width: 220px;
+    min-width: 210px;
     bottom: 10px;
     height: 42px;
   }
-
-  nav a {
-    padding: 4px 6px;
-    font-size: 10.5px;
-  }
+  nav a { padding: 4px 6px; font-size: 10.5px; }
 
   #profile .title {
     font-size: clamp(28px, 12vw, 40px);
     letter-spacing: -1px;
   }
 }
-
-/* Desktop — show desktop nav always */
-#desktop-nav { display: flex; }
-#hamburger-nav { display: none !important; }
