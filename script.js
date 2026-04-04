@@ -69,89 +69,9 @@ function populateSocialLinks() {
 
 
 
-// Function to generate trees throughout the timeline
+// Timeline tree generation — disabled in minimalist design
 function generateTimelineTrees() {
-  const timelineContainer = document.querySelector('.timeline-container');
-  if (!timelineContainer) return;
-
-  const isMobile = window.innerWidth <= 768;
-
-  // Wait for timeline items to render, then generate trees
-  setTimeout(() => {
-    const timelineItems = timelineContainer.querySelectorAll('.timeline-item');
-    const totalTimelineHeight = timelineItems.length > 0 ?
-      timelineItems[timelineItems.length - 1].offsetTop + timelineItems[timelineItems.length - 1].offsetHeight + 200 :
-      1000; // Fallback height
-
-    // Clear any existing trees
-    timelineContainer.querySelectorAll('.timeline-tree-left, .timeline-tree-right, .timeline-tree-bg').forEach(tree => tree.remove());
-
-    // Create trees distributed throughout the entire timeline
-    const treesPerSection = isMobile ? 8 : 12;
-    const timelineItemCount = timelineItems.length || 3; // Fallback to 3
-    const totalTrees = Math.max(treesPerSection, timelineItemCount * treesPerSection);
-
-    for (let i = 0; i < totalTrees; i++) {
-      const progress = i / totalTrees;
-      const basePosition = progress * totalTimelineHeight;
-      const randomOffset = (Math.random() - 0.5) * 120;
-      const treeTop = Math.max(0, basePosition + randomOffset);
-
-      // Left side trees (avoid road area: 45-125px is road zone)
-      if (Math.random() > 0.3) {
-        const leftTree = document.createElement('div');
-        leftTree.className = 'timeline-tree-left';
-        leftTree.innerHTML = Math.random() > 0.5 ? '🌲' : '🌳';
-        leftTree.style.position = 'absolute';
-        leftTree.style.left = `${isMobile ? 2 + Math.random() * 35 : 5 + Math.random() * 35}px`; // Max 40px to avoid road
-        leftTree.style.top = `${treeTop}px`;
-        leftTree.style.fontSize = `${(isMobile ? 18 : 28) + Math.random() * (isMobile ? 12 : 20)}px`;
-        leftTree.style.zIndex = '1';
-        leftTree.style.userSelect = 'none';
-        leftTree.style.pointerEvents = 'none';
-        timelineContainer.appendChild(leftTree);
-      }
-
-      // Right side trees (avoid road area)
-      if (Math.random() > 0.2) {
-        const rightTree = document.createElement('div');
-        rightTree.className = 'timeline-tree-right';
-        rightTree.innerHTML = Math.random() > 0.5 ? '🌲' : '🌳';
-        rightTree.style.position = 'absolute';
-        rightTree.style.right = `${isMobile ? -25 + Math.random() * 40 : -40 + Math.random() * 60}px`;
-        rightTree.style.top = `${treeTop + Math.random() * 80}px`;
-        rightTree.style.fontSize = `${(isMobile ? 20 : 30) + Math.random() * (isMobile ? 12 : 18)}px`;
-        rightTree.style.zIndex = '1';
-        rightTree.style.userSelect = 'none';
-        rightTree.style.pointerEvents = 'none';
-        timelineContainer.appendChild(rightTree);
-      }
-    }
-
-    // Add background trees for depth throughout the timeline
-    const bgTreeCount = Math.floor(totalTimelineHeight / (isMobile ? 150 : 100));
-    for (let i = 0; i < bgTreeCount; i++) {
-      const bgTree = document.createElement('div');
-      bgTree.className = 'timeline-tree-bg';
-      bgTree.innerHTML = ['🌲', '🌳', '🌲'][i % 3];
-      bgTree.style.position = 'absolute';
-
-      // Randomly place on left or right, but far from road
-      if (Math.random() > 0.5) {
-        bgTree.style.left = `${Math.random() * (isMobile ? 25 : 35)}px`; // Keep away from road
-      } else {
-        bgTree.style.right = `${-70 + Math.random() * (isMobile ? 30 : 50)}px`;
-      }
-
-      bgTree.style.top = `${Math.random() * totalTimelineHeight}px`;
-      bgTree.style.fontSize = `${(isMobile ? 12 : 18) + Math.random() * (isMobile ? 8 : 15)}px`;
-      bgTree.style.zIndex = '0';
-      bgTree.style.opacity = `${0.3 + Math.random() * 0.4}`;
-      bgTree.style.userSelect = 'none';
-      bgTree.style.pointerEvents = 'none';
-      timelineContainer.appendChild(bgTree);
-    }
-  }, 150); // Allow time for timeline items to render
+  return;
 }
 
 // Populate professional journey
@@ -159,34 +79,12 @@ function populateProfessionalJourney() {
   const { professionalJourney } = portfolioData;
   const timelineContainer = document.querySelector('.timeline-container');
 
-  // Add adventure classes to the section
-  const professionJourneySection = document.querySelector('.about-details-container');
-  const sectionTitle = professionJourneySection.querySelector('.section-title');
-  if (sectionTitle && sectionTitle.textContent.includes('Professional Journey')) {
-    sectionTitle.classList.add('adventure-title');
-    professionJourneySection.classList.add('adventure-journey');
-  }
-
   timelineContainer.innerHTML = '';
-
-
-
-  // Create the single traveling car
-  const travelingCar = document.createElement('div');
-  travelingCar.className = 'traveling-car';
-
-  const carImage = document.createElement('img');
-  carImage.src = './assets/car.png';
-  carImage.alt = 'Car';
-  carImage.className = 'car-image';
-
-  travelingCar.appendChild(carImage);
-  timelineContainer.appendChild(travelingCar);
 
   professionalJourney.forEach((item, index) => {
     const timelineItem = document.createElement('div');
     timelineItem.className = 'timeline-item';
-    timelineItem.style.animationDelay = `${(index + 1) * 0.3}s`;
+    timelineItem.style.animationDelay = `${index * 0.1}s`;
     timelineItem.setAttribute('data-index', index);
 
     const badges = item.technologies.map(tech =>
@@ -194,94 +92,19 @@ function populateProfessionalJourney() {
     ).join('');
 
     timelineItem.innerHTML = `
-      <div class="timeline-milestone" data-index="${index}">📍</div>
       <div class="timeline-content">
         <div class="timeline-date">${item.period}</div>
-        <h3 class="timeline-title">
-          <img src="./assets/experience.png" alt="Experience icon" class="icon" />
-          ${item.title}
-        </h3>
+        <h3 class="timeline-title">${item.title}</h3>
         <div class="timeline-company">${item.company}</div>
         <div class="timeline-description">${item.description}</div>
         <div>${badges}</div>
       </div>
     `;
 
-    // Add hover event listeners for car movement
-    const timelineContent = timelineItem.querySelector('.timeline-content');
-
-    timelineContent.addEventListener('mouseenter', () => {
-      moveCarToPosition(index);
-    });
-
     timelineContainer.appendChild(timelineItem);
   });
-
-  // Initialize car interactions
-  initializeCarMovement();
-
-  // Generate trees after all timeline items are created
-  generateTimelineTrees();
 }
 
-// Car movement functionality
-let currentCarPosition = 0;
-
-function moveCarToPosition(targetIndex) {
-  const travelingCar = document.querySelector('.traveling-car');
-  const timelineItems = document.querySelectorAll('.timeline-item');
-
-  if (!travelingCar || !timelineItems[targetIndex]) return;
-
-  // Calculate the vertical position based on the timeline item
-  const targetItem = timelineItems[targetIndex];
-  const itemOffset = targetItem.offsetTop;
-
-  // Position the car at the target milestone
-  travelingCar.style.top = `${itemOffset + 32}px`; // Align with milestone
-  travelingCar.classList.add('moving');
-
-  // Add movement animation
-  if (targetIndex !== currentCarPosition) {
-    travelingCar.classList.add('traveling');
-  }
-
-  // Update current position
-  currentCarPosition = targetIndex;
-
-  // Remove animation classes after movement
-  setTimeout(() => {
-    travelingCar.classList.remove('moving', 'traveling');
-  }, 1000);
-
-  // Highlight the active milestone
-  highlightMilestone(targetIndex);
-}
-
-function highlightMilestone(activeIndex) {
-  const milestones = document.querySelectorAll('.timeline-milestone');
-
-  milestones.forEach((milestone, index) => {
-    if (index === activeIndex) {
-      milestone.style.transform = 'scale(1.3)';
-      milestone.style.background = 'linear-gradient(135deg, #FF7F2E, #FFB347)';
-    } else {
-      milestone.style.transform = 'scale(1)';
-      milestone.style.background = 'linear-gradient(135deg, #666666, #999999)';
-    }
-  });
-}
-
-function initializeCarMovement() {
-  const travelingCar = document.querySelector('.traveling-car');
-  const firstItem = document.querySelector('.timeline-item[data-index="0"]');
-
-  if (travelingCar && firstItem) {
-    // Position car at the first milestone initially
-    travelingCar.style.top = `${firstItem.offsetTop + 32}px`;
-    highlightMilestone(0);
-  }
-}
 
 // Populate education section
 function populateEducation() {
@@ -340,7 +163,6 @@ function populateProjects() {
   projects.forEach(project => {
     const projectDiv = document.createElement('div');
     projectDiv.className = 'details-container color-container';
-    const btnLabel = project.githubUrl === '#' ? 'Learn More' : 'GitHub';
     projectDiv.innerHTML = `
       <div class="article-container">
         <img src="${project.image}" alt="${project.name}" class="project-img" />
@@ -348,11 +170,6 @@ function populateProjects() {
       <h2 class="experience-sub-title project-title">${project.name}</h2>
       ${project.role ? `<p class="project-meta">${project.role} &nbsp;·&nbsp; ${project.period}</p>` : ''}
       ${project.description ? `<p class="project-description">${project.description}</p>` : ''}
-      <div class="btn-container">
-        <button class="btn btn-color-2" onclick="window.open('${project.githubUrl}')">
-          ${btnLabel}
-        </button>
-      </div>
     `;
     projectsContainer.appendChild(projectDiv);
   });
@@ -415,64 +232,13 @@ function toggleMenu() {
   icon.classList.toggle("open");
 }
 
-// Initialize minimalist profile section
-function initializeSkyProfile() {
-  createHotAirBalloons();
-}
-
-// Create minimal sky elements
-function createHotAirBalloons() {
-  const profileSection = document.getElementById('profile');
-  const skyContainer = document.createElement('div');
-  skyContainer.className = 'sky-elements';
-
-  const elements = [
-    { emoji: '☁️', left: '15%', top: '10%', size: '55px', type: 'cloud' },
-    { emoji: '☁️', right: '25%', top: '8%', size: '42px', type: 'cloud' },
-    { emoji: '☁️', left: '5%', top: '35%', size: '38px', type: 'cloud' },
-    { emoji: '☁️', right: '10%', top: '45%', size: '48px', type: 'cloud' },
-    { emoji: '☁️', left: '75%', top: '12%', size: '35px', type: 'cloud' },
-    { emoji: '☁️', right: '70%', top: '60%', size: '40px', type: 'cloud' },
-    { emoji: '🪁', right: '20%', top: '25%', size: '35px', type: 'kite' },
-    { emoji: '🪁', left: '85%', top: '20%', size: '40px', type: 'kite' },
-    { emoji: '🎈', left: '12%', top: '70%', size: '32px', type: 'balloon' },
-    { emoji: '🎈', right: '15%', top: '75%', size: '35px', type: 'balloon' }
-  ];
-
-  elements.forEach((element, index) => {
-    const skyElement = document.createElement('div');
-    skyElement.className = `sky-element ${element.type}`;
-    skyElement.textContent = element.emoji;
-
-    if (element.left) skyElement.style.left = element.left;
-    if (element.right) skyElement.style.right = element.right;
-    skyElement.style.top = element.top;
-    skyElement.style.fontSize = element.size;
-    skyElement.style.animationDelay = (index * 5) + 's';
-    skyElement.style.animationDuration = (40 + Math.random() * 20) + 's';
-
-    skyContainer.appendChild(skyElement);
-  });
-
-  profileSection.appendChild(skyContainer);
-}
+// Sky elements — disabled in minimalist design
+function initializeSkyProfile() { return; }
+function createHotAirBalloons() { return; }
 
 
 
 // Initialize everything when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
   loadPortfolioData();
-  setTimeout(initializeSkyProfile, 500); // Slight delay to ensure DOM is ready
 });
-
-// Regenerate trees on window resize to handle mobile/desktop switches
-let resizeTimeout;
-window.addEventListener('resize', () => {
-  clearTimeout(resizeTimeout);
-  resizeTimeout = setTimeout(() => {
-    generateTimelineTrees();
-  }, 300); // Debounce resize events
-});
-
-// Expose tree generation function globally for future use
-window.refreshTimelineTrees = generateTimelineTrees;
