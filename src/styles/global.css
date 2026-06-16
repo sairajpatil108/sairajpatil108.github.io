@@ -1,0 +1,467 @@
+@import 'tailwindcss';
+
+/* ─────────────────────────────────────────────────────────────
+   Design tokens — Monochrome editorial. Black, white, and a
+   disciplined grey scale. No hue. Hierarchy comes from weight,
+   size, spacing, and pure-white emphasis — not colour.
+   ───────────────────────────────────────────────────────────── */
+@theme {
+  --color-ink-void: #050505;
+  --color-canvas: #0a0a0b;
+  --color-canvas-raised: #121214;
+  --color-panel: #141416;
+
+  /* legacy accent token names kept so components resolve; all monochrome now */
+  --color-aurora-violet: #ffffff;
+  --color-aurora-indigo: #2a2a2e;
+  --color-aurora-cyan: #d4d4d8;
+  --color-aurora-deep: #161618;
+  --color-outcome: #ffffff;
+  --color-signal-gold: #ffffff;
+
+  --color-text-primary: #f4f4f5;
+  --color-text-secondary: #9a9aa1;
+  --color-text-mono: #8b8b93;
+
+  --font-display: 'Sora', ui-sans-serif, system-ui, sans-serif;
+  --font-body: 'Sora', ui-sans-serif, system-ui, sans-serif;
+  --font-serif: 'Sora', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, 'SF Mono', monospace;
+
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out-soft: cubic-bezier(0.65, 0.05, 0.36, 1);
+}
+
+:root {
+  --surface: rgba(255, 255, 255, 0.024);
+  --surface-hover: rgba(255, 255, 255, 0.045);
+  --hair: rgba(255, 255, 255, 0.09);
+  --hair-strong: rgba(255, 255, 255, 0.16);
+  /* legacy names → subtle monochrome */
+  --glass-fill: rgba(255, 255, 255, 0.024);
+  --glass-border: rgba(255, 255, 255, 0.09);
+  --glass-border-strong: rgba(255, 255, 255, 0.16);
+  --glow-violet: rgba(255, 255, 255, 0.1);
+  --glow-cyan: rgba(255, 255, 255, 0.08);
+  --glow-outcome: rgba(255, 255, 255, 0.14);
+  --glow-gold: rgba(255, 255, 255, 0.1);
+  color-scheme: dark;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   Base — Tailwind's preflight (in @layer base) handles the reset +
+   box-sizing. A blanket unlayered `* { margin:0; padding:0 }` here would
+   override every Tailwind spacing utility, so it must NOT be reintroduced.
+   ───────────────────────────────────────────────────────────── */
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  background: var(--color-canvas);
+  color: var(--color-text-primary);
+  font-family: var(--font-body);
+  overflow-x: hidden;
+}
+
+::selection {
+  background: rgba(255, 255, 255, 0.85);
+  color: #0a0a0b;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   Layout rhythm — one consistent vertical + horizontal scale so
+   every section aligns to the same gutters and breathes equally.
+   ───────────────────────────────────────────────────────────── */
+/* Identical horizontal gutters everywhere: 24 / 40 / 96px.
+   Matches the px-6 / sm:px-10 / lg:px-24 utilities used on the flex sections. */
+.section {
+  padding-block: clamp(4.5rem, 9vw, 8rem);
+  padding-inline: 1.5rem;
+}
+@media (min-width: 640px) {
+  .section {
+    padding-inline: 2.5rem;
+  }
+}
+@media (min-width: 1024px) {
+  .section {
+    padding-inline: 6rem;
+  }
+}
+.measure {
+  max-width: 64ch;
+}
+.container-wide {
+  width: 100%;
+  max-width: 1240px;
+  margin-inline: auto;
+}
+
+/* Semantic colour helpers */
+.t-primary { color: var(--color-text-primary); }
+.t-secondary { color: var(--color-text-secondary); }
+.t-mono { color: var(--color-text-mono); }
+.t-cyan { color: #ffffff; }
+.t-outcome { color: #ffffff; }
+.nav-link { color: var(--color-text-mono); }
+.nav-link:hover { color: var(--color-text-primary); }
+
+/* Capability ledger rows nudge + brighten on hover */
+.ledger-row > span:first-child {
+  transition: color 0.3s var(--ease-out-expo), transform 0.3s var(--ease-out-expo);
+}
+.ledger-row:hover > span:first-child {
+  color: #ffffff;
+  transform: translateX(6px);
+}
+.ledger-row:hover > span:last-child {
+  color: var(--color-text-secondary);
+}
+
+/* Typographic skill — brighten on hover (level shown via native tooltip) */
+.skill {
+  transition: color 0.3s var(--ease-out-expo);
+}
+.skill:hover {
+  color: #fff !important;
+}
+
+.tabular {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: 'tnum';
+}
+
+/* Hairline divider grid — editorial, monochrome */
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+  background: var(--hair);
+  border: 1px solid var(--hair);
+  border-radius: 14px;
+  overflow: hidden;
+}
+@media (min-width: 1024px) {
+  .stat-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.stat-cell {
+  background: var(--color-canvas);
+  transition: background 0.4s var(--ease-out-expo);
+}
+.stat-cell:hover {
+  background: rgba(255, 255, 255, 0.025);
+}
+
+/* ─────────────────────────────────────────────────────────────
+   Type scale — clear, repeated steps for hierarchy.
+   ───────────────────────────────────────────────────────────── */
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--color-text-mono);
+}
+
+/* repurposed: a quiet large statement (was an italic serif "filmy" beat) */
+.serif-beat {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(1.5rem, 2.8vw, 2.4rem);
+  line-height: 1.32;
+  letter-spacing: -0.01em;
+  color: var(--color-text-secondary);
+}
+
+.display {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: -0.035em;
+  line-height: 0.98;
+}
+
+.chapter-title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(1.9rem, 4.4vw, 3.5rem);
+  line-height: 1.04;
+  letter-spacing: -0.03em;
+  color: var(--color-text-primary);
+}
+
+.body-copy {
+  font-size: clamp(1rem, 1.05vw, 1.125rem);
+  line-height: 1.7;
+  color: var(--color-text-secondary);
+  max-width: 60ch;
+}
+
+/* Blinking caret for the cold open */
+.caret {
+  display: inline-block;
+  margin-left: 2px;
+  color: #ffffff;
+  animation: caret-blink 1.1s steps(1) infinite;
+}
+@keyframes caret-blink {
+  0%, 50% { opacity: 1; }
+  50.01%, 100% { opacity: 0; }
+}
+
+/* Scroll cue chevron */
+.scroll-chevron {
+  width: 16px;
+  height: 16px;
+  border-right: 1.5px solid var(--color-text-mono);
+  border-bottom: 1.5px solid var(--color-text-mono);
+  transform: rotate(45deg);
+  animation: chevron-bob 1.8s var(--ease-in-out-soft) infinite;
+}
+@keyframes chevron-bob {
+  0%, 100% { transform: rotate(45deg) translate(0, 0); opacity: 0.45; }
+  50% { transform: rotate(45deg) translate(3px, 3px); opacity: 0.9; }
+}
+
+/* ─────────────────────────────────────────────────────────────
+   Liquid glass — frosted + saturated, with a specular rim that catches
+   light, a top sheen, an inner bevel highlight, depth, and a soft light
+   that follows the pointer (--gx/--gy, set in App). An approximation of
+   Apple's Liquid Glass material for the web.
+   ───────────────────────────────────────────────────────────── */
+.glass {
+  position: relative;
+  isolation: isolate;
+  background:
+    radial-gradient(220px circle at var(--gx, 72%) var(--gy, -8%), rgba(255, 255, 255, 0.13), transparent 62%),
+    rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(16px) saturate(185%) brightness(1.06);
+  -webkit-backdrop-filter: blur(16px) saturate(185%) brightness(1.06);
+  box-shadow:
+    0 16px 44px -16px rgba(0, 0, 0, 0.62),
+    0 4px 12px -6px rgba(0, 0, 0, 0.45),
+    inset 0 1px 0.5px rgba(255, 255, 255, 0.5),
+    inset 0 -16px 26px -18px rgba(0, 0, 0, 0.4);
+  transition: box-shadow 0.4s var(--ease-out-expo), transform 0.4s var(--ease-out-expo);
+}
+/* top sheen — sits below the content so it never veils text */
+.glass::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: inherit;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0.03) 22%, transparent 46%);
+  pointer-events: none;
+}
+/* specular rim — bright top-left, fading, a glint bottom-right */
+.glass::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.62),
+    rgba(255, 255, 255, 0.08) 30%,
+    rgba(255, 255, 255, 0) 52%,
+    rgba(255, 255, 255, 0.24) 100%
+  );
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* Real refraction (Chromium) — the SVG displacement filter bends the backdrop
+   through the glass. It is GPU-expensive, so it is reserved for the prominent
+   showpiece panels (.glass-refract — hero, chapters, contact; never the 6-card
+   reel) and only on desktop. Every other .glass keeps the cheap frosted look,
+   and mobile/touch gets frost everywhere. */
+@supports (backdrop-filter: url('#liquid-glass')) {
+  @media (min-width: 1024px) and (pointer: fine) {
+    .glass-refract {
+      backdrop-filter: url('#liquid-glass') blur(2px) saturate(180%) brightness(1.05);
+      -webkit-backdrop-filter: url('#liquid-glass') blur(2px) saturate(180%) brightness(1.05);
+    }
+  }
+}
+
+/* Emphasis text — kept pure-bright so emphasised phrases read brighter than the
+   body of the headline (a faint top-down sheen, never dimming). */
+.gradient-text {
+  background: linear-gradient(180deg, #ffffff 0%, #e9e9ec 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+.grad-word {
+  background: linear-gradient(180deg, #ffffff 0%, #e9e9ec 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+/* Ambient field — fixed behind everything; withheld until the cold open lifts */
+.aurora-field {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+  opacity: 0.08;
+  transition: opacity 1400ms var(--ease-out-expo);
+}
+html.aurora-bloomed .aurora-field {
+  opacity: 1;
+}
+
+/* Chrome stays hidden during the cold open, fades in once it lifts */
+.pre-bloom {
+  transition: opacity 0.9s var(--ease-out-expo);
+}
+html:not(.aurora-bloomed) .pre-bloom {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.aurora-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(130px);
+  will-change: transform;
+  pointer-events: none;
+}
+
+.grid-texture {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.022) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.022) 1px, transparent 1px);
+  background-size: 72px 72px;
+  mask-image: radial-gradient(ellipse 80% 60% at 50% 38%, #000 25%, transparent 72%);
+}
+
+.grain::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* ─────────────────────────────────────────────────────────────
+   Buttons / links — monochrome
+   ───────────────────────────────────────────────────────────── */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #0a0a0b;
+  background: #ffffff;
+  border-radius: 7px;
+  padding: 0.85rem 1.4rem;
+  transition: transform 0.3s var(--ease-out-expo), background 0.3s;
+  cursor: pointer;
+}
+.btn-primary:hover {
+  transform: translateY(-2px);
+  background: #e6e6e8;
+}
+
+/* glass pill button */
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-primary);
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(12px) saturate(170%);
+  -webkit-backdrop-filter: blur(12px) saturate(170%);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 8px;
+  padding: 0.85rem 1.4rem;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.32), 0 5px 16px -8px rgba(0, 0, 0, 0.5);
+  transition: border-color 0.3s, background 0.3s, transform 0.3s var(--ease-out-expo), box-shadow 0.3s;
+  cursor: pointer;
+}
+.btn-ghost:hover {
+  border-color: rgba(255, 255, 255, 0.34);
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.45), 0 8px 22px -8px rgba(0, 0, 0, 0.55);
+  transform: translateY(-2px);
+}
+
+/* ─────────────────────────────────────────────────────────────
+   Accessibility
+   ───────────────────────────────────────────────────────────── */
+:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 3px;
+  border-radius: 3px;
+}
+
+.skip-link {
+  position: fixed;
+  top: -100px;
+  left: 16px;
+  z-index: 1000;
+  padding: 0.75rem 1.25rem;
+  background: var(--color-panel);
+  border: 1px solid var(--hair-strong);
+  border-radius: 8px;
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  transition: top 0.25s var(--ease-out-expo);
+}
+.skip-link:focus {
+  top: 16px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  .work-track {
+    flex-direction: column !important;
+    width: 100% !important;
+  }
+  .work-track > * {
+    width: 100% !important;
+    max-width: 640px;
+  }
+}
+
+/* Lenis */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}

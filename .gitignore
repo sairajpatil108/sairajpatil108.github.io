@@ -1,0 +1,20 @@
+# dependencies
+node_modules/
+
+# build output
+dist/
+
+# gstack runtime artifacts
+.gstack/
+
+# agent / editor local state
+.claude/
+tsconfig.tsbuildinfo
+
+# logs
+*.log
+npm-debug.log*
+
+# os / editor
+.DS_Store
+*.local
