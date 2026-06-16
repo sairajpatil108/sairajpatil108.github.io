@@ -21,8 +21,8 @@ export function Closing() {
 
         <Reveal delay={2}>
           <p className="body-copy mt-5">
-            I'm finishing my B.E. in Computer Science (PCCOE Pune, 2026) and looking for product
-            roles, advisory, and ambitious builds where the result is the metric that counts.
+            I recently finished my B.E. in Computer Science (PCCOE Pune, 2026) and I'm looking for
+            product roles, advisory, and ambitious builds where the result is the metric that counts.
           </p>
         </Reveal>
 
