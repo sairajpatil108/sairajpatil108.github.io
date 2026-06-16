@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page not found — Sairaj Patil</title>
+    <meta name="robots" content="noindex" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <meta name="theme-color" content="#08080c" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        color-scheme: dark;
+      }
+      * {
+        margin: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        height: 100%;
+      }
+      body {
+        background: #08080c;
+        color: #f4f4f5;
+        font-family: 'Sora', system-ui, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        display: grid;
+        place-items: center;
+        padding: 32px;
+        overflow: hidden;
+      }
+      .glow {
+        position: fixed;
+        inset: 0;
+        background: radial-gradient(680px circle at 50% 32%, rgba(255, 255, 255, 0.07), transparent 62%);
+        pointer-events: none;
+      }
+      .wrap {
+        position: relative;
+        max-width: 460px;
+        text-align: center;
+      }
+      .plane {
+        animation: drift 6s ease-in-out infinite;
+        filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.55));
+      }
+      @keyframes drift {
+        0%,
+        100% {
+          transform: translateY(0) rotate(-8deg);
+        }
+        50% {
+          transform: translateY(-12px) rotate(-3deg);
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .plane {
+          animation: none;
+        }
+      }
+      .eyebrow {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 12px;
+        font-weight: 500;
+        letter-spacing: 0.24em;
+        text-transform: uppercase;
+        color: #8b8b93;
+        margin: 28px 0 18px;
+      }
+      h1 {
+        font-size: clamp(2rem, 6vw, 3rem);
+        font-weight: 600;
+        line-height: 1.05;
+        letter-spacing: -0.03em;
+      }
+      p {
+        margin-top: 16px;
+        font-size: 1.02rem;
+        line-height: 1.6;
+        color: #b7b7bd;
+      }
+      .home {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 32px;
+        padding: 13px 22px;
+        border-radius: 999px;
+        font-size: 0.95rem;
+        font-weight: 500;
+        color: #08080c;
+        background: #f4f4f5;
+        text-decoration: none;
+        transition: transform 0.2s ease, background 0.2s ease;
+      }
+      .home:hover {
+        transform: translateY(-2px);
+        background: #ffffff;
+      }
+      .home svg {
+        transition: transform 0.2s ease;
+      }
+      .home:hover svg {
+        transform: translateX(-3px);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="glow"></div>
+    <main class="wrap">
+      <svg class="plane" width="64" height="64" viewBox="0 0 64 64" aria-hidden="true">
+        <defs>
+          <linearGradient id="wl" x1="0%" y1="15%" x2="95%" y2="70%">
+            <stop offset="0%" stop-color="#ffffff" />
+            <stop offset="100%" stop-color="#cdcdd4" />
+          </linearGradient>
+          <linearGradient id="wr" x1="100%" y1="15%" x2="5%" y2="70%">
+            <stop offset="0%" stop-color="#a9a9b1" />
+            <stop offset="100%" stop-color="#6f6f78" />
+          </linearGradient>
+        </defs>
+        <polygon points="32,60 5,12 32,35" fill="url(#wl)" stroke="rgba(255,255,255,0.5)" stroke-width="0.5" stroke-linejoin="round" />
+        <polygon points="32,60 59,12 32,35" fill="url(#wr)" stroke="rgba(255,255,255,0.3)" stroke-width="0.5" stroke-linejoin="round" />
+        <polygon points="32,60 28,37 36,37" fill="#f4f4f8" />
+      </svg>
+      <p class="eyebrow">Error 404</p>
+      <h1>This page flew off course.</h1>
+      <p>The page you’re looking for isn’t here — but the story still is.</p>
+      <a class="home" href="/">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M14 6l-6 6 6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+        Back to the start
+      </a>
+    </main>
+  </body>
+</html>
