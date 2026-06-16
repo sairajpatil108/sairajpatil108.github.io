@@ -130,7 +130,7 @@ export const projects: Project[] = [
     name: 'Zylience Fit',
     tagline: 'AI wellness coach built on real-time wearable data',
     description:
-      'A personal AI wellness coach that ingests real-time wearable data — heart rate, SpO2, sleep — to deliver personalized guidance, with HIPAA-compliant handling of clinical-grade data.',
+      'A personal AI wellness coach that ingests real-time wearable data — heart rate, SpO2, sleep — to deliver personalised guidance, with HIPAA-compliant handling of clinical-grade data.',
     image: '/assets/zylience_fit_mockup.png',
     period: 'Feb 2026',
     role: 'Solo Builder',
