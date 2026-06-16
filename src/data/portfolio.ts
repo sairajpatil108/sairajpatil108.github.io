@@ -235,5 +235,5 @@ export const education = {
   degree: 'B.E. Computer Science',
   institute: 'Pimpri Chinchwad College of Engineering, Pune',
   duration: '2022 – 2026',
-  note: 'Final year. Building at the intersection of product, engineering, and AI.',
+  note: 'Graduated. Building at the intersection of product, engineering, and AI.',
 }
