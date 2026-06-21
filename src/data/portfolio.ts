@@ -44,7 +44,7 @@ export const personal = {
   location: 'Pune, India',
   portrait: '/assets/profile-color.jpg',
   avatar: '/assets/avatar2.jpg',
-  cv: '/sairajpatil108_PM.pdf',
+  cv: '/sairajpatil_.pdf',
 }
 
 export const socials: Social[] = [
@@ -68,48 +68,50 @@ export const journey: Role[] = [
   {
     id: 'scriptanalytica',
     period: 'Aug 2024 – Dec 2024',
-    title: 'Product & Engineering Intern',
+    title: 'Product Intern',
     company: 'ScriptAnalytica Technologies',
     oneLiner: 'Owned a mobile product end to end — and cut delivery time 40%.',
     description:
-      'I owned the product from design and architecture through production, then scaled it to iOS to widen the addressable market.',
+      'I drove the product from initial design through production launch, then extended it to iOS to widen the addressable user base.',
     wins: [
-      'Built a reusable component library that cut development time 40%',
-      'Shipped to iOS, expanding the addressable user base',
-      'Owned the full lifecycle: design, architecture, and release',
+      'Cut development time 40% by introducing reusable component libraries',
+      'Tightened the feedback loop between design and engineering',
+      'Shipped to production, then extended to iOS to widen reach',
     ],
-    technologies: ['Flutter', 'iOS', 'Firebase', 'Design Systems', 'Payments'],
+    technologies: ['Flutter', 'iOS', 'Component Libraries', 'Firebase', 'Design Systems'],
   },
   {
     id: 'venoh',
     period: 'Jan 2025 – Jul 2025',
-    title: 'Product & Engineering Lead',
+    title: 'Product Lead (Contract)',
     company: 'Venoh Ventures',
-    oneLiner: 'Shipped a production app from zero to the Play Store in under two months.',
+    oneLiner: 'Shipped a two-sided marketplace — both apps — to live alpha in under two months.',
     description:
-      'I ran cross-functional delivery — setting timelines, unblocking engineers, and owning launch quality — while advising the CEO on architecture and platform choices.',
+      'I owned a marketplace connecting users with professionals — therapists, astrologers, teachers — for per-minute paid chat and calls, leading delivery across both the user and professional apps as the founder’s product partner.',
     wins: [
-      'Took a production app from empty repo to Play Store in under 2 months',
-      'Set timelines, unblocked engineers, and owned quality at launch',
-      'Advised the CEO on architecture and platform decisions',
+      'Owned a two-sided marketplace for per-minute paid chat and calls',
+      'Shipped both apps — user and professional — to live alpha in under 2 months',
+      'Owned discovery, roadmap, and the per-minute monetisation model',
+      'Drove prioritisation and platform decisions in lockstep with the founder',
     ],
-    technologies: ['Kotlin', 'Jetpack Compose', 'Product Management', 'Play Store', 'Payments'],
+    technologies: ['Product Strategy', 'Two-sided Marketplace', 'Monetisation', 'Discovery', 'Roadmapping'],
   },
   {
     id: 'tellme',
     period: 'Feb 2025 – Present',
-    title: 'Product Manager & Tech Advisor to the CEO',
+    title: 'Product Management Intern → Product Manager',
     company: 'TellMe Digiinfotech',
-    oneLiner: 'Led a services-to-product pivot that helped the company raise its first round.',
+    oneLiner: 'Led a services-to-product pivot — and shipped the company’s first product.',
     description:
-      "I proposed and led TellMe's first owned product — a pivot from services to product that launched and supported the company's first fundraise. I now lead national government products and advise the CEO on technology, AI, and vendor strategy.",
+      "I proposed and led DivyaDarshan360, TellMe's first owned product — driving the shift from a services business to a product-led model. I now own the full product surface across consumer and government work, lead national government products, and advise the CEO on technology, AI, and vendor strategy.",
     wins: [
-      "Proposed and led the company's first owned product (services → product)",
-      'The product launched and supported the company raising its first round',
+      "Proposed and led DivyaDarshan360 — the company's first owned product (services → product)",
+      'Owned the full product surface — discovery, PRDs, UX, GTM — often the only PM in the room',
+      'Led org-wide AI adoption: authored the AI usage policy and redefined SOPs around LLM workflows',
+      'Advised the CEO on tech stack, AI adoption, automation, and vendor selection',
       'Lead national government products (MP Tourism, NABARD) from concept to deploy',
-      'Built software that scaled offline operations 3×',
     ],
-    technologies: ['Product Strategy', 'B2G', 'AI / ML', 'Mobile', 'Stakeholder Mgmt'],
+    technologies: ['Product Strategy', 'AI / LLM', 'B2G & Gov', 'Go-to-Market', 'Stakeholder Mgmt'],
   },
 ]
 
@@ -117,20 +119,20 @@ export const projects: Project[] = [
   {
     id: 'divyadarshan',
     name: 'DivyaDarshan360',
-    tagline: '360° VR temple-darshan streaming for elderly users',
+    tagline: '10K+ installs in 30 days, at a fifth of the category’s CPI',
     description:
-      'A 360° VR streaming app that brings live temple rituals and aartis from sacred sites across India to users who can no longer travel to them.',
+      'A 360° VR devotional app for elderly, Hindi-first users in low-bandwidth contexts. It drove 10K+ installs in 30 days at a ₹2–3 cost-per-install — against a category norm near ₹12 — and retained them into a daily habit averaging nearly 3 minutes per user.',
     image: '/assets/divya_darshan_cover.png',
     period: 'Oct 2025',
     role: 'Product Owner',
-    domain: 'VR · Streaming',
+    domain: 'VR · Consumer',
   },
   {
     id: 'zylience',
-    name: 'Zylience Fit',
+    name: 'ZylienceFit',
     tagline: 'AI wellness coach built on real-time wearable data',
     description:
-      'A personal AI wellness coach that ingests real-time wearable data — heart rate, SpO2, sleep — to deliver personalised guidance, with HIPAA-compliant handling of clinical-grade data.',
+      'A personal AI wellness coach that ingests real-time wearable data — heart rate, SpO2, sleep — and delivers personalised guidance through a conversational interface, built on a multi-layered architecture for more accurate, transparent decisions.',
     image: '/assets/zylience_fit_mockup.png',
     period: 'Feb 2026',
     role: 'Solo Builder',
@@ -139,9 +141,9 @@ export const projects: Project[] = [
   {
     id: 'mptourism',
     name: 'MP Tourism TFC',
-    tagline: 'Digital ticketing that scaled TFC operations 3×',
+    tagline: 'Digital ticketing that scaled operations from 3 centres to 25',
     description:
-      'A digital ticketing system for MP Tourism Facilitation Centres that replaced manual bottlenecks and scaled centre operations 3× across Madhya Pradesh.',
+      'A digital ticketing system for MP Tourism Facilitation Centres that replaced manual bottlenecks and scaled operations from 3 centres to 25 — owning senior state-government stakeholders through requirements, design, deployment, and training rollout.',
     image: '/assets/mp_tourism_cover.png',
     period: 'Mar 2026',
     role: 'Product Owner',
@@ -152,7 +154,7 @@ export const projects: Project[] = [
     name: 'NABARD WMS',
     tagline: 'AI modernisation roadmap for a national WMS',
     description:
-      'Advised on modernising a Warehouse Management System for NABARD, with an AI roadmap spanning quality assurance, demand forecasting, inventory optimisation, and IoT-based tracking.',
+      'Advised the National Bank for Agriculture and Rural Development on modernising its Warehouse Management System, with an AI roadmap spanning LLM-assisted QA, ML demand forecasting, inventory optimisation, and IoT-based real-time tracking.',
     image: '/assets/nabard_wms_cover.png',
     period: 'Jan 2026',
     role: 'Advisor',
@@ -185,48 +187,56 @@ export const projects: Project[] = [
 ]
 
 export const stats: Stat[] = [
-  { value: 3, suffix: '×', label: 'Operations scaled', detail: 'Offline government operations, digitised' },
-  { value: 1, suffix: '', label: 'Funding round', detail: 'Supported by a pivot I proposed and led' },
-  { value: 3, suffix: '', label: 'National products', detail: 'Concept to deploy — MP Govt. & NABARD' },
+  { value: 10, suffix: 'K+', label: 'Installs in 30 days', detail: 'DivyaDarshan360 — at a ₹2–3 cost-per-install' },
+  { value: 5, suffix: '×', label: 'Cheaper to acquire', detail: 'CPI cut from a ~₹12 category norm to ₹2–3' },
+  { value: 25, suffix: '', label: 'Centres live', detail: 'MP Tourism — scaled up from 3 centres' },
   { value: 40, suffix: '%', label: 'Faster delivery', detail: 'Dev time cut with reusable systems' },
-  { value: 2, suffix: ' mo', prefix: '<', label: 'Zero to Play Store', detail: 'A full production app, shipped' },
+  { value: 2, suffix: ' mo', prefix: '<', label: 'Zero to alpha', detail: 'Two marketplace apps, shipped live' },
   { value: 2, suffix: ' yrs', label: 'In product', detail: 'Building in production since 2024' },
 ]
 
 export const skills: SkillGroup[] = [
   {
-    label: 'Product',
+    label: 'Strengths',
     items: [
-      { name: 'Roadmapping', level: 'Experienced' },
-      { name: 'PRD Writing', level: 'Experienced' },
-      { name: 'Agile / Sprint', level: 'Experienced' },
-      { name: 'Stakeholder Mgmt', level: 'Experienced' },
-      { name: 'Go-to-Market', level: 'Experienced' },
-      { name: 'User Research', level: 'Intermediate' },
+      { name: '0 → 1 Product', level: 'Experienced' },
+      { name: 'Full-surface Ownership', level: 'Experienced' },
+      { name: 'AI / LLM Product Work', level: 'Experienced' },
+      { name: 'Paid Growth & Retention', level: 'Intermediate' },
+      { name: 'Gov & Senior Stakeholders', level: 'Intermediate' },
     ],
   },
   {
-    label: 'Engineering',
+    label: 'Craft',
     items: [
-      { name: 'Kotlin', level: 'Experienced' },
-      { name: 'Jetpack Compose', level: 'Experienced' },
-      { name: 'Flutter', level: 'Intermediate' },
-      { name: 'Java', level: 'Experienced' },
-      { name: 'Python', level: 'Intermediate' },
-      { name: 'REST APIs', level: 'Experienced' },
-      { name: 'SQL', level: 'Intermediate' },
-      { name: 'Git', level: 'Experienced' },
+      { name: 'Product Discovery', level: 'Experienced' },
+      { name: 'Roadmapping & PRDs', level: 'Experienced' },
+      { name: 'Go-to-Market', level: 'Experienced' },
+      { name: 'User Research', level: 'Intermediate' },
+      { name: 'Experimentation', level: 'Intermediate' },
+      { name: 'Metrics & Analytics', level: 'Intermediate' },
+    ],
+  },
+  {
+    label: 'Technical',
+    items: [
+      { name: 'Python', level: 'Experienced' },
+      { name: 'SQL', level: 'Experienced' },
+      { name: 'Flutter', level: 'Experienced' },
+      { name: 'REST APIs', level: 'Intermediate' },
+      { name: 'Firebase', level: 'Intermediate' },
+      { name: 'AWS', level: 'Applied' },
+      { name: 'Figma', level: 'Applied' },
     ],
   },
   {
     label: 'Domains',
     items: [
-      { name: 'AI / ML', level: 'Applied' },
-      { name: 'Cloud', level: 'Applied' },
-      { name: 'Mobile (iOS & Android)', level: 'Experienced' },
-      { name: 'B2G / GovTech', level: 'Experienced' },
-      { name: 'UX & Design', level: 'Intermediate' },
-      { name: 'Security', level: 'Intermediate' },
+      { name: 'AI / LLM Products', level: 'Experienced' },
+      { name: 'Consumer (B2C)', level: 'Experienced' },
+      { name: 'B2G & Regulated', level: 'Experienced' },
+      { name: 'Mobile (iOS & Android)', level: 'Intermediate' },
+      { name: 'Healthtech', level: 'Applied' },
     ],
   },
 ]
@@ -235,5 +245,5 @@ export const education = {
   degree: 'B.E. Computer Science',
   institute: 'Pimpri Chinchwad College of Engineering, Pune',
   duration: '2022 – 2026',
-  note: 'Graduated. Building at the intersection of product, engineering, and AI.',
+  note: 'Graduated June 2026 · CGPA 7.45 / 10. Building where product, engineering, and AI meet.',
 }

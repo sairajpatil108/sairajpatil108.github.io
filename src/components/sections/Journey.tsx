@@ -4,7 +4,7 @@ import { journey, personal } from '../../data/portfolio'
 /**
  * The career as a film — three pinned chapters in chronological order. The
  * outcome compounds: a faster team, a faster launch, then the company-defining
- * pivot that raised the round (the emotional peak, in gold).
+ * services-to-product pivot (the emotional peak, in gold).
  */
 export function Journey() {
   return (
@@ -21,7 +21,7 @@ export function Journey() {
         role={journey[1]}
         tone="cyan"
         portrait={personal.avatar}
-        metric={{ to: 2, prefix: '<', suffix: ' mo', label: 'from empty repo to Play Store launch' }}
+        metric={{ to: 2, prefix: '<', suffix: ' mo', label: 'to ship both apps to a live alpha' }}
       />
       <Chapter
         index={3}
@@ -29,10 +29,10 @@ export function Journey() {
         tone="gold"
         portrait={personal.avatar}
         peak
-        metric={{ to: 1, label: 'funding round, supported by the pivot I led' }}
+        metric={{ to: 10, suffix: 'K+', label: 'installs in 30 days — the product I proposed' }}
         extraStats={[
-          { value: '3×', label: 'operations scaled' },
-          { value: '3', label: 'national products' },
+          { value: '3→25', label: 'gov centres scaled' },
+          { value: '5×', label: 'cheaper to acquire' },
         ]}
       />
     </div>

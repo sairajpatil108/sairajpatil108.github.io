@@ -103,8 +103,8 @@ export function Hero() {
 
           <p className="hero-sub hero-anim body-copy mt-8 max-w-[52ch]">
             Product Manager and Tech Advisor with two years taking products from concept to launch —
-            across mobile, AI, and government-scale systems. I led a services-to-product pivot that
-            helped my company raise its first round.
+            across mobile, AI, and government-scale systems. I led a services-to-product pivot, grew a
+            devotional app to 10K+ downloads, and scaled a state operation from 3 centres to 25.
           </p>
 
           <div className="mt-9 flex flex-wrap items-center gap-3">

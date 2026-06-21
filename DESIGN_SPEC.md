@@ -19,7 +19,7 @@ national-scale operations → the thread fully lit, a balance sheet of impact.
 
 **The Outcome Thread** — one continuous violet→cyan light line on the left margin (desktop)
 that scrub-draws with global scroll progress. Glowing **outcome nodes** ignite at each chapter
-("−40% DEV TIME", "0→PLAY STORE <2MO", "FUNDING ROUND ENABLED", "3× OPS"). Paired with the
+("−40% DEV TIME", "0→ALPHA <2MO", "10K+ INSTALLS", "3→25 CENTRES"). Paired with the
 **traveling portrait** that docks to the thread as the playhead and retints across eras.
 
 ## Signature risk (kept)
@@ -45,7 +45,7 @@ so it never reads as "failed to load," and a full reduced-motion static fallback
 | `--aurora-cyan` | `#22D3EE` | secondary accent / thread terminus |
 | `--aurora-deep` | `#3B1E6E` | deep background blob |
 | `--outcome` | `#3DF5D0` | resolved-outcome mint — ONLY completed nodes + final counters |
-| `--signal-gold` | `#F5C66B` | RARE warm accent — funding beat + B2G/national only |
+| `--signal-gold` | `#F5C66B` | RARE warm accent — pivot peak + B2G/national only |
 | `--text-primary` | `#F4F5FA` | display + high-emphasis (never pure #fff) |
 | `--text-secondary`| `#9AA0B4` | connective body copy |
 | `--text-mono` | `#8B92A8` | mono eyebrows/labels (kept bright for AA contrast) |
@@ -64,7 +64,7 @@ body `clamp(1rem,1.15vw,1.25rem)/1.65` ≤62ch; eyebrow `0.75rem/+0.18em`.
 
 Lenis smooth scroll drives all GSAP ScrollTrigger. Page-load cold-open timeline runs once, then
 scroll takes over. Transform/opacity only. Stagger 30–50ms. ease-out enter, ease-in exit.
-Signature moment = the funding-round bloom (brightest frame). Everything `prefers-reduced-motion`
+Signature moment = the services-to-product pivot bloom (brightest frame). Everything `prefers-reduced-motion`
 safe: no Lenis, no pins/scrubs, final states rendered, counters show final values, thread static.
 
 ## Sections (order + choreography)
@@ -75,14 +75,15 @@ safe: no Lenis, no pins/scrubs, final states rendered, counters show final value
 1. **Origin** — short pinned serif beat: "He could have just shipped features. He decided to own
    the outcome." Thread thickens (system powering on).
 2. **Journey** — three vertical pinned, scrubbed chapters: ScriptAnalytica (−40% dev time) →
-   Venoh (0→Play Store <2mo) → TellMe (funding round + national 3×). Portrait docked as playhead,
-   retints violet→cyan, white-shirt→black-tee. TellMe = emotional peak: gold/mint unlocked,
-   funding bloom is the brightest moment; "services → product" morph.
-3. **Impact** — pinned counter constellation: 3× · 1 funding · 3 national · 40% · <2mo · 2yrs.
+   Venoh (0→alpha <2mo, two-sided marketplace) → TellMe (services→product pivot; 10K+ installs,
+   3→25 centres). Portrait docked as playhead, retints violet→cyan, white-shirt→black-tee.
+   TellMe = emotional peak: gold/mint unlocked, the pivot bloom is the brightest moment;
+   "services → product" morph.
+3. **Impact** — pinned counter constellation: 10K+ · 5× CPI · 3→25 · 40% · <2mo · 2yrs.
    Numerals count up in `--outcome`, settle to primary; nodes plug into the thread.
 4. **Work** — horizontal pinned reel of 6 project cards (mobile → vertical stagger). Cover image
    parallax inside frame; role/period mono meta; B2G/national cards carry a gold seal.
-5. **Craft** — Product / Engineering / Domains as ledger line-items that draw in left→right and
+5. **Craft** — Strengths / Craft / Technical / Domains as ledger line-items that draw in left→right and
    pulse-connect to the thread (skills = line items; outcomes = totals).
 6. **Closing** — balance sheet: portrait returns full scale, thread fully lit, all nodes reflow
    into a constellation, serif sign-off "The features were never the point. The outcomes always
@@ -93,5 +94,5 @@ safe: no Lenis, no pins/scrubs, final states rendered, counters show final value
 - No generic big-number stat-bar hero; no emoji icons (inline SVG only).
 - No pure #fff / #000. Transform/opacity animation only — never width/height/top/left.
 - No horizontal-scroll maze on mobile; never trap the scroll. Body measure ≤ ~65ch.
-- Gold + mint are scarce: funding, B2G/national, and resolved outcomes only.
+- Gold + mint are scarce: the pivot peak, B2G/national, and resolved outcomes only.
 - Always honour prefers-reduced-motion and visible keyboard focus.
