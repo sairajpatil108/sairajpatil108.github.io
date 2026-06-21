@@ -1,8 +1,11 @@
 import { useGsapContext } from '../../lib/useGsapContext'
 import { gsap } from '../../lib/gsap'
+import { LivingAurora } from './LivingAurora'
 
 /**
- * Ambient aurora field — three heavily-blurred drifting blobs + a grid texture.
+ * Ambient aurora field — three heavily-blurred drifting blobs + a grid texture,
+ * plus the interactive LivingAurora canvas layered on top (skipped under reduced
+ * motion, which leaves the static blobs as the field).
  * Starts dim (the cold open withholds the aurora); Hero adds `aurora-bloomed`
  * to <html> after the thesis flip, fading the field to full via CSS.
  * Blobs drift on slow GSAP loops; reduced motion leaves them still.
@@ -51,6 +54,7 @@ export function AuroraBackground() {
         }}
       />
       <div className="grid-texture" style={{ position: 'absolute', inset: 0 }} />
+      <LivingAurora />
     </div>
   )
 }

@@ -4,12 +4,15 @@ import { ErrorBoundary } from './components/ErrorBoundary'
 import { AuroraBackground } from './components/chrome/AuroraBackground'
 import { Nav } from './components/chrome/Nav'
 import { PaperPlane } from './components/chrome/PaperPlane'
+import { CommandPalette } from './components/chrome/CommandPalette'
+import { SecretLayer } from './components/chrome/SecretLayer'
 import { Hero } from './components/sections/Hero'
 import { Origin } from './components/sections/Origin'
 import { Journey } from './components/sections/Journey'
 import { Impact } from './components/sections/Impact'
 import { Work } from './components/sections/Work'
 import { Craft } from './components/sections/Craft'
+import { Decision } from './components/sections/Decision'
 import { Closing } from './components/sections/Closing'
 
 export function App() {
@@ -57,6 +60,8 @@ export function App() {
       <SmoothScroll>
         <Nav />
         <PaperPlane />
+        <CommandPalette />
+        <SecretLayer />
 
         <main id="main" tabIndex={-1} className="relative z-10 outline-none">
           <ErrorBoundary>
@@ -66,6 +71,7 @@ export function App() {
             <Impact />
             <Work />
             <Craft />
+            <Decision />
             <Closing />
           </ErrorBoundary>
         </main>
