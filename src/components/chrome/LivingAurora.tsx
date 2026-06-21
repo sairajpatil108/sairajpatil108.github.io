@@ -3,21 +3,20 @@ import { prefersReducedMotion } from '../../lib/gsap'
 import { onFx } from '../../lib/effects'
 
 /**
- * Living aurora — an interactive light field rendered on a single canvas, layered
- * inside the ambient `.aurora-field` (so it inherits the cold-open bloom fade and
- * stays behind the frosted glass, like light caught under it).
+ * Aurora effect canvas — renders the effect-bus light moments on a single canvas
+ * layered inside the ambient `.aurora-field` (so it inherits the cold-open bloom
+ * fade and stays behind the frosted glass, like light caught under it):
  *
- * - A soft glow eases toward the pointer, leaving a luminous monochrome wake.
- * - With no pointer it drifts on a slow Lissajous path, so the field stays alive.
- * - Reacts to the effect bus: `pulse` ripples a ring; `supernova` detonates a
- *   white bloom + expanding shockwaves + a radial particle burst.
+ * - `pulse` ripples a ring; `supernova` detonates a white bloom + expanding
+ *   shockwaves + a radial particle burst.
  *
- * Everything is white on near-black (the house palette is monochrome) and additive-
- * blended. Particles and the pointer glow are drawn from a pre-rendered offscreen
- * sprite via drawImage (no per-particle gradient allocation), DPR-aware, paused
- * when the tab is hidden, and skipped under reduced motion — using the same module
- * constant as the rest of the GSAP/Lenis chrome (gsap.ts) so the motion gate is
- * consistent across the app.
+ * It used to also track the pointer (a glow easing toward the cursor, leaving a
+ * luminous wake) plus an idle drift — but that read as a distracting cursor
+ * animation, so the field now stays calm until an effect fires. Everything is
+ * white on near-black (monochrome house palette) and additive-blended. Particles
+ * are drawn from a pre-rendered offscreen sprite via drawImage (no per-particle
+ * gradient allocation), DPR-aware, paused when the tab is hidden, and skipped
+ * under reduced motion.
  */
 
 type Particle = { x: number; y: number; vx: number; vy: number; life: number; max: number; r: number }
@@ -26,7 +25,7 @@ type Ring = { x: number; y: number; t: number; dur: number; max: number; w: numb
 const easeOut = (k: number) => 1 - Math.pow(1 - k, 3)
 
 // A soft white radial dot, rendered once and reused (drawImage-scaled) for every
-// particle and the pointer glow — far cheaper than createRadialGradient per frame.
+// particle — far cheaper than createRadialGradient per frame.
 function makeSprite(): HTMLCanvasElement {
   const size = 64
   const c = document.createElement('canvas')
@@ -70,21 +69,6 @@ export function LivingAurora() {
     resize()
     window.addEventListener('resize', resize)
 
-    // Pointer + eased glow position.
-    let px = W / 2
-    let py = H * 0.4
-    let gx = px
-    let gy = py
-    let lastX = px
-    let lastY = py
-    let moving = 0
-    const onMove = (e: PointerEvent) => {
-      px = e.clientX
-      py = e.clientY
-      moving = 1
-    }
-    window.addEventListener('pointermove', onMove, { passive: true })
-
     const particles: Particle[] = []
     const rings: Ring[] = []
     let flash = 0 // supernova white flash, 1 → 0
@@ -109,7 +93,7 @@ export function LivingAurora() {
       rings.push({ x: cx, y: cy, t: -0.14, dur: 1.8, max: reach * 0.95, w: 1.5 })
       burst(120, cx, cy, 540)
     }
-    const pulse = () => rings.push({ x: gx, y: gy, t: 0, dur: 1.1, max: 340, w: 2 })
+    const pulse = () => rings.push({ x: W / 2, y: H * 0.42, t: 0, dur: 1.1, max: 340, w: 2 })
     const offSupernova = onFx('supernova', supernova)
     const offPulse = onFx('pulse', pulse)
 
@@ -120,45 +104,10 @@ export function LivingAurora() {
       const dt = Math.min(0.05, (now - prev) / 1000)
       prev = now
 
-      // Idle drift when the pointer is at rest.
-      moving = Math.max(0, moving - dt * 1.5)
-      if (moving < 0.05) {
-        const tt = now / 1000
-        px = W * (0.5 + 0.22 * Math.sin(tt * 0.16))
-        py = H * (0.4 + 0.16 * Math.cos(tt * 0.21))
-      }
-      gx += (px - gx) * Math.min(1, dt * 6)
-      gy += (py - gy) * Math.min(1, dt * 6)
-
-      // Spawn wake particles proportional to glide speed.
-      const dx = gx - lastX
-      const dy = gy - lastY
-      const sp = Math.hypot(dx, dy)
-      lastX = gx
-      lastY = gy
-      if (sp > 0.4) {
-        const n = Math.min(3, 1 + Math.floor(sp / 14))
-        for (let i = 0; i < n; i++) {
-          const f = i / n
-          particles.push({
-            x: gx - dx * f, y: gy - dy * f,
-            vx: -dx * 0.05 + (Math.random() - 0.5) * 8,
-            vy: -dy * 0.05 + (Math.random() - 0.5) * 8,
-            life: 0, max: 0.9 + Math.random() * 0.8, r: 10 + Math.random() * 16,
-          })
-        }
-      }
-      if (particles.length > 240) particles.splice(0, particles.length - 240)
-
       ctx.clearRect(0, 0, W, H)
       ctx.globalCompositeOperation = 'lighter'
 
-      // Pointer glow — the cached sprite scaled up, drawn faintly.
-      const gr = 240
-      ctx.globalAlpha = 0.12
-      ctx.drawImage(sprite, gx - gr, gy - gr, gr * 2, gr * 2)
-
-      // Wake + burst particles (sprite scaled per particle, alpha by life).
+      // Burst particles (supernova only) — sprite scaled per particle, alpha by life.
       for (let i = particles.length - 1; i >= 0; i--) {
         const p = particles[i]
         p.life += dt
@@ -225,7 +174,6 @@ export function LivingAurora() {
     return () => {
       if (raf) cancelAnimationFrame(raf)
       window.removeEventListener('resize', resize)
-      window.removeEventListener('pointermove', onMove)
       document.removeEventListener('visibilitychange', onVisibility)
       offSupernova()
       offPulse()
